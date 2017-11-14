@@ -58,14 +58,23 @@ module sprite_contour_separation(
     edge_positions insert_pos(.addra(edge_addr_write), .clka(clk), .dina(x_y_edge_wire), .ena(edge_en), .wea(edge_we)); // don't have anything for .douta
     
     //states
-    parameter [2:0] STATE_GET_FIRST_ROW = 3'b000;
-    parameter [2:0] STATE_GET_FIRST_COLUMN = 3'b100;
-    parameter [2:0] STATE_GET_SLOPE = 3'b001;
-    parameter [2:0] STATE_GET_EDGE = 3'b010;
-    parameter [2:0] STATE_FOLLOW_EDGE = 3'b011;
-    parameter [2:0] STATE_GET_NEXT_ROW_DOWN = 3'b101;
-    parameter [2:0] STATE_GET_EDGE_DIR = 3'b110;
-    parameter [2:0] STATE_GET_NEXT_ROW_UP = 3'b111;
+    parameter [3:0] STATE_GET_FIRST_ROW = 3'b000;
+    parameter [3:0] STATE_GET_FIRST_COLUMN = 3'b100;
+    parameter [3:0] STATE_GET_SLOPE = 3'b001;
+    parameter [3:0] STATE_GET_EDGE = 3'b010;
+    parameter [3:0] STATE_FOLLOW_EDGE = 3'b011;
+    parameter [3:0] STATE_GET_NEXT_ROW_DOWN = 3'b101;
+    parameter [3:0] STATE_GET_EDGE_DIR = 3'b110;
+    parameter [3:0] STATE_GET_NEXT_ROW_UP = 3'b111;
+    
+    parameter [3:0] STATE_UP = 4'b1000;
+    parameter [3:0] STATE_UP_RIGHT = 4'b1001;
+    parameter [3:0] STATE_RIGHT = 4'b1010;
+    parameter [3:0] STATE_DOWN_RIGHT = 4'b1011;
+    parameter [3:0] STATE_DOWN = 4'b100;
+    parameter [3:0] STATE_DOWN_LEFT = 4'b101;
+    parameter [3:0] STATE_LEFT = 4'b110;
+    parameter [3:0] STATE_UP_LEFT = 4'b111;
     
     reg [2:0] state = STATE_GET_FIRST_ROW;
     reg [2:0] prev_state = STATE_GET_FIRST_ROW;
@@ -160,279 +169,156 @@ module sprite_contour_separation(
                     get_dir_index <= get_dir_index + 1;
                     x_prev <= x_pos;
                     y_prev <= y_pos;
+                    prev_state <= STATE_GET_EDGE_DIR;
                     
                     //up
                     if (((vga_bram_out_up[read_index] != 0) || (vga_bram_out_up[read_index + 1] != 0) || (vga_bram_out_up[read_index + 2] != 0)) && 
-                        ((y_pos - 1 != y_prev))) begin
-                        
-                        y_dir <= 1; //up
-                        
-                        prev_state <= STATE_GET_EDGE_DIR;
-                        state <= STATE_GET_NEXT_ROW_UP;
-                        
-                        y_pos <= y_pos - 1;
-                    end  
-                    
+                        ((y_pos - 1 != y_prev))) begin                        
+                        state <= STATE_UP;
+                    end                    
                     //up-right
                     else if (((vga_bram_out_up[read_index + 3] != 0) || (vga_bram_out_up[read_index + 4] != 0) || (vga_bram_out_up[read_index + 5] != 0) ) && 
                         ((y_pos - 1 != y_prev) || (x_pos + 1 != x_prev)))begin
-                        
-                        read_index <= read_index + 3;
-                        
-                        x_dir <= 2; //right
-                        y_dir <= 1; //up
-                        
-                        prev_state <= STATE_GET_EDGE_DIR;
-                        state <= STATE_GET_NEXT_ROW_UP;
-                        
-                        x_pos <= x_pos + 1;
-                        y_pos <= y_pos - 1;
-                    end
-                    
+                        state <= STATE_UP_RIGHT;
+                    end                    
                     //right
                     else if (((vga_bram_out[read_index + 3] != 0) || (vga_bram_out[read_index + 4] != 0) || (vga_bram_out[read_index + 5] != 0) ) && 
                         ((x_pos + 1 != x_prev)))begin
-                        
-                        read_index <= read_index + 3;
-                        
-                        x_dir <= 2; //right
-                        
-                        x_pos <= x_pos + 1;
-                    end
-                    
+                        state <= STATE_RIGHT;
+                    end                    
                     //down-right
                     else if (((vga_bram_out_down[read_index + 3] != 0) || (vga_bram_out_down[read_index + 4] != 0) || (vga_bram_out_down[read_index + 5] != 0) ) &&
                         ((y_pos + 1 != y_prev) || (x_pos + 1 != x_prev)))begin
-                        
-                        read_index <= read_index + 3;
-                        
-                        x_dir <= 2; //right
-                        y_dir <= 2; //down
-                        
-                        prev_state <= STATE_GET_EDGE_DIR;
-                        state <= STATE_GET_NEXT_ROW_DOWN;
-                        
-                        x_pos <= x_pos + 1;
-                        y_pos <= y_pos + 1;
-                    end
-                    
+                        state <= STATE_DOWN_RIGHT;
+                    end                    
                     //down
                     else if (((vga_bram_out_down[read_index] != 0) || (vga_bram_out_down[read_index + 1] != 0) || (vga_bram_out_down[read_index + 2] != 0)) && 
                         ((y_pos + 1 != y_prev))) begin
-                        
-                        y_dir <= 2; //down
-                        
-                        prev_state <= STATE_GET_EDGE_DIR;
-                        state <= STATE_GET_NEXT_ROW_DOWN;
-                        
-                        y_pos <= y_pos + 1;
-                    end                                    
-                    
+                        state <= STATE_DOWN;
+                    end                                      
                     //down_left
                     else if (((vga_bram_out_down[read_index - 1] != 0) || (vga_bram_out_down[read_index - 2] != 0) || (vga_bram_out_down[read_index - 3] != 0) ) &&
                         ((y_pos + 1 != y_prev) || (x_pos - 1 != x_prev)))begin
-                        
-                        read_index <= read_index - 3;
-                        
-                        x_dir <= 1; //left
-                        y_dir <= 2; //down
-                        
-                        prev_state <= STATE_GET_EDGE_DIR;
-                        state <= STATE_GET_NEXT_ROW_DOWN;
-                        
-                        x_pos <= x_pos -1;
-                        y_pos <= y_pos + 1;
-                    end
-                    
+                        state <= STATE_DOWN_LEFT;
+                    end                    
                     //left
                     else if (((vga_bram_out[read_index - 1] != 0) || (vga_bram_out[read_index - 2] != 0) || (vga_bram_out[read_index -3] != 0) ) && 
                        ((x_pos - 1 != x_prev)))begin
-                       
-                       read_index <= read_index - 3;
-                       
-                       x_dir <= 1; //left
-                       
-                       x_pos <= x_pos - 1;
-                   end
-                    
+                        state <= STATE_LEFT;
+                   end                    
                     //up-left
                     else if (((vga_bram_out_up[read_index - 1] != 0) || (vga_bram_out_up[read_index - 2] != 0) || (vga_bram_out_up[read_index - 3] != 0) ) &&
                         ((y_pos - 1 != y_prev) || (x_pos - 1 != x_prev)))begin
-                        
-                        read_index <= read_index - 3;
-                        
-                        x_dir <= 1; //left
-                        y_dir <= 1; //up
-                        
-                        prev_state <= STATE_GET_EDGE_DIR;
-                        state <= STATE_GET_NEXT_ROW_UP;
-                        
-                        x_pos <= x_pos - 1;
-                        y_pos <= y_pos - 1;
-                    end
-                                        
+                        state <= STATE_UP_LEFT;
+                    end                                        
                 end
+            end
+            
+            STATE_UP: begin            
+                y_dir <= 1; //up                                  
+                state <= STATE_GET_NEXT_ROW_UP;                
+                y_pos <= y_pos - 1;
+            end
+            
+            STATE_UP_RIGHT: begin           
+                read_index <= read_index + 3;                
+                x_dir <= 2; //right
+                y_dir <= 1; //up                
+                state <= STATE_GET_NEXT_ROW_UP;                
+                x_pos <= x_pos + 1;
+                y_pos <= y_pos - 1;
+            end
+            
+            STATE_RIGHT: begin                        
+                read_index <= read_index + 3;                
+                x_dir <= 2; //right                
+                x_pos <= x_pos + 1;                 
+                state <= STATE_GET_EDGE_DIR;           
+            end
+            
+            STATE_DOWN_RIGHT: begin                                    
+                read_index <= read_index + 3;                
+                x_dir <= 2; //right
+                y_dir <= 2; //down                
+                state <= STATE_GET_NEXT_ROW_DOWN;               
+                x_pos <= x_pos + 1;
+                y_pos <= y_pos + 1;
+            end
+            
+            STATE_DOWN: begin                                   
+                y_dir <= 2; //down                
+                state <= STATE_GET_NEXT_ROW_DOWN;                
+                y_pos <= y_pos + 1;
+            end
+            
+            STATE_DOWN_LEFT: begin                                    
+                read_index <= read_index - 3;                
+                x_dir <= 1; //left
+                y_dir <= 2; //down                
+                state <= STATE_GET_NEXT_ROW_DOWN;                
+                x_pos <= x_pos -1;
+                y_pos <= y_pos + 1;
+            end
+            
+            STATE_LEFT: begin                                       
+                read_index <= read_index - 3;                
+                x_dir <= 1; //left                
+                x_pos <= x_pos - 1;                
+                state <= STATE_GET_EDGE_DIR;
+            end
+            
+            STATE_UP_LEFT: begin                                    
+                read_index <= read_index - 3;                
+                x_dir <= 1; //left
+                y_dir <= 1; //up                
+                state <= STATE_GET_NEXT_ROW_UP;                
+                x_pos <= x_pos - 1;
+                y_pos <= y_pos - 1;
             end
             
             STATE_FOLLOW_EDGE: begin
-                if (x_pos == 1) begin
+                if (x_pos == 0 || y_pos == 0) begin
+                    prev_state <= STATE_FOLLOW_EDGE;
+                    x_prev <= x_pos;
+                    y_prev <= y_pos;
+                    
+                    //left
+                    if (x_pos == 1) begin
+                        if (((vga_bram_out[read_index - 1] != 0) || (vga_bram_out[read_index - 2] != 0) || (vga_bram_out[read_index -3] != 0) ) && 
+                            ((x_pos - 1 != x_prev)))begin
+                                state <= STATE_LEFT;
+                        end
+                        else state <= STATE_GET_EDGE_DIR;
+                    end
+                    
+                    //right
+                    else if (x_pos == 2) begin
+                        if (((vga_bram_out[read_index + 3] != 0) || (vga_bram_out[read_index + 4] != 0) || (vga_bram_out[read_index + 5] != 0) ) && 
+                            ((x_pos + 1 != x_prev)))begin
+                            state <= STATE_RIGHT;
+                        end
+                        else state <= STATE_GET_EDGE_DIR;                         
+                    end
+                    
+                    //up
+                    else if(y_pos == 1) begin
+                        if (((vga_bram_out_up[read_index] != 0) || (vga_bram_out_up[read_index + 1] != 0) || (vga_bram_out_up[read_index + 2] != 0)) && 
+                            ((y_pos - 1 != y_prev))) begin                        
+                            state <= STATE_UP;
+                        end
+                        else state <= STATE_GET_EDGE_DIR;                        
+                    end
+                    
+                    //down
+                    else if (y_pos == 2) begin
+                        if (((vga_bram_out_down[read_index] != 0) || (vga_bram_out_down[read_index + 1] != 0) || (vga_bram_out_down[read_index + 2] != 0)) && 
+                            ((y_pos + 1 != y_prev))) begin
+                            state <= STATE_DOWN;
+                        end
+                        else state <= STATE_GET_EDGE_DIR;
+                    end
                 end
-                else if (x_pos == 2) begin
-                end
-                else if(y_pos == 1) begin
-                end
-                else if (y_pos == 2) begin
-                end
-                else begin
-                    state <= STATE_GET_EDGE_DIR;
-                end
-            end
-            
-
+            end          
         endcase
-    end
-//        case (state)            
-//            STATE_GET_FIRST_ROW: begin
-//                vga_en = 1;
-//                vga_we = 0;
-//                if (vga_bram_out == 0) begin
-//                    vga_addr_read <= vga_addr_read + 1;
-//                end
-//                else begin
-//                    y_start <= vga_addr_read;
-//                    state <= STATE_GET_FIRST_COLUMN;
-//                end
-//            end
-            
-//            STATE_GET_FIRST_COLUMN: begin
-//                vga_en = 0;
-//                if (vga_bram_out[read_index] == 1) begin
-//                    x_start <= x_pos;
-//                    state <= STATE_GET_SLOPE;
-                    
-//                    //preliminary slope: all to the right (horizontal)
-//                    x_slope <= 0;
-//                    y_slope <= 0;
-//                    x_dir <= 0;
-//                    y_dir <= 0;
-                    
-//                    state <= STATE_GET_FIRST_EDGE;
-//                    edge_length_fixed <= 0;
-                    
-//                end
-//                else begin
-//                    read_index <= read_index + 3;
-//                    x_pos <= x_pos + 1;
-//                end
-//            end
-            
-//            STATE_SEE_AHEAD: begin
-//                vga_en <= 1;
-//                vga_addr_read <= vga_addr_read + 1;
-                
-//                vga_bram_out_prev <= vga_bram_out;
-                
-//                reg [1919:0] vga_bram_out_prev;
-//                 reg [1919:0] vga_bram_out_next
-                    
-////                if (bram_out[read_index] == 1) begin
-////                    read_index <= read_index + 1;
-////                end
-////                else begin
-////                    state <= STATE_GET_EDGE_SETUP;
-////                end
-////            end
-            
-////            STATE_GET_DIRECTION: begin
-////                ena <= 1;
-////                en_next <= 1;
-////                wea <= 0;
-                
-                
-//            /*                    state <= STATE_GET_SLOPE;
-                                
-//                                //preliminary slope: all to the right (horizontal)
-//                                x_slope <= 1;
-//                                y_slope <= 0;
-//                                x_dir <= 1;
-//                                y_dir <= 1;*/
-                                
-//                get_slope_index <= get_slope_index + 1;
-                
-//                if (bram_out[read_index + 1] == 1) begin
-//                    read_index <= read_index + 1;
-                    
-//                    x_slope <= x_slope + 1;
-//                    x_dir <= 1;
-                    
-////                    y_slope <= y_slope;
-////                    y_dir <= y_dir;
-//                end
-//                else if (bram_out[read_index - 1] == 1) begin
-//                    read_index <= read_index + 1;
-                    
-//                    x_slope <= x_slope + 1;
-//                    x_dir <= 0;
-                    
-////                    y_slope <= y_slope;
-////                    y_dir <= y_dir;
-                    
-                    
-//                end 
-//                else if (bram_out_next[read_index] == 1) begin
-//                    read_index <= read_index + 1;
-                
-////                    x_slope <= x_slope;
-////                    x_dir <= x_dir;
-                
-//                    y_slope <= y_slope + 1;
-//                    y_dir <= 1;
-                
-//                end
-//                else if (bram_out_next[read_index + 1] == 1) begin
-//                    read_index <= read_index + 1;
-            
-//                    x_slope <= x_slope + 1;
-//                    x_dir <= 1;
-            
-//                    y_slope <= y_slope + 1;
-//                    y_dir <= 1;
-//                end
-//                else if (bram_out_next[read_index - 1] == 1) begin
-//                    read_index <= read_index + 1;
-        
-//                    x_slope <= x_slope + 1;
-//                    x_dir <= 0;
-        
-//                    y_slope <= y_slope + 1;
-//                    y_dir <= 1;                
-//                end
-                
-                                
-//            end
-            
-//            STATE_GET_XSLOPE: begin
-//                if (x_slope == 0) begin
-                
-//                    if (bram_out[read_index + 1] == 1) begin
-//                        x_dir <= 1;
-//                    end
-//                    else if (bram_out[read_index - 1] == 1) begin
-//                        x_dir <= 0;
-//                    end
-//                end
-//            end
-            
-//            STATE_GET_EDGE_SETUP: begin
-
-//            end
-            
-//            STATE_GET_EDGE: begin
-//            end
-            
-//            STATE_DONE: begin
-//            end
-//        endcase
-//    end
-    
+    end 
 endmodule
