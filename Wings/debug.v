@@ -43,148 +43,190 @@ module debug(
 
     );
     
-        wire clk_100mhz;
-       wire clk_25mhz;
-       wire clk_65mhz;
+    //CLOCK SETUP
+    wire clk_100mhz;
+    wire clk_25mhz;
+    wire clk_65mhz;
+    
+    wire reset = 0;
+    wire locked = 1;
+    
+    clk_wiz_0 clocks (
+       .clk_in1(CLK100MHZ),    // input clk_in1
+       .clk_out1(clk_100mhz),  // 100mhz for everything
+       .clk_out2(clk_25mhz),   // 25mhz for SD card
+       .clk_out3(clk_65mhz),   // 65 mhz for VGA???
+       .reset(reset), // input reset
+       .locked(locked) // output locked
+    );
        
-       wire reset = 0;
-       wire locked = 1;
+    
+    //8-HEX SETUP FOR TESTING               
+    wire [31:0] data;
+    wire [6:0] segments;
+    display_8hex display(.clk(clk_25mhz),.data(data), .seg(segments), .strobe(AN));    
+    assign SEG[6:0] = segments;
+    assign SEG[7] = 1'b1;
+    
+    assign data = {1'h0, set_bin_out, 16'h0, pixel_per_bin};//, 8'b0, state};
+    assign LED[0] = done_sd_color_bram;
+
+    
+    //SETTING UP THE SD CARD    
+    wire [7:0] sd_read;
+    wire [7:0] sd_write;
+    //wire sd_we;  //0 = read, 1 = write
+    wire sd_read_available;
+    wire sd_write_available;
+    wire sd_write_ready = 0;
+    wire sd_reset = 0;
+    wire sd_ready;
+    wire [31:0] sd_addr;
+    wire [4:0] sd_status;
+    
+    // set SPI mode
+    assign SD_DAT[2] = 1;
+    assign SD_DAT[1] = 1;
+    assign SD_RESET = 0;     
        
-       clk_wiz_0 clocks (
-           // Clock in ports
-           .clk_in1(CLK100MHZ),    // input clk_in1
-           // Clock out ports
-           .clk_out1(clk_100mhz),  // 100mhz for everything
-           .clk_out2(clk_25mhz),   // 25mhz for SD card
-           .clk_out3(clk_65mhz),   // 65 mhz for VGA???
-           // Status and control signals
-           .reset(reset), // input reset
-           .locked(locked) // output locked
-       );
-       
-                   
-       wire [31:0] data;
-       wire [6:0] segments;
-       display_8hex display(.clk(clk_25mhz),.data(data), .seg(segments), .strobe(AN));    
-       assign SEG[6:0] = segments;
-       assign SEG[7] = 1'b1;
-       
-       wire state;
-       assign data = {20'h0, num_edge_pixels};//, 8'b0, state};
-//assign data = {13'h000, total_pixel_count};
-       assign LED[1] = done_sd_color_bram;
-       assign LED[0] = reset_sd_color_bram;
-       
-       wire [18:0] total_pixel_count;
-     
-       
-       wire [7:0] sd_read;
-       wire [7:0] sd_write;
-//       wire sd_we;  //0 = read, 1 = write
-       wire sd_read_available;
-       wire sd_write_available;
-       wire sd_write_ready = 0;
-       wire sd_reset = 0;
-       wire sd_ready;
-       wire [31:0] sd_addr;
-       wire [4:0] sd_status;
-       
-       // set SPI mode
-       assign SD_DAT[2] = 1;
-       assign SD_DAT[1] = 1;
-       assign SD_RESET = 0;
-       
-       
-       sd_controller sd_read_write (
-           .cs (SD_DAT[3]), 
-           .mosi (SD_CMD), 
-           .miso (SD_DAT[0]), 
-           .sclk (SD_SCK),        
-           .rd (1), //input rd. The byte is presented on [dout].
-           .dout (sd_read), // output reg [7:0] dout for READ operation.
-           .byte_available (sd_read_available), // A new byte has been presented on [dout].
-           .wr(0), //input wr. The next byte to be written should be presentaed on [din].
-           .din(sd_write), // Data input for WRITE operation.
-           .ready_for_next_byte (sd_write_available), // A new byte should be presented on [din].       
-           .reset(sd_reset), // input Resets controller on assertion.
-           .ready (sd_ready), //output HIGH if the SD card is ready for a read or write operation.
-           .address(sd_addr), //input [31:0] addres
-           .clk(clk_25mhz), // 25 MHz clock.
-           .status(sd_status) //output [4:0] status: Current state of controller.
-       );
-       
-       wire [18:0] bram_addr;
-       wire [2:0] xy_edge_out;
-       wire [2:0] xy_bin_in;
-       wire xy_bin_we;    //0 for read, 1 for write
-       
-        xy_bin get_if_edge(
-            .addra(bram_addr), 
-            .clka(clk_100mhz), 
-            .dina(xy_bin_in), 
-            .douta(xy_edge_out), 
-            .wea(xy_bin_we)
-        );
-       
-       wire [9:0] x_first_edge;
-       wire [8:0] y_first_edge;
-       wire [18:0] addr_first_edge;
-       wire [11:0] num_edge_pixels;
-       
-        assign reset_sd_color_bram = BTNR;
-        wire [18:0] sd_color_bram_addr;
-        wire [2:0] sd_color_xy_bin_in;
+    sd_controller sd_read_write (
+        .cs (SD_DAT[3]), 
+        .mosi (SD_CMD), 
+        .miso (SD_DAT[0]), 
+        .sclk (SD_SCK),        
+        .rd (1), //input rd. The byte is presented on [dout].
+        .dout (sd_read), // output reg [7:0] dout for READ operation.
+        .byte_available (sd_read_available), // A new byte has been presented on [dout].
+        .wr(0), //input wr. The next byte to be written should be presentaed on [din].
+        .din(sd_write), // Data input for WRITE operation.
+        .ready_for_next_byte (sd_write_available), // A new byte should be presented on [din].       
+        .reset(sd_reset), // input Resets controller on assertion.
+        .ready (sd_ready), //output HIGH if the SD card is ready for a read or write operation.
+        .address(sd_addr), //input [31:0] addres
+        .clk(clk_25mhz), // 25 MHz clock.
+        .status(sd_status) //output [4:0] status: Current state of controller.
+    );
+      
+      
+    //SETTING UP THE BRAM WITH THE BINS OF EACH XY POSITION 
+    wire [18:0] bram_addr;
+    wire [2:0] xy_edge_out;
+    wire [2:0] xy_bin_in;
+    wire xy_bin_we;    //0 for read, 1 for write
+    
+    xy_bin get_if_edge(
+        .addra(bram_addr), 
+        .clka(clk_100mhz), 
+        .dina(xy_bin_in), 
+        .douta(xy_edge_out), 
+        .wea(xy_bin_we)
+    );
+    
+    //LOGIC FOR BRAM INPUTS
+    //first reset (one clock_cycle, with push?) --> sd_color_bram --> done signal --> color_contour --> done signal --> image
+
+    assign bram_addr = ~done_sd_color_bram ? sd_color_bram_addr: ~color_contour_done ? color_contour_bram_addr : vga_bram_addr;
+    assign xy_bin_in = ~done_sd_color_bram ? sd_color_xy_bin_in: color_contour_xy_bin_in;
+    assign xy_bin_we = ~done_sd_color_bram ? sd_color_xy_bin_we: ~color_contour_done ? color_contour_xy_bin_we : 0;
+    
+    
+    //MODULE TO GET EDGE FROM SD CARD TO BRAM
+    wire [9:0] x_first_edge;
+    wire [8:0] y_first_edge;
+    wire [18:0] addr_first_edge;
+    wire [11:0] num_edge_pixels;
+    
+    //assign reset_sd_color_bram = BTNR;
+    wire [18:0] sd_color_bram_addr;
+    wire [2:0] sd_color_xy_bin_in;
+    
+    wire sd_color_xy_bin_en; //not necessary
+    wire sd_color_xy_bin_we;    //not necessary
         
-        wire sd_color_xy_bin_en; //not necessary
-        wire sd_color_xy_bin_we;    //not necessary
-       sd_color_bram to_xy_bram(
-           .clk(clk_100mhz),
-           .sd_read(sd_read),
-           .sd_read_available(sd_read_available),
-           .reset(reset_sd_color_bram),
+    
+    
+    assign reset_sd_color_bram = BTNR;
+    
+    wire state;
+    wire [18:0] total_pixel_count;
+
+    sd_color_bram to_xy_bram(
+        .clk(clk_100mhz),
+        .sd_read(sd_read),
+        .sd_read_available(sd_read_available),
+        .reset(reset_sd_color_bram),
+        
+        .sd_addr(sd_addr),
+        //           .sd_we(sd_we),
+        .done(done_sd_color_bram),
+        
+        .bram_addr(sd_color_bram_addr),
+        .edge_out(xy_edge_out),
+        .bin_in(sd_color_xy_bin_in),
+        .en(sd_color_xy_bin_en),
+        .we(sd_color_xy_bin_we),
+        
+        .x_start(x_first_edge),
+        .y_start(y_first_edge),
+        .addr_start(addr_first_edge),
+        .num_pixels(num_edge_pixels)     ,
+        
+        .total_pixel_count(total_pixel_count),
+        
+        .state(state)           
+    );
+
+    //MODULE FOR VGA OUTPUT
+    wire [18:0] vga_bram_addr;
+    
+    edge_to_display video_playback_1 (
+        .bin_data(xy_edge_out),
+        .video_clk(clk_25mhz),
+        .memory_addr(vga_bram_addr),
+        .vsync(VGA_VS),
+        .hsync(VGA_HS),
+        .video_out({VGA_R, VGA_G, VGA_B})
+        );
+    
+    
+    //MODULE FOR ETRACTING EDGE CONTOURS FROM THE EDGE
+    wire [18:0] color_contour_bram_addr;
+    wire [2:0] color_contour_xy_edge_out;
+    wire [2:0] color_contour_xy_bin_in;
+    wire color_contour_xy_bin_en;
+    wire color_contour_xy_bin_we;    //0 for read, 1 for write
+    
+    wire [1:0] color_contour_state;
+    
+    wire [11:0] pixel_per_bin;   //15c
+    wire [2:0] set_bin_out;
+    
+    parameter [2:0] num_bins = 4;
+    wire color_contour_reset;
+    wire color_contour_done;
+    color_contour get_contour(
+        .clk(clk_100mhz),
+        .x_start(x_first_edge),
+        .y_start(y_first_edge),
+        .addr_start(addr_first_edge),
+        .num_pixels(num_edge_pixels),
+        .num_bins(num_bins),
+        .reset(color_contour_reset),
+        .done(color_contour_done),
+        
+        .addr(color_contour_bram_addr),
+        .edge_out(color_contour_xy_edge_out),
+        .bin_in(color_contour_xy_bin_in),
+        .we(color_contour_xy_bin_we),
+        .start(done_sd_color_bram)        ,
+        .state_out(color_contour_state),
+        .pixel_count(pixel_per_bin),
+        .set_bin_out(set_bin_out)
+    );
+           
                
-           .sd_addr(sd_addr),
-//           .sd_we(sd_we),
-           .done(done_sd_color_bram),
-           
-           .bram_addr(sd_color_bram_addr),
-           .edge_out(xy_edge_out),
-           .bin_in(sd_color_xy_bin_in),
-           .en(sd_color_xy_bin_en),
-           .we(sd_color_xy_bin_we),
-           
-           .x_start(x_first_edge),
-           .y_start(y_first_edge),
-           .addr_start(addr_first_edge),
-           .num_pixels(num_edge_pixels)     ,
-           
-           .total_pixel_count(total_pixel_count),
-           
-           .state(state)           
-           );
-       
-       //first reset (one clock_cycle, with push?) --> sd_color_bram --> done signal --> color_contour --> done signal --> image
-       
-       edge_to_display video_playback_1 (
-               .bin_data(xy_edge_out),
-               .video_clk(clk_25mhz),
-               .memory_addr(vga_bram_addr),
-               .vsync(VGA_VS),
-               .hsync(VGA_HS),
-               .video_out(junk),
-               .start(vga_start)
-               );
-           assign {VGA_R, VGA_G, VGA_B} = junk; //12'b000011110000;
-           
-           wire [18:0] color_contour_bram_addr;
-           wire [2:0] color_contour_xy_edge_out;
-           wire [2:0] color_contour_xy_bin_in;
-           wire color_contour_xy_bin_en;
-           wire color_contour_xy_bin_we;    //0 for read, 1 for write
-           
-               
-           wire [2:0] fsm_state;
-           dubug_high_fsm fsm(
+           /*wire [2:0] fsm_state;
+           debug_high_fsm fsm(
                .clk (clk_100mhz),
            
                .reset(BTNR),
@@ -211,7 +253,7 @@ module debug(
                .vga_bram_addr(vga_bram_addr),
                .state_out(fsm_state)
                
-               );
+               );*/
           
        
-   endmodule
+endmodule

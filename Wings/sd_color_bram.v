@@ -27,7 +27,7 @@ module sd_color_bram(
     input reset,
         
     output reg [31:0] sd_addr,
-    output reg sd_we,
+//    output reg sd_we,
     output reg done,
     
     output reg [18:0] bram_addr,
@@ -50,7 +50,7 @@ module sd_color_bram(
     parameter height = 9'd480;
     parameter total_pixels = 20'd307200;
      
-//    reg state;
+    //    reg state;
     parameter STATE_GET_SD = 0;
     parameter STATE_SD_BRAM = 1;
     
@@ -88,7 +88,7 @@ module sd_color_bram(
 
             state <= STATE_GET_SD;
         end
-        else if (~done) begin
+        else begin //if (~done) begin
             total_pixel_count <= bram_addr;
         
             case (state)

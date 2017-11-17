@@ -26,8 +26,7 @@ module edge_to_display(
     output wire [18:0] memory_addr,
     output reg vsync,
     output reg hsync,
-    output wire [11:0] video_out,
-    input start
+    output wire [11:0] video_out
     );
     
     
@@ -47,8 +46,11 @@ module edge_to_display(
     reg vsync_pre_delay_2;
 
     reg at_display_area; 
-//    assign video_out = 12'hFFF; //blank_delay_2 ? 12'b0 : (bin_data != 3'b000) ? 12'hFFF : 12'b0; 
-    assign video_out = at_display_area ? ((bin_data != 3'b000) ? 12'h000 : 12'hF0F): 0;//(12'h0F0) : 0;
+//    assign video_out = 12'hF0F; //blank_delay_2 ? 12'b0 : (bin_data != 3'b000) ? 12'hFFF : 12'b0; 
+//    assign video_out = at_display_area ? 12'hF0f: 0;
+//    assign video_out = at_display_area ? ((bin_data != 3'b000) ? 12'h000 : 12'hFFF): 0;//(12'h0F0) : 0;
+    assign video_out = ~at_display_area ? 0: bin_data == 3'b001 ? 12'hF00 : bin_data == 3'b010 ? 12'h0F0 : 
+                        bin_data == 3'b011 ? 12'h00F : bin_data == 3'b100 ? 12'hF0F : 12'hFFF; 
     
     assign hblankon = (hcount == 639);   //blank after display width   
     assign hsyncon = (hcount == 655);  // active video + front porch
@@ -70,9 +72,7 @@ module edge_to_display(
 
     assign memory_addr = hcount+vcount*640;
       
-    always @(posedge video_clk) begin
-        if (start) begin
-           
+    always @(posedge video_clk) begin           
         blank_delay <= blank;
         blank_delay_2 <= blank_delay;
         hsync_pre_delay_2 <= hsync_pre_delay;
@@ -91,7 +91,5 @@ module edge_to_display(
          blank <= next_vblank | (next_hblank & ~hreset);
          
          at_display_area <= ((hcount >= 0) && (hcount < 640) && (vcount >= 0) && (vcount < 480));
-
-         end
     end
 endmodule
