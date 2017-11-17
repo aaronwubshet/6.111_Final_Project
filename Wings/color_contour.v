@@ -28,10 +28,16 @@ module color_contour(
     input [11:0] num_pixels,
     input [2:0] num_bins,
     input reset,
-    output done
+    output reg done,
+    
+    output reg [18:0] addr,
+    output reg [2:0] edge_out,
+    output reg [2:0] bin_in,
+    output reg en,
+    output reg we
     );
     
-    reg [23:0] div_out;
+    wire [23:0] div_out;
     reg [11:0] pixel_per_bin;
     reg div_ready = 0;
     div_gen_0 pixel_per(.s_axis_divisor_tdata(num_pixels), .s_axis_dividend_tdata(num_bins), .aclk (clk), .m_axis_dout_tdata(div_out));
@@ -39,14 +45,14 @@ module color_contour(
     reg [11:0] pixel_count = 0;
     reg [2:0] bin = 1;
     
-    //reading bram
-    reg [18:0]addr = 0;
-    reg [2:0] edge_out;
-    reg [2:0] bin_in;
-    reg en = 0;
-    reg we = 0;    //0 for read, 1 for write
+//    //reading bram
+//    reg [18:0]addr = 0;
+//    reg [2:0] edge_out;
+//    reg [2:0] bin_in;
+//    reg en = 0;
+//    reg we = 0;    //0 for read, 1 for write
               
-    xy_bin get_if_edge(.addra(addr), .clka(clk), .dina(bin_in), .douta(edge_out), .ena(en), .wea(we));
+//    xy_bin get_if_edge(.addra(addr), .clka(clk), .dina(bin_in), .douta(edge_out), .ena(en), .wea(we));
     
     parameter STATE_SETUP = 0;
     parameter STATE_WAIT = 1;
@@ -66,7 +72,6 @@ module color_contour(
     
     reg state;
     reg next_state;
-    reg done = 0;
     
     reg [9:0] x_prev = 0;
     reg [8:0] y_prev = 0;
