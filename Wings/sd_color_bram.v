@@ -120,9 +120,10 @@ module sd_color_bram(
                             num_pixels <= num_pixels + 1;
                             if (~first_edge) begin
                                 first_edge <= 1;
-                                addr_start <= bram_addr;
-                                x_start <= x_curr;
+                                addr_start <= bram_addr+1;
+                                x_start <= x_curr+1;
                                 y_start <= y_curr;
+                                bin_in <= 3'b011;
 //                                total_pixel_count <= bram_addr;
                                 
                             end

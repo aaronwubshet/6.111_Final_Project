@@ -241,7 +241,7 @@ module color_contour(
                         done <= 1;
                     end
                     else begin
-                        if (edge_out != 0) begin
+                        if (edge_out != 3'b000) begin
                             //update our memory of current and past pixels
                             x_prev <= x_curr;
                             y_prev <= y_curr;

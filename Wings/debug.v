@@ -40,6 +40,9 @@ module debug(
     output[15:0] LED,
     output[7:0] SEG,  // segments A-G (0-6), DP (7)
     output[7:0] AN    // Display 0-7
+    
+//    output SD_DONE,
+//    output BRAM_DONE
 
     );
     
@@ -114,20 +117,34 @@ module debug(
     wire [2:0] xy_bin_in;
     wire xy_bin_we;    //0 for read, 1 for write
     
-    xy_bin get_if_edge(
-        .addra(bram_addr), 
-        .clka(clk_100mhz), 
-        .dina(xy_bin_in), 
-        .douta(xy_edge_out), 
-        .wea(xy_bin_we)
+    wire [18:0] bram_addr_b = 0;
+    wire [2:0] xy_edge_out_b;
+    wire [2:0] xy_bin_in_b = 0;
+    wire xy_bin_we_b = 0;    //0 for read, 1 for write
+
+    xy_bin xy_bram (
+      .clka(clk_100mhz),    // input wire clka
+      .wea(xy_bin_we),      // input wire [0 : 0] wea
+      .addra(bram_addr),  // input wire [18 : 0] addra
+      .dina(xy_bin_in),    // input wire [2 : 0] dina
+      .douta(xy_edge_out),  // output wire [2 : 0] douta
+      .clkb(clk_100mhz),    // input wire clkb
+      .web(xy_bin_we_b),      // input wire [0 : 0] web
+      .addrb(bram_addr_b),  // input wire [18 : 0] addrb
+      .dinb(xy_bin_in_b),    // input wire [2 : 0] dinb
+      .doutb(xy_edge_out_b)  // output wire [2 : 0] doutb
     );
     
+
     //LOGIC FOR BRAM INPUTS
     //first reset (one clock_cycle, with push?) --> sd_color_bram --> done signal --> color_contour --> done signal --> image
 
     assign bram_addr = ~done_sd_color_bram ? sd_color_bram_addr: ~color_contour_done ? color_contour_bram_addr : vga_bram_addr;
     assign xy_bin_in = ~done_sd_color_bram ? sd_color_xy_bin_in: color_contour_xy_bin_in;
     assign xy_bin_we = ~done_sd_color_bram ? sd_color_xy_bin_we: ~color_contour_done ? color_contour_xy_bin_we : 0;
+    
+//    assign SD_DONE = done_sd_color_bram;
+//    assign BRAM_DONE = color_contour_done;
     
     
     //MODULE TO GET EDGE FROM SD CARD TO BRAM
@@ -141,8 +158,7 @@ module debug(
     wire [2:0] sd_color_xy_bin_in;
     
     wire sd_color_xy_bin_en; //not necessary
-    wire sd_color_xy_bin_we;    //not necessary
-        
+    wire sd_color_xy_bin_we;    //not necessary       
     
     
     assign reset_sd_color_bram = BTNR;

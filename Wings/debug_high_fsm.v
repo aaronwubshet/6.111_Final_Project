@@ -3,6 +3,27 @@
 // Company: 
 // Engineer: 
 // 
+// Create Date: 11/17/2017 10:36:00 AM
+// Design Name: 
+// Module Name: debug_high_fsm
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
 // Create Date: 11/17/2017 02:26:36 AM
 // Design Name: 
 // Module Name: debug_high_fsm
@@ -68,10 +89,7 @@ module debug_high_fsm(
         else begin
             case (state)
                 WAIT_BEGINNING: begin 
-                    reset_sd_color_bram <= 0;
-                    color_contour_reset <= 0;
-                    vga_start <= 0;
-                
+                                   
                 
                     if (reset) begin
                         reset_sd_color_bram <= 1;
@@ -80,6 +98,11 @@ module debug_high_fsm(
                         bram_addr <= sd_color_bram_addr;
                         xy_bin_in <= sd_color_xy_bin_in;
                         xy_bin_we <= 1;
+                    end
+                    else begin
+                        reset_sd_color_bram <= 0;
+                        color_contour_reset <= 0;
+                        vga_start <= 0;
                     end
                 
                 end
@@ -126,7 +149,6 @@ module debug_high_fsm(
                 if (BTNR) begin
                     reset_sd_color_bram <= 1;
                     state <= SD_COLOR_BRAM;
-
                     bram_addr <= sd_color_bram_addr;
                     xy_bin_in <= sd_color_xy_bin_in;
                     xy_bin_en <= sd_color_xy_bin_en;
@@ -139,7 +161,6 @@ module debug_high_fsm(
                 if (done_sd_color_bram) begin
 //                    color_contour_reset <= 1;
                     state <= COLOR_CONTOUR;
-
                     
                     bram_addr <= color_contour_bram_addr;
                     xy_bin_in <= color_contour_xy_bin_in;
@@ -171,4 +192,4 @@ module debug_high_fsm(
             end
                     endcase*/
         end
-    endmodule
+endmodule
