@@ -96,49 +96,47 @@ module debug(
        
        
        sd_controller sd_read_write (
-           .cs (SD_DAT[3]), // output: Connect to SD_DAT[3].
-           .mosi (SD_CMD), //output mosi, // output: Connect to SD_CMD.
-           .miso (SD_DAT[0]), //input miso, // Connect to SD_DAT[0].
-           .sclk (SD_SCK), //output sclk, // Connect to SD_SCK.
-                       // For SPI mode, SD_DAT[2] and SD_DAT[1] should be held HIGH. 
-                       // SD_RESET should be held LOW.
-       
-           .rd (1), //input rd,   // Read-enable. When [ready] is HIGH, asseting [rd] will 
-                       // begin a 512-byte READ operation at [address]. 
-                       // [byte_available] will transition HIGH as a new byte has been
-                       // read from the SD card. The byte is presented on [dout].
-           .dout (sd_read), // output reg [7:0] dout, // Data output for READ operation.
-           .byte_available (sd_read_available), //output reg byte_available, // A new byte has been presented on [dout].
-       
-           .wr(0), //input wr,   // Write-enable. When [ready] is HIGH, asserting [wr] will
-                       // begin a 512-byte WRITE operation at [address].
-                       // [ready_for_next_byte] will transition HIGH to request that
-                       // the next byte to be written should be presentaed on [din].
-           .din(sd_write), //input [7:0] din, // Data input for WRITE operation.
-           .ready_for_next_byte (sd_write_available), //output reg ready_for_next_byte, // A new byte should be presented on [din].
-       
-           .reset(sd_reset), //input reset, // Resets controller on assertion.
-           .ready (sd_ready), //output ready, // HIGH if the SD card is ready for a read or write operation.
-           .address(sd_addr), //input [31:0] address,   // Memory address for read/write operation. This MUST 
-                                   // be a multiple of 512 bytes, due to SD sectoring.
-           .clk(clk_25mhz), //input clk,  // 25 MHz clock.
-           .status(sd_status) //output [4:0] status // For debug purposes: Current state of controller.
+           .cs (SD_DAT[3]), 
+           .mosi (SD_CMD), 
+           .miso (SD_DAT[0]), 
+           .sclk (SD_SCK),        
+           .rd (1), //input rd. The byte is presented on [dout].
+           .dout (sd_read), // output reg [7:0] dout for READ operation.
+           .byte_available (sd_read_available), // A new byte has been presented on [dout].
+           .wr(0), //input wr. The next byte to be written should be presentaed on [din].
+           .din(sd_write), // Data input for WRITE operation.
+           .ready_for_next_byte (sd_write_available), // A new byte should be presented on [din].       
+           .reset(sd_reset), // input Resets controller on assertion.
+           .ready (sd_ready), //output HIGH if the SD card is ready for a read or write operation.
+           .address(sd_addr), //input [31:0] addres
+           .clk(clk_25mhz), // 25 MHz clock.
+           .status(sd_status) //output [4:0] status: Current state of controller.
        );
        
        wire [18:0] bram_addr;
        wire [2:0] xy_edge_out;
        wire [2:0] xy_bin_in;
-       wire xy_bin_en;
        wire xy_bin_we;    //0 for read, 1 for write
        
-       xy_bin get_if_edge(.addra(bram_addr), .clka(clk_100mhz), .dina(xy_bin_in), .douta(xy_edge_out), .ena(1), .wea(xy_bin_we));
+        xy_bin get_if_edge(
+            .addra(bram_addr), 
+            .clka(clk_100mhz), 
+            .dina(xy_bin_in), 
+            .douta(xy_edge_out), 
+            .wea(xy_bin_we)
+        );
        
        wire [9:0] x_first_edge;
-           wire [8:0] y_first_edge;
-           wire [18:0] addr_first_edge;
-           wire [11:0] num_edge_pixels;
+       wire [8:0] y_first_edge;
+       wire [18:0] addr_first_edge;
+       wire [11:0] num_edge_pixels;
        
-      assign reset_sd_color_bram = BTNR;
+        assign reset_sd_color_bram = BTNR;
+        wire [18:0] sd_color_bram_addr;
+        wire [2:0] sd_color_xy_bin_in;
+        
+        wire sd_color_xy_bin_en; //not necessary
+        wire sd_color_xy_bin_we;    //not necessary
        sd_color_bram to_xy_bram(
            .clk(clk_100mhz),
            .sd_read(sd_read),
@@ -149,11 +147,11 @@ module debug(
 //           .sd_we(sd_we),
            .done(done_sd_color_bram),
            
-           .bram_addr(bram_addr),
+           .bram_addr(sd_color_bram_addr),
            .edge_out(xy_edge_out),
-           .bin_in(xy_bin_in),
-           .en(xy_bin_en),
-           .we(xy_bin_we),
+           .bin_in(sd_color_xy_bin_in),
+           .en(sd_color_xy_bin_en),
+           .we(sd_color_xy_bin_we),
            
            .x_start(x_first_edge),
            .y_start(y_first_edge),
@@ -185,11 +183,11 @@ module debug(
            wire color_contour_xy_bin_we;    //0 for read, 1 for write
            
                
-           wire [2:0] state;
-           high_fsm fsm(
+           wire [2:0] fsm_state;
+           dubug_high_fsm fsm(
                .clk (clk_100mhz),
            
-               .BTNR(BTNR),
+               .reset(BTNR),
                .reset_sd_color_bram(reset_sd_color_bram),
                .done_sd_color_bram(done_sd_color_bram),
                
@@ -200,27 +198,20 @@ module debug(
                
                .bram_addr(bram_addr),
                .xy_bin_in(xy_bin_in),
-               .xy_bin_en(xy_bin_en),
                .xy_bin_we(xy_bin_we),
                
                
                .sd_color_bram_addr(sd_color_bram_addr),
                .sd_color_xy_bin_in(sd_color_xy_bin_in),
-               .sd_color_xy_bin_en(sd_color_xy_bin_en),
-               .sd_color_xy_bin_we(sd_color_xy_bin_we),
                
-               .color_contour_bram_addr(color_contour_bram_addr),
-               .color_contour_xy_bin_in(color_contour_xy_bin_in),
-               .color_contour_xy_bin_en(color_contour_xy_bin_en),
-               .color_contour_xy_bin_we(color_contour_xy_bin_we)   ,
+//               .color_contour_bram_addr(color_contour_bram_addr),
+//               .color_contour_xy_bin_in(color_contour_xy_bin_in),
+//               .color_contour_xy_bin_we(color_contour_xy_bin_we)   ,
                
                .vga_bram_addr(vga_bram_addr),
-               .state_out(state)
+               .state_out(fsm_state)
                
                );
-       
-
-
-     
+          
        
    endmodule
