@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1510984740">
+  <File Type="RDS-PROPCONSTRS" Name="final_project_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="final_project.tcl"/>
+  <File Type="RDS-RDS" Name="final_project.vds"/>
+  <File Type="RDS-UTIL" Name="final_project_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="final_project_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="final_project.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="final_project_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="final_project_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/New folder/sd_color_bram.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/New folder/sd_color_bram.v"/>
+        <Attr Name="ImportTime" Val="1510973731"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/New folder/color_contour.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/New folder/color_contour.v"/>
+        <Attr Name="ImportTime" Val="1510973731"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clk_manager/clk_manager.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/New folder/debug.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/New folder/debug.v"/>
+        <Attr Name="ImportTime" Val="1510973731"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/JW_BRAM_COLOR/JW_BRAM_COLOR.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Julian/Color_output.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/Color_output.v"/>
+        <Attr Name="ImportTime" Val="1510882913"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Common/sd_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/sd_controller.v"/>
+        <Attr Name="ImportTime" Val="1510499576"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Common/display_8hex.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/display_8hex.v"/>
+        <Attr Name="ImportTime" Val="1509987322"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Common/debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/debounce.v"/>
+        <Attr Name="ImportTime" Val="1509987317"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Common/vga.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/vga.v"/>
+        <Attr Name="ImportTime" Val="1510975562"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Common/final_project.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/final_project.v"/>
+        <Attr Name="ImportTime" Val="1510939048"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_PWM.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Aaron/verilog/audio_PWM.v"/>
+        <Attr Name="ImportTime" Val="1510789140"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Aaron/verilog/filter_control.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Aaron/verilog/filter_control.v"/>
+        <Attr Name="ImportTime" Val="1510939068"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Aaron/verilog/audio_processing.v"/>
+        <Attr Name="ImportTime" Val="1510939080"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Julian/FFT_energy.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/FFT_energy.v"/>
+        <Attr Name="ImportTime" Val="1510882913"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="final_project"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Common/Constraints_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/Constraints_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1510497833"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
