@@ -22,6 +22,7 @@
 
 module Color_output(
     input clock,
+    input ready,
     input [9:0] hcount,
     input [9:0] vcount,
     input  [2:0] data,
@@ -30,27 +31,51 @@ module Color_output(
     output reg [11:0] rgb
     );
     
-//reg [2:0] data_reg;
+/*important register flags*/
+reg start_out;
+reg start;
 
     always@(posedge clock) begin
-    
-        /*register data value */ 
-        //data_reg <= data; 
-        
-        /*calculate address to index into BRAM */
-        
-        if(vcount == 479 & hcount == 486) begin     //Look into this! 
-            address <= 19'd0;                       //check if were at the end of a frame and need to wrap around 
-        end 
-        
-        else begin 
-        address <= vcount*640 + hcount + 3;          //include offset to account for registered values
+    /*check that we can start reading from BRAM*/
+        if(ready) begin 
+            start <= 1'b1;             
         end
         
-        /*set color value according to data value*/
+        else if (start) begin
         
-        case(data) 
+            /*wait for end of current frame to start changing address*/
+            if(vcount == 523 && hcount > 795) begin
+                address <= 3 - (799 - hcount);
+                start_out <= 1'b1;                  //now can start!   
+            end
+        end
+        
+        /*start forecasting addresses for incoming hcount,vcount*/
+        if(start_out) begin
+        
+            /*check if we need to wrap around */
+            if(vcount == 523 && hcount > 795) begin
+                address <= 3 - (799 - hcount);
+        
+            end
             
+            /*normal outputting */
+            else if(vcount <= 479 && hcount <636) begin
+                address <= address + 1;
+            end
+            
+            /*forecasting outside of display screen*/ 
+            else if((vcount <= 479 && hcount > 795)) begin 
+                address <= address + 1;
+            end
+        end
+        
+           
+                                 
+      /*set color value according to data value*/
+                                
+        case(data) 
+                                    
             3'b001: rgb <= FFT_color[11:0];
             3'b010: rgb <= FFT_color[23:12];
             3'b011: rgb <= FFT_color[35:24];
@@ -59,9 +84,10 @@ module Color_output(
             3'b110: rgb <= FFT_color[71:60];
             3'b111: rgb <= FFT_color[83:72];
             3'b000: rgb <= 12'd0;    
-    
-    
-        endcase   
+                            
+                            
+        endcase
+               
     end
 
 endmodule
