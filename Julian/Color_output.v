@@ -65,7 +65,7 @@ reg start;
             end
             
             /*forecasting outside of display screen*/ 
-            else if((vcount <= 479 && hcount > 795)) begin 
+            else if((vcount < 479 && hcount > 795)) begin 
                 address <= address + 1;
             end
         end
