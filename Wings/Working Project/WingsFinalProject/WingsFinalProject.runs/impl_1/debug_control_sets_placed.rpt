@@ -1,0 +1,78 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Fri Nov 24 17:15:36 2017
+| Host         : Wings-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file debug_control_sets_placed.rpt
+| Design       : debug
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |    94 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             266 |           91 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              20 |            6 |
+| Yes          | No                    | No                     |             105 |           39 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             107 |           30 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+------------------------------------------+---------------------------------------+------------------+----------------+
+|      Clock Signal     |               Enable Signal              |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-----------------------+------------------------------------------+---------------------------------------+------------------+----------------+
+|  clocks/inst/clk_out2 | sd_read_write/cs_i_1_n_0                 |                                       |                1 |              1 |
+|  clocks/inst/clk_out2 | sd_read_write/recv_data[0]_i_1_n_0       |                                       |                1 |              1 |
+|  clocks/inst/clk_out2 |                                          | display/strobe[5]_i_1_n_0             |                1 |              4 |
+|  clocks/inst/clk_out2 |                                          | display/counter_reg[12]               |                2 |              4 |
+|  clocks/inst/clk_out2 | sd_read_write/bit_counter_reg[7]_i_1_n_0 | sd_read_write/bit_counter[9]_i_1_n_0  |                1 |              4 |
+|  clocks/inst/clk_out2 | sd_read_write/cmd_out[47]_i_1_n_0        | sd_read_write/cmd_out[6]_i_1_n_0      |                1 |              4 |
+|  clocks/inst/clk_out2 | sd_read_write/return_state[4]_i_1_n_0    |                                       |                3 |              5 |
+|  clocks/inst/clk_out2 | sd_read_write/state[4]_i_1_n_0           |                                       |                2 |              5 |
+|  clocks/inst/clk_out2 | sd_read_write/bit_counter_reg[7]_i_1_n_0 |                                       |                3 |              6 |
+|  clocks/inst/clk_out2 | sd_read_write/byte_counter[8]_i_2_n_0    | sd_read_write/byte_counter[8]_i_1_n_0 |                2 |              7 |
+|  clocks/inst/clk_out2 | sd_read_write/data_sig[7]_i_2_n_0        | sd_read_write/data_sig[7]_i_1_n_0     |                1 |              7 |
+|  clocks/inst/clk_out1 | get_contour/addr_curr[18]_i_2_n_0        | get_contour/addr_curr[14]_i_1_n_0     |                3 |              8 |
+|  clocks/inst/clk_out1 | get_contour/addr[14]_i_1_n_0             |                                       |                4 |              9 |
+|  clocks/inst/clk_out1 | get_contour/addr[14]_i_1_n_0             | get_contour/addr[18]_i_1_n_0          |                5 |             10 |
+|  clocks/inst/clk_out1 | get_contour/addr_curr[18]_i_2_n_0        | get_contour/addr_curr[18]_i_1_n_0     |                5 |             11 |
+|  clocks/inst/clk_out2 |                                          | video_playback_1/hreset               |                3 |             12 |
+|  clocks/inst/clk_out2 | video_playback_1/hreset                  | video_playback_1/vcount0              |                3 |             12 |
+|  clocks/inst/clk_out1 | get_contour/addr_curr[18]_i_2_n_0        | get_contour/pixel_count[11]_i_1_n_0   |                4 |             12 |
+|  clocks/inst/clk_out1 | get_contour/pixel_per_bin[11]_i_1_n_0    |                                       |                4 |             12 |
+|  clocks/inst/clk_out1 | get_contour/addr_prev[18]_i_1_n_0        |                                       |                7 |             19 |
+|  clocks/inst/clk_out2 | sd_read_write/cmd_out[47]_i_1_n_0        |                                       |                7 |             20 |
+|  clocks/inst/clk_out2 |                                          |                                       |               15 |             27 |
+|  clocks/inst/clk_out2 | sd_read_write/boot_counter[0]_i_1_n_0    |                                       |                7 |             27 |
+|  clocks/inst/clk_out2 | sd_read_write/cmd_out[47]_i_1_n_0        | sd_read_write/cmd_out[39]_i_1_n_0     |                5 |             32 |
+|  clocks/inst/clk_out1 |                                          |                                       |               77 |            240 |
++-----------------------+------------------------------------------+---------------------------------------+------------------+----------------+
+
+
