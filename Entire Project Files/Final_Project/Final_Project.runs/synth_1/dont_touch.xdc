@@ -3,11 +3,65 @@
 
 # XDC: imports/Common/Constraints_Master.xdc
 
+# IP: ip/filter_input_buffer/filter_input_buffer.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==filter_input_buffer || ORIG_REF_NAME==filter_input_buffer}]
+
+# Block Designs: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag || ORIG_REF_NAME==fft_mag}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_axis_register_slice_2_0 || ORIG_REF_NAME==fft_mag_axis_register_slice_2_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_c_addsub_0_0 || ORIG_REF_NAME==fft_mag_c_addsub_0_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_cordic_0_0 || ORIG_REF_NAME==fft_mag_cordic_0_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_mult_gen_0_0 || ORIG_REF_NAME==fft_mag_mult_gen_0_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_mult_gen_1_0 || ORIG_REF_NAME==fft_mag_mult_gen_1_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xfft_0_0 || ORIG_REF_NAME==fft_mag_xfft_0_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconstant_0_0 || ORIG_REF_NAME==fft_mag_xlconstant_0_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconstant_1_0 || ORIG_REF_NAME==fft_mag_xlconstant_1_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconstant_2_0 || ORIG_REF_NAME==fft_mag_xlconstant_2_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlslice_0_0 || ORIG_REF_NAME==fft_mag_xlslice_0_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlslice_1_0 || ORIG_REF_NAME==fft_mag_xlslice_1_0}]
+
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconcat_0_0 || ORIG_REF_NAME==fft_mag_xlconcat_0_0}]
+
+# IP: c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_1/fft_mag_xlconstant_2_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconstant_2_1 || ORIG_REF_NAME==fft_mag_xlconstant_2_1}]
+
+# IP: ip/bram_fft_output_buffer/bram_fft_output_buffer.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bram_fft_output_buffer || ORIG_REF_NAME==bram_fft_output_buffer}]
+
 # IP: ip/clk_manager/clk_manager.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_manager || ORIG_REF_NAME==clk_manager}]
 
-# IP: ip/JW_BRAM_COLOR/JW_BRAM_COLOR.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==JW_BRAM_COLOR || ORIG_REF_NAME==JW_BRAM_COLOR}]
+# IP: ip/xy_bin/xy_bin.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==xy_bin || ORIG_REF_NAME==xy_bin}]
+
+# XDC: ip/filter_input_buffer/filter_input_buffer_ooc.xdc
+
+# XDC: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag_ooc.xdc
+
+# XDC: ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc
 
 # XDC: ip/clk_manager/clk_manager_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_manager || ORIG_REF_NAME==clk_manager}] {/inst }]/inst ]]
@@ -17,4 +71,4 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: ip/clk_manager/clk_manager_ooc.xdc
 
-# XDC: ip/JW_BRAM_COLOR/JW_BRAM_COLOR_ooc.xdc
+# XDC: ip/xy_bin/xy_bin_ooc.xdc

@@ -40,10 +40,7 @@ module sd_color_bram(
     output reg [18:0] addr_start,
     output reg [11:0] num_pixels,
     
-    output reg [18:0] total_pixel_count,
-    
-    output reg state
-    
+    output reg [18:0] total_pixel_count    
     );
     
     parameter width = 10'd640;
@@ -53,6 +50,7 @@ module sd_color_bram(
     //    reg state;
     parameter STATE_GET_SD = 0;
     parameter STATE_SD_BRAM = 1;
+    reg state = STATE_GET_SD;
     
     reg [7:0] sd_info_for_bram;
     reg [2:0] index = 0;

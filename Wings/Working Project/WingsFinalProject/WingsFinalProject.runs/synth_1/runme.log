@@ -1,0 +1,748 @@
+
+*** Running vivado
+    with args -log debug.vds -m64 -mode batch -messageDb vivado.pb -notrace -source debug.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source debug.tcl -notrace
+Command: synth_design -top debug -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33076 
+WARNING: [Synth 8-992] color_contour_done is already implicitly declared earlier [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:253]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:45 . Memory (MB): peak = 315.141 ; gain = 108.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'debug' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:23]
+	Parameter num_bins bound to: 3'b100 
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'display_8hex' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/display_8hex.v:38]
+	Parameter bits bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/display_8hex.v:38]
+INFO: [Synth 8-638] synthesizing module 'sd_controller' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/sd_controller.v:28]
+	Parameter RST bound to: 0 - type: integer 
+	Parameter INIT bound to: 32'sb00000000000000000000000000000001 
+	Parameter CMD0 bound to: 2 - type: integer 
+	Parameter CMD55 bound to: 3 - type: integer 
+	Parameter CMD41 bound to: 4 - type: integer 
+	Parameter POLL_CMD bound to: 5 - type: integer 
+	Parameter IDLE bound to: 6 - type: integer 
+	Parameter READ_BLOCK bound to: 7 - type: integer 
+	Parameter READ_BLOCK_WAIT bound to: 8 - type: integer 
+	Parameter READ_BLOCK_DATA bound to: 9 - type: integer 
+	Parameter READ_BLOCK_CRC bound to: 10 - type: integer 
+	Parameter SEND_CMD bound to: 11 - type: integer 
+	Parameter RECEIVE_BYTE_WAIT bound to: 12 - type: integer 
+	Parameter RECEIVE_BYTE bound to: 13 - type: integer 
+	Parameter WRITE_BLOCK_CMD bound to: 14 - type: integer 
+	Parameter WRITE_BLOCK_INIT bound to: 15 - type: integer 
+	Parameter WRITE_BLOCK_DATA bound to: 16 - type: integer 
+	Parameter WRITE_BLOCK_BYTE bound to: 17 - type: integer 
+	Parameter WRITE_BLOCK_WAIT bound to: 18 - type: integer 
+	Parameter WRITE_DATA_SIZE bound to: 515 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/sd_controller.v:101]
+INFO: [Synth 8-256] done synthesizing module 'sd_controller' (3#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/sd_controller.v:28]
+INFO: [Synth 8-638] synthesizing module 'xy_bin' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/realtime/xy_bin_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'xy_bin' (4#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/realtime/xy_bin_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'edge_to_display' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/edge_to_display.v:124]
+INFO: [Synth 8-256] done synthesizing module 'edge_to_display' (5#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/edge_to_display.v:124]
+INFO: [Synth 8-638] synthesizing module 'color_contour' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/color_contour.v:22]
+	Parameter STATE_SETUP bound to: 0 - type: integer 
+	Parameter STATE_WAIT bound to: 1 - type: integer 
+	Parameter STATE_EXPLORE bound to: 2 - type: integer 
+	Parameter STATE_IS_IT_EDGE bound to: 3 - type: integer 
+	Parameter STATE_WAIT_TWO bound to: 4 - type: integer 
+	Parameter STATE_DONE bound to: 5 - type: integer 
+	Parameter STATE_DONE_PREMATURE bound to: 6 - type: integer 
+	Parameter DIR_GET_RIGHT bound to: 0 - type: integer 
+	Parameter DIR_GET_DOWNRIGHT bound to: 1 - type: integer 
+	Parameter DIR_GET_DOWN bound to: 2 - type: integer 
+	Parameter DIR_GET_DOWNLEFT bound to: 3 - type: integer 
+	Parameter DIR_GET_LEFT bound to: 4 - type: integer 
+	Parameter DIR_GET_UPLEFT bound to: 5 - type: integer 
+	Parameter DIR_GET_UP bound to: 6 - type: integer 
+	Parameter DIR_GET_UPRIGHT bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (6#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/color_contour.v:108]
+INFO: [Synth 8-256] done synthesizing module 'color_contour' (7#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/color_contour.v:22]
+WARNING: [Synth 8-3848] Net SD_CD in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:27]
+WARNING: [Synth 8-3848] Net LED16_B in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:38]
+WARNING: [Synth 8-3848] Net LED16_G in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:38]
+WARNING: [Synth 8-3848] Net LED16_R in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:38]
+WARNING: [Synth 8-3848] Net LED17_B in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:39]
+WARNING: [Synth 8-3848] Net LED17_G in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:39]
+WARNING: [Synth 8-3848] Net LED17_R in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:39]
+WARNING: [Synth 8-3848] Net sd_write in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:79]
+WARNING: [Synth 8-3848] Net sd_addr in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:86]
+WARNING: [Synth 8-3848] Net color_contour_reset in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:252]
+WARNING: [Synth 8-3848] Net vga_bram_addr in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:211]
+WARNING: [Synth 8-3848] Net xy_bin_in_b in module/entity debug does not have driver. [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:121]
+INFO: [Synth 8-256] done synthesizing module 'debug' (8#1) [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:23]
+WARNING: [Synth 8-3917] design debug has port SD_RESET driven by constant 0
+WARNING: [Synth 8-3917] design debug has port LED[0] driven by constant 1
+WARNING: [Synth 8-3917] design debug has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design debug has port SD_DAT[2] driven by constant 1
+WARNING: [Synth 8-3917] design debug has port SD_DAT[1] driven by constant 1
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[9]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[8]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[7]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[6]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[5]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[4]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[3]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[2]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[1]
+WARNING: [Synth 8-3331] design color_contour has unconnected port x_start[0]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[8]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[7]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[6]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[5]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[4]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[3]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[2]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[1]
+WARNING: [Synth 8-3331] design color_contour has unconnected port y_start[0]
+WARNING: [Synth 8-3331] design debug has unconnected port SD_CD
+WARNING: [Synth 8-3331] design debug has unconnected port LED16_B
+WARNING: [Synth 8-3331] design debug has unconnected port LED16_G
+WARNING: [Synth 8-3331] design debug has unconnected port LED16_R
+WARNING: [Synth 8-3331] design debug has unconnected port LED17_B
+WARNING: [Synth 8-3331] design debug has unconnected port LED17_G
+WARNING: [Synth 8-3331] design debug has unconnected port LED17_R
+WARNING: [Synth 8-3331] design debug has unconnected port LED[15]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[14]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[13]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[12]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[11]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[10]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[9]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[8]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[7]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[6]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[5]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[4]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[3]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[2]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[15]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[14]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[13]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[12]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[11]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[10]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[9]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[8]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[7]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[6]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[5]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[4]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[3]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[2]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[1]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[0]
+WARNING: [Synth 8-3331] design debug has unconnected port BTNC
+WARNING: [Synth 8-3331] design debug has unconnected port BTNU
+WARNING: [Synth 8-3331] design debug has unconnected port BTNL
+WARNING: [Synth 8-3331] design debug has unconnected port BTNR
+WARNING: [Synth 8-3331] design debug has unconnected port BTND
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:49 . Memory (MB): peak = 339.859 ; gain = 132.750
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[7] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[6] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[5] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[4] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[3] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[2] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[1] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[0] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[31] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[30] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[29] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[28] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[27] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[26] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[25] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[24] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[23] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[22] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[21] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[20] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[19] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[18] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[17] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[16] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[15] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[14] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[13] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[12] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[11] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[10] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[9] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[8] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[7] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[6] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[5] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[4] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[3] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[2] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[1] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:address[0] to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:94]
+WARNING: [Synth 8-3295] tying undriven pin get_contour:reset to constant 0 [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:257]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:49 . Memory (MB): peak = 339.859 ; gain = 132.750
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clocks' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:56]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'div_gen_0' instantiated as 'get_contour/getting_pixels_per_bin' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/color_contour.v:88]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'xy_bin' instantiated as 'xy_bram' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/debug.v:124]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp/clk_wiz_0_in_context.xdc] for cell 'clocks'
+Finished Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp/clk_wiz_0_in_context.xdc] for cell 'clocks'
+Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp_2/xy_bin_in_context.xdc] for cell 'xy_bram'
+Finished Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp_2/xy_bin_in_context.xdc] for cell 'xy_bram'
+Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp_3/div_gen_0_in_context.xdc] for cell 'get_contour/getting_pixels_per_bin'
+Finished Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp_3/div_gen_0_in_context.xdc] for cell 'get_contour/getting_pixels_per_bin'
+Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/constrs_1/imports/6.111/Nexys4DDR_Master_lab4.xdc]
+Finished Parsing XDC File [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/constrs_1/imports/6.111/Nexys4DDR_Master_lab4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/constrs_1/imports/6.111/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/debug_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/debug_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 652.223 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xy_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can result in different synthesis results.
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'get_contour/getting_pixels_per_bin' at clock pin 'aclk' is different from the actual clock period '10.000', this can result in different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:02 ; elapsed = 00:01:47 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:02 ; elapsed = 00:01:47 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.runs/synth_1/.Xil/Vivado-7068-Wings-PC/dcp/clk_wiz_0_in_context.xdc, line 5).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:47 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "boot_counter" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "byte_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ready_for_next_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bit_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "return_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "return_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'dividend_ready_reg' into 'divisor_ready_reg' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/color_contour.v:92]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/color_contour.v:146]
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:56 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     19 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               56 Bit    Registers := 1     
+	               19 Bit    Registers := 3     
+	               12 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 7     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   8 Input     56 Bit        Muxes := 1     
+	   8 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 2     
+	   8 Input     19 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 2     
+	   8 Input     12 Bit        Muxes := 1     
+	  20 Input     10 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 8     
+	  20 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  20 Input      3 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 2     
+	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  20 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 14    
+	  20 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debug 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+Module display_8hex 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 8     
+Module sd_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               56 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   8 Input     56 Bit        Muxes := 1     
+	  20 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  20 Input      3 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 1     
+	  20 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 12    
+	  20 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 2     
+Module edge_to_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+Module color_contour 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     19 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               19 Bit    Registers := 3     
+	               12 Bit    Registers := 3     
+	                3 Bit    Registers := 7     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     20 Bit        Muxes := 1     
+	   8 Input     19 Bit        Muxes := 3     
+	   8 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:58 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'video_playback_1/vcount_reg[11:0]' into 'video_playback_1/vcount_reg[11:0]' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/edge_to_display.v:172]
+INFO: [Synth 8-4471] merging register 'video_playback_1/hcount_reg[11:0]' into 'video_playback_1/hcount_reg[11:0]' [C:/Users/Wings/Desktop/WingsFinalProject/WingsFinalProject.srcs/sources_1/imports/Wings/edge_to_display.v:164]
+INFO: [Synth 8-5546] ROM "sd_read_write/bit_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_read_write/byte_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_read_write/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_read_write/return_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_read_write/return_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_read_write/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "sd_read_write/boot_counter" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sd_read_write/state" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "sd_read_write/ready_for_next_byte" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP video_playback_1/memory_addr0, operation Mode is: (C' or 0)+(A2*(B:0x280) or 0).
+DSP Report: register video_playback_1/vcount_reg is absorbed into DSP video_playback_1/memory_addr0.
+DSP Report: register video_playback_1/hcount_reg is absorbed into DSP video_playback_1/memory_addr0.
+DSP Report: operator video_playback_1/memory_addr0 is absorbed into DSP video_playback_1/memory_addr0.
+DSP Report: operator video_playback_1/memory_addr1 is absorbed into DSP video_playback_1/memory_addr0.
+WARNING: [Synth 8-3917] design debug has port SD_RESET driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_R[3] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_R[2] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_R[1] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_R[0] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_G[3] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_G[2] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_G[1] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port VGA_G[0] driven by constant 0
+WARNING: [Synth 8-3917] design debug has port LED[0] driven by constant 1
+WARNING: [Synth 8-3917] design debug has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design debug has port SD_DAT[2] driven by constant 1
+WARNING: [Synth 8-3917] design debug has port SD_DAT[1] driven by constant 1
+WARNING: [Synth 8-3331] design debug has unconnected port SD_CD
+WARNING: [Synth 8-3331] design debug has unconnected port LED16_B
+WARNING: [Synth 8-3331] design debug has unconnected port LED16_G
+WARNING: [Synth 8-3331] design debug has unconnected port LED16_R
+WARNING: [Synth 8-3331] design debug has unconnected port LED17_B
+WARNING: [Synth 8-3331] design debug has unconnected port LED17_G
+WARNING: [Synth 8-3331] design debug has unconnected port LED17_R
+WARNING: [Synth 8-3331] design debug has unconnected port LED[15]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[14]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[13]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[12]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[11]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[10]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[9]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[8]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[7]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[6]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[5]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[4]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[3]
+WARNING: [Synth 8-3331] design debug has unconnected port LED[2]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[15]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[14]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[13]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[12]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[11]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[10]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[9]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[8]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[7]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[6]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[5]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[4]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[3]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[2]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[1]
+WARNING: [Synth 8-3331] design debug has unconnected port SW[0]
+WARNING: [Synth 8-3331] design debug has unconnected port BTNC
+WARNING: [Synth 8-3331] design debug has unconnected port BTNU
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:02:02 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:10 ; elapsed = 00:02:02 . Memory (MB): peak = 652.223 ; gain = 445.113
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|debug       | (C' or 0)+(A2*(B:0x280) or 0) | 12     | 10     | 12     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[0]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[1]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[2]' (FDE) to 'get_contour/divisor_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[3]' (FDE) to 'get_contour/divisor_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[4]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[5]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[6]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[7]' (FDE) to 'get_contour/divisor_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[8]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[9]' (FDE) to 'get_contour/divisor_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[10]' (FDE) to 'get_contour/divisor_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'get_contour/dividend_in_reg[11]' (FDE) to 'get_contour/divisor_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'get_contour/divisor_in_reg[0]' (FDE) to 'get_contour/divisor_in_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\get_contour/divisor_in_reg[1] )
+INFO: [Synth 8-3886] merging instance 'get_contour/divisor_in_reg[2]' (FDE) to 'get_contour/divisor_ready_reg'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\get_contour/divisor_ready_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\get_contour/next_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\get_contour/next_state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'display/seg_reg[0]' (FD) to 'display/seg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/seg_reg[1]' (FD) to 'display/seg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/seg_reg[2]' (FD) to 'display/seg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/seg_reg[3]' (FD) to 'display/seg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/seg_reg[4]' (FD) to 'display/seg_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/seg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/seg_reg[6] )
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[6]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[5]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[4]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[3]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[2]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[1]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (display/seg_reg[0]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[7]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[6]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[5]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[4]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[3]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[2]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (sd_read_write/recv_data_reg[1]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/next_state_reg[2]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/next_state_reg[1]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/divisor_ready_reg) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/divisor_in_reg[2]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[0]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[1]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/divisor_in_reg[1]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[2]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[3]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[4]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[5]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[6]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[7]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[8]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[9]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[10]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/dividend_in_reg[11]) is unused and will be removed from module debug.
+WARNING: [Synth 8-3332] Sequential element (get_contour/divisor_in_reg[0]) is unused and will be removed from module debug.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:02:09 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:02:09 . Memory (MB): peak = 652.223 ; gain = 445.113
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clocks/clk_out1' to pin 'clocks/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clocks/clk_out2' to pin 'clocks/bbstub_clk_out2/O'
+INFO: [Synth 8-5820] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:16 ; elapsed = 00:03:46 . Memory (MB): peak = 652.223 ; gain = 445.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:03:50 . Memory (MB): peak = 674.855 ; gain = 467.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:22 ; elapsed = 00:03:53 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:02:22 ; elapsed = 00:03:53 . Memory (MB): peak = 682.023 ; gain = 474.914
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:22 ; elapsed = 00:03:53 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module xy_bram has unconnected pin dinb[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module xy_bram has unconnected pin dinb[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module xy_bram has unconnected pin dinb[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:24 ; elapsed = 00:03:55 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:24 ; elapsed = 00:03:55 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:25 ; elapsed = 00:03:56 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:25 ; elapsed = 00:03:56 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:25 ; elapsed = 00:03:56 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:25 ; elapsed = 00:03:56 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |xy_bin        |         1|
+|3     |div_gen_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |div_gen_0 |     1|
+|3     |xy_bin    |     1|
+|4     |CARRY4    |   102|
+|5     |DSP48E1   |     1|
+|6     |LUT1      |   300|
+|7     |LUT2      |    89|
+|8     |LUT3      |    42|
+|9     |LUT4      |    31|
+|10    |LUT5      |    50|
+|11    |LUT6      |   136|
+|12    |MUXF7     |     1|
+|13    |XORCY     |     4|
+|14    |FDRE      |   244|
+|15    |FDSE      |    27|
+|16    |IBUF      |     1|
+|17    |OBUF      |    38|
+|18    |OBUFT     |    21|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------+----------------+------+
+|      |Instance           |Module          |Cells |
++------+-------------------+----------------+------+
+|1     |top                |                |  1121|
+|2     |  display          |display_8hex    |    45|
+|3     |  get_contour      |color_contour   |   565|
+|4     |  sd_read_write    |sd_controller   |   331|
+|5     |  video_playback_1 |edge_to_display |   111|
++------+-------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:25 ; elapsed = 00:03:56 . Memory (MB): peak = 682.023 ; gain = 474.914
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 87 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:03:00 . Memory (MB): peak = 682.023 ; gain = 134.844
+Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:03:57 . Memory (MB): peak = 682.023 ; gain = 474.914
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+82 Infos, 209 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:21 ; elapsed = 00:03:42 . Memory (MB): peak = 682.023 ; gain = 451.059
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 682.023 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 24 17:09:16 2017...
