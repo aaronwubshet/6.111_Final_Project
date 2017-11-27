@@ -1,7 +1,7 @@
-set_property SRC_FILE_INFO {cfile:{c:/Users/Aaron Wubshet/Desktop/new_folder/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc} rfile:../../../Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc id:1 order:EARLY scoped_inst:clocker/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:{C:/Users/Aaron Wubshet/Desktop/new_folder/Final_Project/Final_Project.srcs/constrs_1/imports/Common/Constraints_Master.xdc} rfile:../../../Final_Project.srcs/constrs_1/imports/Common/Constraints_Master.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc} rfile:../../../Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc id:1 order:EARLY scoped_inst:clocker/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/constrs_1/imports/Common/Constraints_Master.xdc} rfile:../../../Final_Project.srcs/constrs_1/imports/Common/Constraints_Master.xdc id:2} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.10000000000000001
 set_property src_info {type:XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:2 line:13 export:INPUT save:INPUT read:READ} [current_design]
@@ -122,22 +122,6 @@ set_property src_info {type:XDC file:2 line:87 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { BTNR }]; #IO_L10N_T1_D15_14 Sch=btnr
 set_property src_info {type:XDC file:2 line:88 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS33 } [get_ports { BTND }]; #IO_L9N_T1_DQS_D13_14 Sch=btnd
-set_property src_info {type:XDC file:2 line:96 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { JA[0] }]; #IO_L20N_T3_A19_15 Sch=ja[1]
-set_property src_info {type:XDC file:2 line:97 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { JA[1] }]; #IO_L21N_T3_DQS_A18_15 Sch=ja[2]
-set_property src_info {type:XDC file:2 line:98 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { JA[2] }]; #IO_L21P_T3_DQS_15 Sch=ja[3]
-set_property src_info {type:XDC file:2 line:99 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { JA[3] }]; #IO_L18N_T2_A23_15 Sch=ja[4]
-set_property src_info {type:XDC file:2 line:100 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN D17   IOSTANDARD LVCMOS33 } [get_ports { JA[4] }]; #IO_L16N_T2_A27_15 Sch=ja[7]
-set_property src_info {type:XDC file:2 line:101 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN E17   IOSTANDARD LVCMOS33 } [get_ports { JA[5] }]; #IO_L16P_T2_A28_15 Sch=ja[8]
-set_property src_info {type:XDC file:2 line:102 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN F18   IOSTANDARD LVCMOS33 } [get_ports { JA[6] }]; #IO_L22N_T3_A16_15 Sch=ja[9]
-set_property src_info {type:XDC file:2 line:103 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN G18   IOSTANDARD LVCMOS33 } [get_ports { JA[7] }]; #IO_L22P_T3_A17_15 Sch=ja[10]
 set_property src_info {type:XDC file:2 line:156 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A3    IOSTANDARD LVCMOS33 } [get_ports { VGA_R[0] }]; #IO_L8N_T1_AD14N_35 Sch=vga_r[0]
 set_property src_info {type:XDC file:2 line:157 export:INPUT save:INPUT read:READ} [current_design]

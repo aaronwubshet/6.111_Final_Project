@@ -22,56 +22,48 @@
 
 module filter_control(
     input clock,
+    input reset,
     input [1:0] switch,
     input ready,
-    input audio_in,
-    output audio_out,
+    input state,
+    input [7:0] audio_in,
+    output [7:0] audio_out,
+    output signed [7:0] filter_to_fft,
     output done,
-    output all_filters_ready
+    output internal_ready
     );
-    //filter is ready to accept data
-    wire hpf_ready;
-    wire lpf_ready;
-    wire bpf_ready;
-    assign all_filters_ready = hpf_ready && lpf_ready && bpf_ready;
-
-    //filter selection via switch
-    wire [3:0] data_in_valid;
-    assign data_in_valid = switch[0] ? (switch[1] ? 4'b1000: 4'b1000) : (switch[1] ? 4'b0010: 4'b0001);
-
-    //user is ready to input data     input to filter
-    wire input_data;
-    assign input_data = all_filters_ready ? audio_in: 0;
-
-    fir_compiler_high_pass hpf (
-      .aclk(clock),                              // input wire aclk
-      .s_axis_data_tvalid(data_in_valid[0]),  // input wire s_axis_data_tvalid
-      .s_axis_data_tready(hpf_ready),           // output wire s_axis_data_tready
-      .s_axis_data_tdata(input_data),    // input wire [15 : 0] s_axis_data_tdata
-      .m_axis_data_tvalid(m_axis_data_tvalid),  // output wire m_axis_data_tvalid
-      .m_axis_data_tready(m_axis_data_tready),  // input wire m_axis_data_tready
-      .m_axis_data_tdata(m_axis_data_tdata)    // output wire [31 : 0] m_axis_data_tdata
-    );
-    fir_compiler_bandpass bpf (
-      .aclk(clock),                              // input wire aclk
-      .s_axis_data_tvalid(data_in_valid[1]),  // input wire s_axis_data_tvalid
-      .s_axis_data_tready(bpf_ready),  // output wire s_axis_data_tready
-      .s_axis_data_tdata(input_data),    // input wire [15 : 0] s_axis_data_tdata
-      .m_axis_data_tvalid(m_axis_data_tvalid),  // output wire m_axis_data_tvalid
-      .m_axis_data_tready(m_axis_data_tready),  // input wire m_axis_data_tready
-      .m_axis_data_tdata(m_axis_data_tdata)    // output wire [31 : 0] m_axis_data_tdata
-    );
-    fir_compiler_low_pass lpf (
-      .aclk(clock),                              // input wire aclk
-      .s_axis_data_tvalid(data_in_valid[2]),  // input wire s_axis_data_tvalid
-      .s_axis_data_tready(lpf_ready),  // output wire s_axis_data_tready
-      .s_axis_data_tdata(input_data),    // input wire [15 : 0] s_axis_data_tdata
-      .m_axis_data_tvalid(m_axis_data_tvalid),  // output wire m_axis_data_tvalid
-      .m_axis_data_tready(m_axis_data_tready),  // input wire m_axis_data_tready
-      .m_axis_data_tdata(m_axis_data_tdata)    // output wire [31 : 0] m_axis_data_tdata
-    );
-
-
+    
+    reg [4:0] count;
+    wire filter_ready;
+    assign internal_ready = (count == 0) ? 1 : 0;
+    assign filter_ready = internal_ready && ready;
+    
+    wire signed [9:0] coeff;
+    wire [4:0] idx;
+    wire signed [17:0] filter_out;
+    wire [4:0] offset;
+    wire lpf_done;
+    
+    fir31 lpf(.clock(clock),.reset(reset),.ready(filter_ready), .x(audio_in), .coeff(coeff), .idx(idx),
+        .y(filter_out), .offset(offset), .done(lpf_done));      
+    
+    lpf_coeffs low_pass_coeffs(.index(idx), .coeff(coeff));   
+ 
+    assign filter_to_fft = filter_out[17:10];
+    assign audio_out = filter_out[14:7];
+    
+    
+    always @ (posedge clock)
+    begin
+        if(reset)
+        begin
+            count <= 1;
+        end
+        if (state == 2'b11)
+        begin
+            count <= count + 1;
+        end
+    end
 
 
 endmodule

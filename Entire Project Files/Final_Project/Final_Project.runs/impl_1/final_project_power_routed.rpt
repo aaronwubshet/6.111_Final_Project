@@ -1,0 +1,298 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date             : Sun Nov 26 19:11:17 2017
+| Host             : THINKPAD running 64-bit major release  (build 9200)
+| Command          : report_power -file final_project_power_routed.rpt -pb final_project_power_summary_routed.pb -rpx final_project_power_routed.rpx
+| Design           : final_project
+| Device           : xc7a100tcsg324-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------+
+| Total On-Chip Power (W)  | 0.231  |
+| Dynamic (W)              | 0.133  |
+| Device Static (W)        | 0.098  |
+| Effective TJA (C/W)      | 4.6    |
+| Max Ambient (C)          | 98.9   |
+| Junction Temperature (C) | 26.1   |
+| Confidence Level         | Medium |
+| Setting File             | ---    |
+| Simulation Activity File | ---    |
+| Design Nets Matched      | NA     |
++--------------------------+--------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.005 |       10 |       --- |             --- |
+| Slice Logic             |     0.001 |     1706 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      635 |     63400 |            1.00 |
+|   CARRY4                |    <0.001 |      142 |     15850 |            0.90 |
+|   Register              |    <0.001 |      650 |    126800 |            0.51 |
+|   F7/F8 Muxes           |    <0.001 |        8 |     63400 |            0.01 |
+|   Others                |     0.000 |      195 |       --- |             --- |
+|   LUT as Shift Register |     0.000 |        1 |     19000 |           <0.01 |
+| Signals                 |     0.002 |     1311 |       --- |             --- |
+| Block RAM               |     0.017 |     28.5 |       135 |           21.11 |
+| MMCM                    |     0.106 |        1 |         6 |           16.67 |
+| DSPs                    |    <0.001 |        1 |       240 |            0.42 |
+| I/O                     |     0.002 |       44 |       210 |           20.95 |
+| Static Power            |     0.098 |          |           |                 |
+| Total                   |     0.231 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.040 |       0.024 |      0.016 |
+| Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------------+-----------------------------------+-----------------+
+| Clock                  | Domain                            | Constraint (ns) |
++------------------------+-----------------------------------+-----------------+
+| CLK100MHZ              | CLK100MHZ                         |            10.0 |
+| clk_out1_clk_manager   | clocker/inst/clk_out1_clk_manager |            40.0 |
+| clk_out1_clk_manager_1 | clocker/inst/clk_out1_clk_manager |            40.0 |
+| clk_out2_clk_manager   | clocker/inst/clk_out2_clk_manager |            10.0 |
+| clk_out2_clk_manager_1 | clocker/inst/clk_out2_clk_manager |            10.0 |
+| clkfbout_clk_manager   | clocker/inst/clkfbout_clk_manager |            10.0 |
+| clkfbout_clk_manager_1 | clocker/inst/clkfbout_clk_manager |            10.0 |
+| sys_clk_pin            | CLK100MHZ                         |            10.0 |
++------------------------+-----------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------------------------------+-----------+
+| Name                                                                  | Power (W) |
++-----------------------------------------------------------------------+-----------+
+| final_project                                                         |     0.133 |
+|   clocker                                                             |     0.106 |
+|     inst                                                              |     0.106 |
+|   display                                                             |    <0.001 |
+|   filters_and_fft                                                     |    <0.001 |
+|     my_audio                                                          |    <0.001 |
+|   get_contour                                                         |     0.005 |
+|     getting_pixels_per_bin                                            |     0.003 |
+|       U0                                                              |     0.003 |
+|         i_synth                                                       |     0.003 |
+|           i_nd_to_rdy                                                 |    <0.001 |
+|           i_nonzero_fract.i_synth                                     |     0.003 |
+|             i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider           |     0.003 |
+|               i_sdivider.divider_blk                                  |     0.003 |
+|                 div_loop[0].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[0].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[0].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[10].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[10].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|                 div_loop[10].num_stages.numerator_gen.del_numer       |    <0.001 |
+|                 div_loop[10].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|                 div_loop[11].adder_gen.reg_req.adsu_mod               |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[11].divisor_gen.divisor_dc1.del_divisor_msbs |    <0.001 |
+|                 div_loop[11].num_stages.numerator_gen.del_numer       |    <0.001 |
+|                 div_loop[11].quot_gen.quot_reg.i_div1.quot_out        |    <0.001 |
+|                 div_loop[1].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[1].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[1].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[1].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[2].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[2].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[2].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[2].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[3].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[3].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[3].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[4].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[4].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[4].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[4].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[5].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[5].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[5].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[5].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[6].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[6].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[6].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[6].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[7].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[7].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[7].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[7].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[8].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[8].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[8].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 div_loop[9].adder_gen.reg_req.adsu_mod                |    <0.001 |
+|                   add1                                                |    <0.001 |
+|                     no_pipelining.the_addsub                          |    <0.001 |
+|                       i_q_simple.qreg                                 |    <0.001 |
+|                 div_loop[9].divisor_gen.divisor_dc1.del_divisor_msbs  |    <0.001 |
+|                 div_loop[9].num_stages.numerator_gen.del_numer        |    <0.001 |
+|                 div_loop[9].quot_gen.quot_reg.i_div1.quot_out         |    <0.001 |
+|                 reg_quot_out.reg_quot                                 |    <0.001 |
+|   sd_read_write                                                       |    <0.001 |
+|   to_xy_bram                                                          |     0.001 |
+|   video_playback_1                                                    |    <0.001 |
+|   xy_bram                                                             |     0.017 |
+|     U0                                                                |     0.017 |
+|       inst_blk_mem_gen                                                |     0.017 |
+|         gnbram.gnativebmg.native_blk_mem_gen                          |     0.017 |
+|           valid.cstr                                                  |     0.017 |
+|             bindec_a.bindec_inst_a                                    |    <0.001 |
+|             bindec_b.bindec_inst_b                                    |    <0.001 |
+|             has_mux_a.A                                               |    <0.001 |
+|             has_mux_b.B                                               |    <0.001 |
+|             ramloop[0].ram.r                                          |     0.004 |
+|               prim_noinit.ram                                         |     0.004 |
+|             ramloop[10].ram.r                                         |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[11].ram.r                                         |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[12].ram.r                                         |     0.004 |
+|               prim_noinit.ram                                         |     0.004 |
+|             ramloop[13].ram.r                                         |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[14].ram.r                                         |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[15].ram.r                                         |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[16].ram.r                                         |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[1].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[2].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[3].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[4].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[5].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[6].ram.r                                          |     0.004 |
+|               prim_noinit.ram                                         |     0.004 |
+|             ramloop[7].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[8].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
+|             ramloop[9].ram.r                                          |    <0.001 |
+|               prim_noinit.ram                                         |    <0.001 |
++-----------------------------------------------------------------------+-----------+
+
+
