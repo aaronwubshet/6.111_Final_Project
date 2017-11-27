@@ -43,7 +43,7 @@ module edge_to_display(
     reg hsync_pre_delay;
     reg hsync_pre_delay_2;
     reg vsync_pre_delay;
-    reg vsync_pre_delay_2;
+    reg vsync_pre_delay_2;   
 
     reg at_display_area; 
 //    assign video_out = 12'hF0F; //blank_delay_2 ? 12'b0 : (bin_data != 3'b000) ? 12'hFFF : 12'b0; 

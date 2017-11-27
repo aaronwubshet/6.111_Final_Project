@@ -35,7 +35,7 @@ reg [59:0] addr_hold;                   //holds
 reg [9:0] max_addr;
 reg [59:0] shifted;
 reg [2:0] bin_count;
-reg start_count;
+reg [1:0] start_count;
 reg addr_count;
 reg start;
 reg [9:0] current_addr;
@@ -46,7 +46,6 @@ reg [41:0] bin_acc;                 //make sure this can hold our maximum value!
         if(ready) begin
             start <= 1'b1;                      //start in taking data and calculating 
             addr_hold <= addresses;
-            //current_addr <= 10'd0;              //start getting our first sample
             bram_addr <= 10'd0;
             max_addr <= addresses[9:0];
             
@@ -55,11 +54,11 @@ reg [41:0] bin_acc;                 //make sure this can hold our maximum value!
         else if(start) begin
             
         /*data available, start calculation */ 
-            if(start_count > 2) begin
+            if(start_count >= 2) begin
                  if(bram_addr < max_addr && bin_count < bin_num) begin 
                      bin_acc <= data*data + bin_acc;                    //update our bin energy 
                      bram_addr <= bram_addr + 1;                        //move on to next bram address
-                 
+                     start_count <= 0;
                  end
                  
                  else if (bram_addr >= max_addr) begin
@@ -69,28 +68,19 @@ reg [41:0] bin_acc;                 //make sure this can hold our maximum value!
                     bin_count <= bin_count + 1;
                     bin_acc <= 0;
                     /*maybe check if were indexing too far?*/
-                    addr_hold <= addr_hold>>10;
-                    max_addr <= addr_hold[9:0];     //get next max bin address
+                    //addr_hold <= addr_hold>>10;
+                    max_addr <= addr_hold>>10;     //get next max bin address
                  end
             
             end 
             
+
             else begin
-                start_count <= start_count + 1; 
-                bram_addr <= bram_addr + 1;        //still update our bram address while waiting for data to be avaialable 
-                  
+                start_count <= start_count + 1;    
             end
         
         
         end    
-            
-    
-        else begin
-            
-        end    
-    
-    
-    
-    
+        
     end 
 endmodule
