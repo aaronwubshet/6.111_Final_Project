@@ -122,6 +122,7 @@ module top(
         .clk(CLK_100M),
         .start(1),
         .done(sobel_done),
+        .SW(SW[5:0]),
         
         .pixel_data(memory_read_data),
         .pic_memory_addr(sobel_rgb_bram_addr),
@@ -187,7 +188,7 @@ module video_playback(
     reg [11:0] bw_total;
     
 //    assign video_out = blank_delay_2 ? 12'b0 : pixel_data; 
-    assign video_out = at_display_area ? ((pixel_data != 3'bF00) ? 12'h000 : bw_total): 0;//(12'h0F0) : 0; 
+    assign video_out = at_display_area ? ((pixel_data != 3'b000) ? 12'h00F : rgb_data): 0;//(12'h0F0) : 0; 
     
     assign hblankon = (hcount == 639);   //blank after display width   
     assign hsyncon = (hcount == 655);  // active video + front porch

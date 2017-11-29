@@ -24,6 +24,7 @@ module sobel(
     input wire clk,
     input wire start,
     output reg done,
+    input wire [5:0] SW,  //lower 6 switches
 
     //from the BRAM of the original picture
     input wire [11:0] pixel_data,
@@ -38,7 +39,6 @@ module sobel(
     reg [3:0] bw_pixel_load0, bw_pixel_load1, bw_pixel_load2;
     
     parameter STATE_SETUP = 0;
-    parameter STATE_DONE = 1;
     parameter STATE_THRESHOLD = 2;
     parameter STATE_WAIT = 3;
     parameter STATE_WAIT2 = 4;
@@ -55,20 +55,29 @@ module sobel(
     
     reg [9:0] x;
     reg [8:0] y;
+    reg [9:0] x_buffer = 25;
+    reg [8:0] y_buffer = 25;
     
-    reg [8:0] GX; //6
-    reg [8:0] GY; //6
+    reg [6:0] GX; 
+    reg [6:0] GY; 
     
-    reg [16:0] GX2; //11
-    reg [16:0] GY2; //11
-    reg [16:0] threshold = 12'd5;//2500; //FFF = 4095
+    reg [11:0] GX2; //11
+    reg [11:0] GY2; //11
+    reg [11:0] threshold = 12'd3000;
+   
     
     
     reg [3:0] i = 0;
-    
-    
-    reg state = STATE_SETUP;
+    reg [5:0] old_SW = 16'hFFFF;   
+        
     always @(posedge clk) begin
+        if (SW != old_SW) begin
+            threshold <= {SW[5], SW[5], SW[4], SW[4], SW[3], SW[3], SW[2], SW[2], SW[1], SW[1], SW[0], SW[0]};
+            old_SW <= SW;
+            state <= STATE_SETUP;
+            done <= 0;
+        end
+        if (~done) begin
         case (state)
             STATE_SETUP: begin                
                 pic_memory_addr <= 0;
@@ -87,7 +96,7 @@ module sobel(
             STATE_WAIT: state <= STATE_WAIT2;
             
             STATE_WAIT2: state <= next_state;
-            
+                    
             STATE_GET_9: begin
                 i <= i + 1;
                 state <= STATE_WAIT;
@@ -133,13 +142,13 @@ module sobel(
                     end                    
                 endcase
             end 
-            
+                    
             STATE_CALCULATE_G: begin
-                GX <= bw_pixel0 - bw_pixel2 + bw_pixel3 >> 1 - bw_pixel5 >> 1 + bw_pixel6 - bw_pixel8;
-                GY <= bw_pixel0 + bw_pixel1 >> 1 + bw_pixel2 - bw_pixel6 - bw_pixel7 >> 1 - bw_pixel8;
+                GX <= bw_pixel0 - bw_pixel2 + (bw_pixel3 << 1) - (bw_pixel5 << 1) + bw_pixel6 - bw_pixel8;
+                GY <= bw_pixel0 + (bw_pixel1 << 1) + bw_pixel2 - bw_pixel6 - (bw_pixel7 << 1) - bw_pixel8;
                 state <= STATE_SQUARE;
             end
-            
+                    
             STATE_SQUARE: begin
                 GX2 <= GX * GX;
                 state <= STATE_SQUARE2;
@@ -205,22 +214,19 @@ module sobel(
                 i <= 0;
                 
                 
-                if ((x == WIDTH - 1) || (x == 0)) begin
+                if ((x < x_buffer)  || (x > (WIDTH - x_buffer)) || (y < y_buffer) || ( y >( HEIGHT - y_buffer ))) begin
                     state <= STATE_SHIFTWINDOW;
+                    is_edge <= 0;
                 end
                 else begin
                     state <= STATE_CALCULATE_G;
                 end
                 
                 if (( x == WIDTH - 1) && (y == HEIGHT - 2)) begin
-                    state <= STATE_DONE;
+                    done <= 1;
                 end
             end
-            
-            STATE_DONE: begin
-                done <= 1;
-                state <= STATE_DONE;
-            end
         endcase
+        end
     end
 endmodule
