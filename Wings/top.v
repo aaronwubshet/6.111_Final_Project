@@ -73,9 +73,6 @@ module top(
         );
 
             
-    wire [3:0] green;
-    wire [3:0] blue;
-    wire [3:0] red;
 /*    
     video_playback video_playback_1 (
         .pixel_data(memory_read_data),
@@ -89,16 +86,19 @@ module top(
             
     wire [18:0] vga_bram_addr;
     video_playback video_playback_1 (
-        .pixel_data(edge_bram_dout),
+        .pixel_data(edge_bram_doutb),
         .rgb_data(memory_read_data),
         .video_clk(clk_25mhz),
         .memory_addr(vga_bram_addr),
-        .vsync(VGA_VS),
-        .hsync(VGA_HS),
+//        .vsync(VGA_VS),
+//        .hsync(VGA_HS),
+        .vsync(vsync),
+        .hsync(hsync),
         .video_out({VGA_R, VGA_G, VGA_B})
-//        .video_out({red, green, blue})   
         );
-                
+    wire vsync, hsync;
+    assign VGA_VS = vsync;
+    assign VGA_HS = hsync;         
                 
      
     //frame buffer memory   
@@ -113,10 +113,14 @@ module top(
         .addrb(memory_read_addr),
         .doutb(memory_read_data)
         );
+        
+        
+        
     
     wire sobel_done;
     wire [18:0] sobel_edge_bram_addr;
     wire [18:0] sobel_rgb_bram_addr;
+    wire [2:0] sobel_edge_bram_din;
     //sobel edge detection    
     sobel edge_detection(
         .clk(CLK_100M),
@@ -127,7 +131,7 @@ module top(
         .pixel_data(memory_read_data),
         .pic_memory_addr(sobel_rgb_bram_addr),
         
-        .is_edge(edge_bram_din),
+        .is_edge(sobel_edge_bram_din),
         .edge_memory_addr(sobel_edge_bram_addr)
     );
     
@@ -138,20 +142,75 @@ module top(
     wire [18:0] edge_bram_addr;
     wire edge_bram_we;
     
-    assign edge_bram_we = ~sobel_done ? 1: 0;
-    assign edge_bram_addr = ~sobel_done ? sobel_edge_bram_addr : vga_bram_addr;
-    assign memory_read_addr = ~sobel_done ?  sobel_rgb_bram_addr : vga_bram_addr;
+    wire [2:0] edge_bram_dinb;
+    wire [2:0] edge_bram_doutb;
+    wire [18:0] edge_bram_addrb;
     
-        
+    
+    assign edge_bram_we = ~sobel_done ? 1: 0;
+    assign edge_bram_addr = ~sobel_done ? sobel_edge_bram_addr : ~erosion_done ? erosion_edge_bram_addr : one_edge_addr; 
+    assign edge_bram_addrb = ~erosion_done ? erosion_edge_bram_addrb : ~one_edge_done ? one_edge_addrb : vga_bram_addr;
+    assign memory_read_addr = ~sobel_done ?  sobel_rgb_bram_addr : vga_bram_addr; 
+    assign edge_bram_din = ~sobel_done ? sobel_edge_bram_din : ~erosion_done ? erosion_edge_bram_din : one_edge_bram_din;
+    
+    //a = write, b = read
     edge_bram your_instance_name (
         .clka(clk_25mhz),    // input wire clka
         .ena(1),      // input wire ena
-        .wea(edge_bram_we),      // input wire [0 : 0] wea
+        .wea(1),      // input wire [0 : 0] wea
         .addra(edge_bram_addr),  // input wire [18 : 0] addra
         .dina(edge_bram_din),    // input wire [2 : 0] dina
-        .douta(edge_bram_dout)  // output wire [2 : 0] douta
+        .douta(edge_bram_dout),  // output wire [2 : 0] douta
+        //
+        .clkb(clk_25mhz),
+        .enb(1),
+        .web(0),
+        .addrb(edge_bram_addrb),
+        .dinb(edge_bram_dinb),
+        .doutb(edge_bram_doutb)
     );
-
+    
+    wire erosion_done;
+    wire [18:0] erosion_edge_bram_addrb;
+    wire [2:0] erosion_edge_bram_din;
+    wire [18:0] erosion_edge_bram_addr;
+    wire [2:0] erosion_edge_bram_doutb;
+    
+    edge_pixel_width skinny_edge(
+        .clk(clk_25mhz),
+        .start(sobel_done),
+        .done(erosion_done),
+        
+        .bram_read(edge_bram_doutb),
+        .bram_write(erosion_edge_bram_din),
+        .edge_addr_read(erosion_edge_bram_addrb),
+        .edge_addr_write(erosion_edge_bram_addr)
+        
+    );
+    
+    wire [9:0] x_start;
+    wire [8:0] y_start;
+    wire [18:0] addr_start;
+    wire [11:0] num_edge_pixels;
+    wire one_edge_done;
+    wire [2:0] one_edge_bram_din;
+    wire [18:0] one_edge_addrb;
+    wire [18:0] one_edge_addr;
+    
+    one_edge isolate(
+        .clk(clk_25mhz),
+        .x_start(x_start),
+        .y_start(y_start),
+        .addr_start(addr_start),
+        .num_pixels(num_edge_pixels),
+        .done(one_edge_done),
+        .start(erosion_done),
+        .bram_read(edge_bram_doutb),
+        .bram_write(one_edge_bram_din),
+        .edge_addr_read(one_edge_addrb),
+        .edge_addr_write(one_edge_addr)
+    );
+        
 
         
 endmodule
@@ -188,7 +247,12 @@ module video_playback(
     reg [11:0] bw_total;
     
 //    assign video_out = blank_delay_2 ? 12'b0 : pixel_data; 
-    assign video_out = at_display_area ? ((pixel_data != 3'b000) ? 12'h00F : rgb_data): 0;//(12'h0F0) : 0; 
+    assign video_out = at_display_area ? 
+                    ((pixel_data == 3'b001) ? 12'h000: //12'h00F : 
+                    (pixel_data == 3'b010) ? 12'h0F0: 
+                    (pixel_data == 3'b011) ? 12'h00F:                    
+                    (pixel_data == 3'b111) ? 12'hF00:
+                    rgb_data) : 0;//(12'h0F0) : 0; 
     
     assign hblankon = (hcount == 639);   //blank after display width   
     assign hsyncon = (hcount == 655);  // active video + front porch

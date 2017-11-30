@@ -20,27 +20,36 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module erosion(
-input wire clk,
+module edge_pixel_width(
+    input wire clk,
     input wire start,
     output reg done,
     
     //writing to the BRAM of the edges
-    input wire [3:0] bram_read,
-    output reg [3:0] bram_write,
-    output reg [18:0] edge_memory_addr,
-    output reg bram_we
+    input wire [2:0] bram_read,
+    output reg [2:0] bram_write,
+    output reg [18:0] edge_addr_read,
+    output reg [18:0] edge_addr_write
     );
+    
+    reg [2:0] n = 1;
     
     reg [3:0] pixel0, pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8;
     reg [3:0] pixel_load0, pixel_load1, pixel_load2;
     
     parameter STATE_SETUP = 0;
-    parameter STATE_WAIT = 3;
-    parameter STATE_WAIT2 = 4;
-    parameter STATE_GET_9 = 5;
-    parameter STATE_ERODE = 6;
-    parameter STATE_SHIFTWINDOW = 8;
+    parameter STATE_WAIT = 1;
+    parameter STATE_WAIT2 = 2;
+    parameter STATE_GET_9 = 3;
+    
+    parameter STATE_SHIFTWINDOW = 4;
+    parameter STATE_MIDDLE_EDGE = 5;
+    parameter STATE_UP = 6;
+    parameter STATE_DOWN = 7;
+    parameter STATE_RIGHT = 8;
+    parameter STATE_LEFT = 9;
+    
+    
     reg [4:0] state = STATE_SETUP;
     reg [4:0] next_state;
     
@@ -50,16 +59,7 @@ input wire clk,
     reg [9:0] x;
     reg [8:0] y;
     
-    reg [6:0] GX; //6
-    reg [6:0] GY; //6
-    
-    reg [11:0] GX2; //11
-    reg [11:0] GY2; //11
-    reg [11:0] threshold = 12'd3000;
-    
-    reg [18:0] write_xy_addr;
-    reg [18:0] read_xy_addr;
-   
+    reg [18:0] middle_addr;   
     
     
     reg [3:0] i = 0;
@@ -67,16 +67,20 @@ input wire clk,
     
         
     always @(posedge clk) begin
+        if (~start) begin
+            state <= STATE_SETUP;
+            n <= 1;
+            done <= 0;
+        end
         if (~done) begin
         case (state)
-            STATE_SETUP: begin                
+            STATE_SETUP: begin
                 i <= 0;
                 x <= 1;
                 y <= 1;
-                edge_memory_addr <= 0;
-                write_xy_addr <= 640 + 1;
-                read_xy_addr <= 0;
-                done <= 0;
+                edge_addr_read <= 0;
+                middle_addr <= 640 + 1;
+                done <= 0;                
                 
                 if (start) begin                
                     state <= STATE_WAIT;
@@ -96,44 +100,89 @@ input wire clk,
                 case (i)
                     0: begin
                         pixel0 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + 1;
+                        edge_addr_read <= edge_addr_read + 1;
                     end
                     1: begin
                         pixel1 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + 1;
+                        edge_addr_read <= edge_addr_read + 1;
                     end
                     2: begin
                         pixel2 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + WIDTH - 2;
+                        edge_addr_read <= edge_addr_read + WIDTH - 2;
                     end
                     3: begin
                         pixel3 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + 1;
+                        edge_addr_read <= edge_addr_read + 1;
                     end
                     4: begin
                         pixel4 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + 1;
+                        edge_addr_read <= edge_addr_read + 1;
                     end
                     5: begin
                         pixel5 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + WIDTH - 2;
+                        edge_addr_read <= edge_addr_read + WIDTH - 2;
                     end
                     6: begin
                         pixel6 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + 1;
+                        edge_addr_read <= edge_addr_read + 1;
                     end
                     7: begin
                         pixel7 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + 1;
+                        edge_addr_read <= edge_addr_read + 1;
                     end
                     8: begin
                         pixel8 = bram_read;
-                        edge_memory_addr <= edge_memory_addr - WIDTH - WIDTH + 1;
-                        next_state <= STATE_ERODE;
+                        edge_addr_read <= edge_addr_read - WIDTH - WIDTH + 1;
+                        next_state <= STATE_MIDDLE_EDGE;
                     end                    
                 endcase
             end 
             
+            STATE_MIDDLE_EDGE: begin    //decides whether or not middle pixel is an edge
+                if (pixel4 == n) begin //1) begin
+                    state <= STATE_UP;
+                end else begin
+                    middle_addr <= middle_addr + 1;
+                    state <= STATE_SHIFTWINDOW;
+                    i <= 0;
+                    
+                end
+            end
+            
+            STATE_UP: begin
+                if (pixel1 == 0) begin
+                    bram_write <= n + 1; //3'b010;
+                    edge_addr_write <= middle_addr - 640;
+                end
+                state <= STATE_RIGHT;
+            end
+            
+            STATE_RIGHT: begin
+                if (pixel5 == 0) begin
+                    bram_write <= n + 1; //3'b010;
+                    edge_addr_write <= middle_addr + 1;
+                end
+                state <= STATE_DOWN;
+            end
+            
+            STATE_DOWN: begin
+                if (pixel7 == 0) begin
+                    bram_write <= n + 1; //3'b010;
+                    edge_addr_write <= middle_addr + 640;
+                end
+                state <= STATE_LEFT;
+            end
+            
+            STATE_LEFT: begin
+                if (pixel3 == 0) begin
+                    bram_write <= n + 1; //3'b010;
+                    edge_addr_write <= middle_addr - 1;
+                end
+                middle_addr <= middle_addr + 1;
+                state <= STATE_SHIFTWINDOW;
+                i <= 0;
+            end
+                
             
             
             STATE_SHIFTWINDOW: begin
@@ -141,23 +190,20 @@ input wire clk,
                 state <= STATE_WAIT;
                 next_state <= STATE_SHIFTWINDOW;
                 
-                read_xy_addr <= edge_memory_addr;
-                bram_write <= write_xy_addr;
-                
                 case(i)
                     0: begin
                         pixel_load0 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + WIDTH;
+                        edge_addr_read <= edge_addr_read + WIDTH;
                     end
                     
                     1: begin
                         pixel_load1 = bram_read;
-                        edge_memory_addr <= edge_memory_addr + WIDTH;
+                        edge_addr_read <= edge_addr_read + WIDTH;
                     end
                     
                     2: begin
                         pixel_load2 = bram_read;
-                        edge_memory_addr <= edge_memory_addr - WIDTH - WIDTH + 1;
+                        edge_addr_read <= edge_addr_read - WIDTH - WIDTH + 1;
                     end
                     
                     3: begin
@@ -179,26 +225,18 @@ input wire clk,
                             x <= x + 1;
                         end
                         
-                        state <= STATE_ERODE;
+                        if (middle_addr >= 307200 - 640 - 640) begin// ( x == WIDTH - 1) && (y == HEIGHT - 2)) begin
+                            if (n == 2) begin
+                                done <= 1;                                
+                            end else begin
+                                state <= STATE_SETUP;
+                                n <= n + 1;
+                            end
+                        end else begin                        
+                            state <= STATE_MIDDLE_EDGE;
+                        end
                     end
                 endcase
-            end
-            
-            STATE_ERODE: begin
-                if (pixel0 != 0 && pixel1 != 0 && pixel2 != 0 && pixel3 != 0 && pixel4 != 0 &&
-                    pixel5 != 0 && pixel6 != 0 && pixel7 != 0 && pixel8 != 0) begin
-                    bram_write <= 3'b010;
-                    bram_we <= 1;
-                    read_xy_addr <= edge_memory_addr;
-                    edge_memory_addr <= write_xy_addr;
-                    
-                end
-                write_xy_addr <= write_xy_addr;
-                state <= STATE_SHIFTWINDOW;               
-                i <= 0;
-                if (( x == WIDTH - 1) && (y == HEIGHT - 2)) begin
-                    done <= 1;
-                end
             end
             
         endcase
