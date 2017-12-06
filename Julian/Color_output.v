@@ -23,7 +23,7 @@
 module Color_output(
     input wire [2:0] bin_data,
     input wire ready,
-    input [83:0] FFT_COLOR,
+    input wire [83:0] FFT_COLOR,
     input wire video_clk,
     output wire [18:0] memory_addr,
     output reg vsync,
@@ -54,11 +54,11 @@ module Color_output(
     assign video_out = ~at_display_area ? 0:
 			bin_data == 3'b001 ? FFT_COLOR[11:0] :
 			bin_data == 3'b010 ? FFT_COLOR[23:12] :
-                        bin_data == 3'b011 ? FFT_COLOR[35:24] :
+            bin_data == 3'b011 ? FFT_COLOR[35:24] :
 			bin_data == 3'b100 ? FFT_COLOR[47:36]:
-			bin_data == 3’b101 ? FFT_COLOR[59:48]:
-			bin_data == 3’b110 ? FFT_COLOR[71:60]:
-			bin_data == 3’b111 ? FFT_COLOR[83:72]: 0;
+			bin_data == 3'b101 ? FFT_COLOR[59:48]:
+			bin_data == 3'b110 ? FFT_COLOR[71:60]:
+			bin_data == 3'b111 ? FFT_COLOR[83:72]: 0;
 
     assign hblankon = (hcount == 639);   //blank after display width
     assign hsyncon = (hcount == 655);  // active video + front porch
