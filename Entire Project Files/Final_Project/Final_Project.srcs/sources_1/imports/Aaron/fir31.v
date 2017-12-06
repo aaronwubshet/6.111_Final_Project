@@ -16,7 +16,6 @@ module fir31(
   input wire signed [9:0] coeff,
   output wire [4:0] idx,
   output reg signed [17:0] y,
-  output reg [4:0] offset,
   output done
 );
 
@@ -25,18 +24,22 @@ module fir31(
   reg signed [17:0] accumulator;
   reg [4:0] idx_reg;
   reg flag;
-
+  reg last_flag;
+  reg [4:0] offset;
   assign idx = idx_reg;
 
   initial offset = 0;
   initial flag = 1;
+  initial last_flag = 1;
   initial idx_reg = 0;
 
   initial sample[offset] = x;
-  assign done = flag;
+  
+  assign done = (last_flag == 0 && flag==1) ? 1:0;
   always @(posedge clock)
   begin
   //reset values each time output is updated
+        last_flag <= flag;
 		if(ready && flag)
 		begin
 			accumulator <= 0;
@@ -60,8 +63,9 @@ module fir31(
 		end
 		if (idx_reg == 31)
 		begin
+		    //  y<=x;
 			y <= accumulator;
 			flag <=1;
 		end
-  end
+    end
 endmodule

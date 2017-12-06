@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module edge_to_display(
+module Color_output(
     input wire [2:0] bin_data,
     input wire ready,
-    input [83:0] FFT_COLOR,
+    input wire [83:0] FFT_COLOR,
     input wire video_clk,
     output wire [18:0] memory_addr,
     output reg vsync,
@@ -78,7 +78,7 @@ module edge_to_display(
     assign next_hblank = hreset ? 0 : hblankon ? 1 : hblank;
     assign next_vblank = vreset ? 0 : vblankon ? 1 : vblank;
 
-    assign memory_addr = ready ? hcount+vcount*640 : 0;			//don't output address until can start reading from BRAM
+    assign memory_addr = ready ? hcount+vcount*640 : 0;			//don’t output address until can start reading from BRAM
 
     always @(posedge video_clk) begin
         blank_delay <= blank;

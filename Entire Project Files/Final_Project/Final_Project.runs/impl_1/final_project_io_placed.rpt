@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Sun Nov 26 19:10:25 2017
+| Date         : Wed Dec 06 01:36:01 2017
 | Host         : THINKPAD running 64-bit major release  (build 9200)
 | Command      : report_io -file final_project_io_placed.rpt
 | Design       : final_project
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            84 |
+|            85 |
 +---------------+
 
 
@@ -33,7 +33,7 @@ Table of Contents
 +------------+-------------+------------+------------------------------+-------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+------+------------------+
 | Pin Number | Signal Name | Bank Type  | Pin Name                     | Use         | IO Standard | IO Bank | Drive (mA) | Slew | On-Chip Termination | Off-Chip Termination | Voltage | Constraint | Pull Type | DQS Bias | Vref | Signal Integrity |
 +------------+-------------+------------+------------------------------+-------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+------+------------------+
-| A1         | SD_CD       | High Range | IO_L9N_T1_DQS_AD7N_35        | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| A1         | SD_CD       | High Range | IO_L9N_T1_DQS_AD7N_35        | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | A2         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | A3         | VGA_R[0]    | High Range | IO_L8N_T1_AD14N_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | A4         | VGA_R[3]    | High Range | IO_L8P_T1_AD14P_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
@@ -85,7 +85,7 @@ Table of Contents
 | C14        |             | High Range | IO_L1N_T0_AD0N_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
 | C15        |             | High Range | IO_L12N_T1_MRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
 | C16        |             | High Range | IO_L20P_T3_A20_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
-| C17        |             | High Range | IO_L20N_T3_A19_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
+| C17        | JA[0]       | High Range | IO_L20N_T3_A19_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | C18        |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | D1         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | D2         | SD_DAT[3]   | High Range | IO_L14N_T2_SRCC_35           | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |

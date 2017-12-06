@@ -16,7 +16,7 @@ set_property parent.project_path {C:/Users/Aaron Wubshet/Desktop/Local Final Pro
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-add_files {{c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Working Project/WingsFinalProject/decahedral.coe}}
+add_files {{c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/image_rgb.coe}}
 add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp}}
 set_property used_in_implementation false [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp}}]
 read_ip -quiet {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.xci}}
@@ -32,9 +32,9 @@ set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubsh
 set_property used_in_implementation false [get_files -all {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag_ooc.xdc}}]
 set_property is_locked true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}]
 
-read_ip -quiet {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc}}]
-set_property is_locked true [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci}}]
+read_ip -quiet {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin_ooc.xdc}}]
+set_property is_locked true [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
 
 read_ip -quiet {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc}}]
@@ -42,22 +42,38 @@ set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubsh
 set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager_ooc.xdc}}]
 set_property is_locked true [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}]
 
-read_ip -quiet {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin_ooc.xdc}}]
-set_property is_locked true [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
+read_ip -quiet {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc}}]
+set_property is_locked true [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci}}]
+
+read_ip -quiet {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc}}]
+set_property is_locked true [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}]
 
 read_verilog -library xil_defaultlib {
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Aaron/verilog/lpf_coeffs.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/hpf_coeffs.v}
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Aaron/fir31.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/bpf2_coeffs.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/bpf1_coeffs.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Wings/sobel.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Wings/one_edge.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Julian/lev_puls.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Julian/FFT_energy.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Wings/erosion.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Julian/Color_output.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Julian/Color_offst.v}
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/filter_control.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/fifo.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/clock_divider.v}
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_PWM.v}
-  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v}
-  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/sd_color_bram.v}
-  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Wings/color_contour.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/debounce.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Wings/image_processing.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Julian/Color_transform.v}
+  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/test.v}
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/sd_controller.v}
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/display_8hex.v}
-  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Julian/Color_output.v}
-  {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/debounce.v}
   {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v}
 }
 foreach dcp [get_files -quiet -all *.dcp] {

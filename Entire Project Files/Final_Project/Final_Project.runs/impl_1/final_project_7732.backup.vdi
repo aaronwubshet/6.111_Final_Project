@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Nov 28 15:00:59 2017
+# Process ID: 7732
+# Current directory: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1
+# Command line: vivado.exe -log final_project.vdi -applog -messageDb vivado.pb -mode batch -source final_project.tcl -notrace
+# Log file: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.vdi
+# Journal file: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source final_project.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/.Xil/Vivado-7732-THINKPAD/div_gen_0/div_gen_0.dcp]
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/.Xil/Vivado-7732-THINKPAD/div_gen_0/div_gen_0.dcp' for cell 'get_contour/getting_pixels_per_bin'
+INFO: [Netlist 29-17] Analyzing 8390 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 9 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/music_buffer/music_buffer/music_buffer.xdc] for cell 'aaron/stuff/U0'
+Finished Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/music_buffer/music_buffer/music_buffer.xdc] for cell 'aaron/stuff/U0'
+Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc] for cell 'clocker/inst'
+Finished Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc] for cell 'clocker/inst'
+Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc] for cell 'clocker/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc:57]
+get_clocks: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1219.617 ; gain = 561.148
+Finished Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc] for cell 'clocker/inst'
+Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/constrs_1/imports/Common/Constraints_Master.xdc]
+Finished Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/constrs_1/imports/Common/Constraints_Master.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/.Xil/Vivado-7732-THINKPAD/div_gen_0/div_gen_0.dcp'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8192 instances were transformed.
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 4096 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 4096 instances
+
+link_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:54 . Memory (MB): peak = 1219.617 ; gain = 1012.133
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.797 . Memory (MB): peak = 1219.617 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 2b8d79794
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1e72cb79d
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1219.617 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 74 cells.
+Phase 2 Constant Propagation | Checksum: f2b6cd5c
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 1219.617 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 55421 unconnected nets.

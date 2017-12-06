@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1511741100">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1512541593">
   <File Type="OPT-DCP" Name="final_project_opt.dcp"/>
   <File Type="ROUTE-STATUS-PB" Name="final_project_route_status.pb"/>
   <File Type="PA-TCL" Name="final_project.tcl"/>
@@ -68,10 +68,94 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/hpf_coeffs.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Aaron/fir31.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Aaron/fir31.v"/>
         <Attr Name="ImportTime" Val="1511622591"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bpf2_coeffs.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bpf1_coeffs.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wings/sobel.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/sobel.v"/>
+        <Attr Name="ImportTime" Val="1512532216"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wings/one_edge.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/one_edge.v"/>
+        <Attr Name="ImportTime" Val="1512532216"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Julian/lev_puls.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/lev_puls.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Julian/FFT_energy.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/FFT_energy.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wings/erosion.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/erosion.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Julian/Color_output.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/Color_output.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Julian/Color_offst.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/Color_offst.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -93,7 +177,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fifo.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -109,48 +207,50 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci">
+    <File Path="$PSRCDIR/sources_1/imports/Wings/color_contour.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/color_contour.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v">
+    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Common/debounce.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Aaron/verilog/audio_processing.v"/>
-        <Attr Name="ImportTime" Val="1510939080"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/New folder/sd_color_bram.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/New folder/sd_color_bram.v"/>
-        <Attr Name="ImportTime" Val="1510973731"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/clk_manager/clk_manager.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/New folder/color_contour.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/Current Working Files/color_contour.v"/>
-        <Attr Name="ImportTime" Val="1511739375"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/debounce.v"/>
+        <Attr Name="ImportTime" Val="1509987317"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/xy_bin/xy_bin.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wings/image_processing.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Wings/image_processing.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Julian/Color_transform.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/Color_transform.v"/>
+        <Attr Name="ImportTime" Val="1512532215"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -175,19 +275,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Julian/Color_output.v">
+    <File Path="$PSRCDIR/sources_1/ip/clk_manager/clk_manager.xci">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Julian/Color_output.v"/>
-        <Attr Name="ImportTime" Val="1511232514"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/6.111_Final_Project/Common/debounce.v">
+    <File Path="$PSRCDIR/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../6.111_Final_Project/Common/debounce.v"/>
-        <Attr Name="ImportTime" Val="1509987317"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/frame_buffer/frame_buffer.xci">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -202,6 +305,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/filter_input_buffer.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/xy_bin.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -209,7 +319,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../6.111_Final_Project/Wings/Working Project/WingsFinalProject/decahedral.coe">
+    <File Path="$PSRCDIR/sources_1/ip/bram_fft_output_buffer.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/frame_buffer.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../6.111_Final_Project/Wings/image_rgb.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

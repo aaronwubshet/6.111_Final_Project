@@ -57,30 +57,30 @@ set rc [catch {
   set_property ip_output_repo {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.cache/ip}} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/final_project.dcp}}
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp}}]
+  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp}}
+  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp}}]
   add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_1/fft_mag_xlconstant_2_1.dcp}}
   set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_1/fft_mag_xlconstant_2_1.dcp}}]
   add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp}}

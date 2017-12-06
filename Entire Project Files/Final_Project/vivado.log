@@ -2,10 +2,10 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Nov 25 10:00:16 2017
-# Process ID: 14212
+# Start of session at: Tue Dec 05 15:13:45 2017
+# Process ID: 3232
 # Current directory: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6552 C:\Users\Aaron Wubshet\Desktop\Local Final Project\Final_Project\Final_Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5128 C:\Users\Aaron Wubshet\Desktop\Local Final Project\Final_Project\Final_Project.xpr
 # Log file: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/vivado.log
 # Journal file: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project\vivado.jou
 #-----------------------------------------------------------
@@ -16,468 +16,16 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 799.293 ; gain = 153.648
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_PWM.v}}]
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v}}]
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/filter_control.v} {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.xci}}]
-update_compile_order -fileset sources_1
-import_files -norecurse {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fir31.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/verilog/lpf_coeffs.v}}
-update_compile_order -fileset sources_1
-remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/high_pass_filter/high_pass_filter.xci}}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/high_pass_filter}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.ip_user_files/ip/high_pass_filter} {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.ip_user_files/sim_scripts/high_pass_filter}
-convert_ips [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/audio_fft/audio_fft.xci}}]
-INFO: [filemgmt 56-106] Converting IP 'audio_fft' into core container format.
-INFO: [filemgmt 56-101] Creating core container 'C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/audio_fft.xcix' for IP 'audio_fft'
-export_ip_user_files -of_objects  [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/audio_fft/audio_fft.xci}}] -sync -no_script -force -quiet
-set_property coreContainer.enable 1 [current_project]
-INFO: [Device 21-403] Loading part xc7a100tcsg324-3
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-set_property -dict [list CONFIG.Write_Depth_A {2048}] [get_ips filter_input_buffer]
-generate_target all [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'filter_input_buffer'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'filter_input_buffer'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'filter_input_buffer'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'filter_input_buffer'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'filter_input_buffer'...
-export_ip_user_files -of_objects [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.xci}}] -no_script -force -quiet
-remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/bd/design_1/design_1.bd}}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/bd/design_1}
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/audio_fft/audio_fft.xci}}]
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}}]
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}
-Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
-Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
-Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
-Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
-Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
-Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd>
-open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1087.980 ; gain = 16.758
-close_bd_design [get_bd_designs fft_mag]
-remove_files {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}}
-add_files -norecurse {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}}
-export_ip_user_files -of_objects  [get_files  {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}}] -no_script -force -quiet
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Common/vga.v}}]
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.xci}}]
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}
-Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
-Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
-Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
-Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
-Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
-Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd>
-close_bd_design [get_bd_designs fft_mag]
-remove_files {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Aaron/fft_mag.bd}}
-add_files -norecurse {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}
-export_ip_user_files -of_objects  [get_files  {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}] -no_script -force -quiet
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}
-Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
-Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
-Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
-Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
-Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd>
-open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1173.383 ; gain = 0.000
-close_bd_design [get_bd_designs fft_mag]
-open_bd_design {C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}
-Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
-Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
-Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
-Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
-Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd>
-startgroup
-set_property -dict [list CONFIG.input_width.VALUE_SRC USER] [get_bd_cells xfft_0]
-set_property -dict [list CONFIG.transform_length {1024} CONFIG.target_clock_frequency {100} CONFIG.implementation_options {automatically_select} CONFIG.input_width {8} CONFIG.phase_factor_width {8} CONFIG.xk_index {false} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {3}] [get_bd_cells xfft_0]
-endgroup
-make_wrapper -files [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}] -fileset [get_filesets sources_1] -inst_template
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 32. S_AXIS_CARTESIAN_TDATA real input width: 32.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_DATA(2) and /frame(4)
-ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_register_slice_2/S_AXIS(100000000) and /xfft_0/M_AXIS_DATA(104000000)
-ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd 
-ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
-set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_ports clk]
-validate_bd_design
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 32. S_AXIS_CARTESIAN_TDATA real input width: 32.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_DATA(2) and /frame(4)
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-validate_bd_design -force
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 32. S_AXIS_CARTESIAN_TDATA real input width: 32.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_DATA(2) and /frame(4)
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-set_property -dict [list CONFIG.TDATA_NUM_BYTES {2}] [get_bd_intf_ports frame]
-validate_bd_design
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 32. S_AXIS_CARTESIAN_TDATA real input width: 32.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-make_wrapper -files [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}] -fileset [get_filesets sources_1] -inst_template
-INFO: [BD 41-1662] The design 'fft_mag.bd' is already validated. Therefore parameter propagation will not be re-run.
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlslice_0/Din'(32) to net 'xfft_0_m_axis_data_tdata'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlslice_1/Din'(32) to net 'xfft_0_m_axis_data_tdata'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.v
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag_wrapper.v
-Wrote  : <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd> 
-startgroup
-set_property -dict [list CONFIG.DIN_WIDTH {16} CONFIG.DIN_TO {8} CONFIG.DIN_FROM {15} CONFIG.DOUT_WIDTH {8}] [get_bd_cells xlslice_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.DIN_WIDTH {16} CONFIG.DIN_TO {0} CONFIG.DIN_FROM {7} CONFIG.DIN_FROM {7} CONFIG.DOUT_WIDTH {8}] [get_bd_cells xlslice_1]
-endgroup
-startgroup
-set_property -dict [list CONFIG.PortAWidth {8} CONFIG.PortBWidth {8} CONFIG.OutputWidthHigh {15}] [get_bd_cells mult_gen_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.PortAWidth {8} CONFIG.PortBWidth {8} CONFIG.OutputWidthHigh {15}] [get_bd_cells mult_gen_1]
-endgroup
-startgroup
-set_property -dict [list CONFIG.B_Width.VALUE_SRC USER CONFIG.A_Width.VALUE_SRC USER CONFIG.B_Type.VALUE_SRC USER CONFIG.A_Type.VALUE_SRC USER] [get_bd_cells c_addsub_0]
-set_property -dict [list CONFIG.A_Type {Unsigned} CONFIG.B_Type {Unsigned} CONFIG.A_Width {16} CONFIG.B_Width {16} CONFIG.Out_Width {16} CONFIG.Latency {0} CONFIG.B_Value {0000000000000000}] [get_bd_cells c_addsub_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.Input_Width {16} CONFIG.Output_Width {9}] [get_bd_cells cordic_0]
-endgroup
-make_wrapper -files [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}] -fileset [get_filesets sources_1] -inst_template
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-308] /c_addsub_0 A-DATA: Validating field: data(16:0): uint16 against /mult_gen_0 P-DATA: data(16:0): int16.
-ERROR: [xilinx.com:ip:c_addsub:12.0-311] /c_addsub_0 A-DATA: Field property mismatch. Value mismatch for: integer signed. /c_addsub_0 field: data = FALSE. /mult_gen_0 P-DATA field: data = TRUE.
-INFO: [xilinx.com:ip:c_addsub:12.0-914] /c_addsub_0 Refer to Port Structure details on the GUI informational tab, when available, to help resolve bus mismatches. Alternatively use intermediary blocks to rearrange the bus appropriately.
-INFO: [xilinx.com:ip:c_addsub:12.0-308] /c_addsub_0 B-DATA: Validating field: data(16:0): uint16 against /mult_gen_1 P-DATA: data(16:0): int16.
-ERROR: [xilinx.com:ip:c_addsub:12.0-311] /c_addsub_0 B-DATA: Field property mismatch. Value mismatch for: integer signed. /c_addsub_0 field: data = FALSE. /mult_gen_1 P-DATA field: data = TRUE.
-INFO: [xilinx.com:ip:c_addsub:12.0-914] /c_addsub_0 Refer to Port Structure details on the GUI informational tab, when available, to help resolve bus mismatches. Alternatively use intermediary blocks to rearrange the bus appropriately.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 16. S_AXIS_CARTESIAN_TDATA real input width: 16.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd 
-ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
-startgroup
-endgroup
-startgroup
-endgroup
-startgroup
-set_property -dict [list CONFIG.B_Type.VALUE_SRC PROPAGATED CONFIG.A_Type.VALUE_SRC PROPAGATED] [get_bd_cells c_addsub_0]
-set_property -dict [list CONFIG.A_Width {16} CONFIG.B_Width {16} CONFIG.Out_Width {16} CONFIG.Latency {0}] [get_bd_cells c_addsub_0]
-endgroup
-startgroup
-endgroup
-startgroup
-set_property -dict [list CONFIG.B_Type.VALUE_SRC USER CONFIG.A_Type.VALUE_SRC USER] [get_bd_cells c_addsub_0]
-set_property -dict [list CONFIG.A_Type {Signed} CONFIG.B_Type {Signed} CONFIG.A_Width {16} CONFIG.B_Width {16} CONFIG.Out_Width {16} CONFIG.Latency {0}] [get_bd_cells c_addsub_0]
-endgroup
-make_wrapper -files [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}] -fileset [get_filesets sources_1] -inst_template
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 16. S_AXIS_CARTESIAN_TDATA real input width: 16.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.v
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag_wrapper.v
-Wrote  : <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd> 
-copy_bd_objs /  [get_bd_cells {xlconstant_2}]
-set_property location {1 67 530} [get_bd_cells xlconstant_3]
-set_property -dict [list CONFIG.CONST_WIDTH {12}] [get_bd_cells xlconstant_3]
-delete_bd_objs [get_bd_nets scaling_1] [get_bd_ports scaling]
-connect_bd_net [get_bd_pins xlconcat_0/In1] [get_bd_pins xlconstant_3/dout]
-make_wrapper -files [get_files {{C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}}] -fileset [get_filesets sources_1] -inst_template
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/S_AXIS is not associated to any clock pin. It may not work correctly.
-CRITICAL WARNING: [BD 41-967] AXI interface pin /axis_register_slice_2/M_AXIS is not associated to any clock pin. It may not work correctly.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 16. S_AXIS_CARTESIAN_TDATA real input width: 16.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.v
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag_wrapper.v
-Wrote  : <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd> 
-save_bd_design
-remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/audio_fft/audio_fft.xci}}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/audio_fft.xcix}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.ip_user_files/ip/audio_fft}
-startgroup
-set_property -dict [list CONFIG.TUSER_WIDTH {10}] [get_bd_cells axis_register_slice_2]
-endgroup
-startgroup
-set_property -dict [list CONFIG.cartesian_tuser_width {10}] [get_bd_cells cordic_0]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd> 
-close_bd_design [get_bd_designs fft_mag]
+open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 744.668 ; gain = 127.672
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1 -jobs 2
-Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
-Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
-Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
-Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
-Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd>
-INFO: [xilinx.com:ip:xfft:9.0-913] /xfft_0 input_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-7] /cordic_0 Setting Input Width to 16. S_AXIS_CARTESIAN_TDATA real input width: 16.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 Input_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:cordic:6.0-913] /cordic_0 cartesian_tuser_width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 A_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:c_addsub:12.0-913] /c_addsub_0 B_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_1 PortBWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-WARNING: [BD 41-1271] The connection to the pin: /xfft_0/m_axis_data_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: xfft_0_M_AXIS_DATA 
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.v
-Verilog Output written to : C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag_wrapper.v
-Wrote  : <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd> 
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_register_slice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block c_addsub_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block cordic_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block mult_gen_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block mult_gen_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
-Exporting to file C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hw_handoff/fft_mag.hwh
-Generated Block Design Tcl file C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hw_handoff/fft_mag_bd.tcl
-Generated Hardware Definition File C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.hwdef
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.v" into library work [C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/hdl/fft_mag.v:1]
-[Sat Nov 25 14:33:34 2017] Launched fft_mag_xlconstant_0_0_synth_1, fft_mag_xlconstant_1_0_synth_1, fft_mag_xlconcat_0_0_synth_1, fft_mag_xfft_0_0_synth_1, fft_mag_xlslice_0_0_synth_1, fft_mag_xlconstant_2_0_synth_1, fft_mag_mult_gen_0_0_synth_1, fft_mag_cordic_0_0_synth_1, fft_mag_axis_register_slice_2_0_synth_1, fft_mag_xlslice_1_0_synth_1, fft_mag_mult_gen_1_0_synth_1, fft_mag_c_addsub_0_0_synth_1, fft_mag_xlconstant_2_1_synth_1...
-Run output will be captured here:
-fft_mag_xlconstant_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlconstant_0_0_synth_1/runme.log
-fft_mag_xlconstant_1_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlconstant_1_0_synth_1/runme.log
-fft_mag_xlconcat_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlconcat_0_0_synth_1/runme.log
-fft_mag_xfft_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xfft_0_0_synth_1/runme.log
-fft_mag_xlslice_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlslice_0_0_synth_1/runme.log
-fft_mag_xlconstant_2_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlconstant_2_0_synth_1/runme.log
-fft_mag_mult_gen_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_mult_gen_0_0_synth_1/runme.log
-fft_mag_cordic_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_cordic_0_0_synth_1/runme.log
-fft_mag_axis_register_slice_2_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_axis_register_slice_2_0_synth_1/runme.log
-fft_mag_xlslice_1_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlslice_1_0_synth_1/runme.log
-fft_mag_mult_gen_1_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_mult_gen_1_0_synth_1/runme.log
-fft_mag_c_addsub_0_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_c_addsub_0_0_synth_1/runme.log
-fft_mag_xlconstant_2_1_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/fft_mag_xlconstant_2_1_synth_1/runme.log
-[Sat Nov 25 14:33:34 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1390.730 ; gain = 0.000
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v:1]
-[Sat Nov 25 14:46:17 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sat Nov 25 14:52:23 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Couldn't access process for termination
+
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sat Nov 25 14:54:21 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2016.2
-  **** Build date : Jun  2 2016-16:57:03
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1534.656 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-current_hw_device [lindex [get_hw_devices] 0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-close_hw
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.3 -module_name xy_bin
-INFO: [filemgmt 56-101] Creating core container 'c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin.xcix' for IP 'xy_bin'
-set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Width_A {3} CONFIG.Write_Depth_A {307200} CONFIG.Enable_A {Always_Enabled} CONFIG.Enable_B {Always_Enabled} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/Aaron Wubshet/Desktop/Working Project/WingsFinalProject/decahedral.coe} CONFIG.Read_Width_A {3} CONFIG.Write_Width_B {3} CONFIG.Read_Width_B {3} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips xy_bin]
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/Aaron Wubshet/Desktop/Working Project/WingsFinalProject/decahedral.coe' provided. It will be converted relative to IP Instance files '../../../../../../Working Project/WingsFinalProject/decahedral.coe'
-generate_target {instantiation_template} [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xy_bin'...
-update_compile_order -fileset sources_1
-set_property generate_synth_checkpoint false [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
-generate_target all [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xy_bin'...
-generate_target: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1700.145 ; gain = 0.000
-export_ip_user_files -of_objects [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}] -no_script -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Current Working Files/debug.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Current Working Files/debug.v:1]
-[Sat Nov 25 15:29:58 2017] Launched synth_1...
+[Tue Dec 05 15:25:20 2017] Launched synth_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v:1]
-[Sat Nov 25 15:34:23 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sat Nov 25 15:39:15 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sat Nov 25 15:42:43 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sat Nov 25 15:51:42 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sat Nov 25 15:52:38 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sat Nov 25 16:00:04 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sat Nov 25 16:02:26 2017] Launched impl_1...
+[Tue Dec 05 15:25:20 2017] Launched impl_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
 open_hw
 connect_hw_server
@@ -510,47 +58,12 @@ WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Cha
 Resolution: 
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
 2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-close_hw
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sat Nov 25 17:16:22 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sat Nov 25 17:18:49 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sat Nov 25 17:24:30 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sat Nov 25 17:27:08 2017] Launched impl_1...
+[Tue Dec 05 15:46:25 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
+[Tue Dec 05 15:46:25 2017] Launched impl_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2016.2
-  **** Build date : Jun  2 2016-16:57:03
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1880.371 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-current_hw_device [lindex [get_hw_devices] 0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
 set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
 set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
 program_hw_devices [lindex [get_hw_devices] 0]
@@ -561,951 +74,12 @@ WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Cha
 Resolution: 
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
 2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
-update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 14:36:29 2017] Launched synth_1...
+[Tue Dec 05 16:03:27 2017] Launched synth_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 14:36:29 2017] Launched impl_1...
+[Tue Dec 05 16:03:27 2017] Launched impl_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_bd_design {C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}
-Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
-Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
-Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
-Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
-Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
-Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd>
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 15:36:04 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 15:36:04 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Aaron/verilog/audio_processing.v:1]
-[Sun Nov 26 15:38:01 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 15:44:38 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 15:44:38 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_0A: 1514	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-DADDR_0A: 1514	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {40.000} CONFIG.MMCM_CLKOUT1_DIVIDE {10} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {175.402} CONFIG.CLKOUT1_PHASE_ERROR {98.575} CONFIG.CLKOUT2_JITTER {130.958}] [get_ips clk_manager]
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-generate_target all [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_manager'...
-export_ip_user_files -of_objects [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}] -no_script -force -quiet
-DADDR_09: 4c00	-CLKOUT0 Register 1
-DADDR_08: 1451	-CLKOUT0 Register 2
-DADDR_07: 1400	-CLKOUT0 Register Shared with CLKOUT5
-DADDR_09: 4c00	-CLKOUT0 Register 1
-DADDR_08: 1451	-CLKOUT0 Register 2
-DADDR_07: 1400	-CLKOUT0 Register Shared with CLKOUT5
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0A: 1041	-CLKOUT1 Register 1
-DADDR_0B: 00c0	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0A: 1041	-CLKOUT1 Register 1
-DADDR_0B: 00c0	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_09: 4c00	-CLKOUT0 Register 1
-DADDR_08: 1451	-CLKOUT0 Register 2
-DADDR_07: 1400	-CLKOUT0 Register Shared with CLKOUT5
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-set_property -dict [list CONFIG.CLKOUT2_USED {false} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} CONFIG.MMCM_CLKOUT1_DIVIDE {1} CONFIG.NUM_OUT_CLKS {1} CONFIG.CLKOUT1_JITTER {181.828} CONFIG.CLKOUT1_PHASE_ERROR {104.359}] [get_ips clk_manager]
-DADDR_09: 4c00	-CLKOUT0 Register 1
-DADDR_08: 1451	-CLKOUT0 Register 2
-DADDR_07: 1400	-CLKOUT0 Register Shared with CLKOUT5
-DADDR_09: 4c00	-CLKOUT0 Register 1
-DADDR_08: 1451	-CLKOUT0 Register 2
-DADDR_07: 1400	-CLKOUT0 Register Shared with CLKOUT5
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0A: 1041	-CLKOUT1 Register 1
-DADDR_0B: 00c0	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0A: 1041	-CLKOUT1 Register 1
-DADDR_0B: 00c0	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_09: 4c00	-CLKOUT0 Register 1
-DADDR_08: 1451	-CLKOUT0 Register 2
-DADDR_07: 1400	-CLKOUT0 Register Shared with CLKOUT5
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-generate_target all [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_manager'...
-export_ip_user_files -of_objects [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}] -no_script -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 15:54:39 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {40.000} CONFIG.MMCM_CLKOUT1_DIVIDE {10} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {175.402} CONFIG.CLKOUT1_PHASE_ERROR {98.575}] [get_ips clk_manager]
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-DADDR_0A: 1145	-CLKOUT1 Register 1
-DADDR_0B: 0000	-CLKOUT1 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0C: 1041	-CLKOUT2 Register 1
-DADDR_0D: 00c0	-CLKOUT2 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_0E: 1041	-CLKOUT3 Register 1
-DADDR_0F: 00c0	-CLKOUT3 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_10: 1041	-CLKOUT4 Register 1
-DADDR_11: 00c0	-CLKOUT4 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_06: 1041	-CLKOUT5 Register 1
-DADDR_07: 00c0	-CLKOUT5 Register 2
-DADDR_08: 1514	-CLKOUT0 Register 1
-DADDR_09: 0000	-CLKOUT0 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-
-	WARNING: Min duty cycle violation 0.500 < 1.0
-	         Changing dutycycle to 1.0
-
-
-	WARNING: Max duty cycle is 1.0 > 0.0
-	         Changing dutycycle to 0.0
-
-DADDR_12: 1041	-CLKOUT6 Register 1
-DADDR_13: 00c0	-CLKOUT6 Register 2
-generate_target all [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_manager'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_manager'...
-export_ip_user_files -of_objects [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xci}}] -no_script -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 16:06:14 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sun Nov 26 16:12:00 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 16:13:34 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sun Nov 26 16:16:29 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 16:18:04 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2016.2
-  **** Build date : Jun  2 2016-16:57:03
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-current_hw_device [lindex [get_hw_devices] 0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
 set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
 set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
 program_hw_devices [lindex [get_hw_devices] 0]
@@ -1519,74 +93,11 @@ Resolution:
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 16:25:14 2017] Launched synth_1...
+[Tue Dec 05 16:16:13 2017] Launched synth_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 16:25:14 2017] Launched impl_1...
+[Tue Dec 05 16:16:13 2017] Launched impl_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-close_hw
-update_compile_order -fileset sources_1
-remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Current Working Files/debug.v}}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Current Working Files/debug.v}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/JW_BRAM_COLOR/JW_BRAM_COLOR.xci}}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/JW_BRAM_COLOR}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.ip_user_files/ip/JW_BRAM_COLOR} {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.ip_user_files/sim_scripts/JW_BRAM_COLOR}
-remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Common/vga.v}}
-file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/Common/vga.v}
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded}] [get_ips xy_bin]
-generate_target all [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xy_bin'...
-export_ip_user_files -of_objects [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}] -no_script -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 17:00:12 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sun Nov 26 17:05:32 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 17:09:56 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sun Nov 26 17:14:06 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 17:15:50 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_hw
+disconnect_hw_server localhost:3121
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
 ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
@@ -1607,280 +118,133 @@ WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Cha
 Resolution: 
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
 2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 17:32:11 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 17:32:11 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-close_hw
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 17:44:34 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-remove_files {{c:/Users/Aaron Wubshet/Desktop/Working Project/WingsFinalProject/decahedral.coe}}
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 17:46:33 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 17:47:33 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sun Nov 26 17:51:49 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 17:54:13 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-current_hw_device [lindex [get_hw_devices] 0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
+open_bd_design {C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd}
+Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_2
+Adding cell -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
+Adding cell -- xilinx.com:ip:cordic:6.0 - cordic_0
+Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
+Adding cell -- xilinx.com:ip:mult_gen:12.0 - mult_gen_1
+Adding cell -- xilinx.com:ip:xfft:9.0 - xfft_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Successfully read diagram <fft_mag> from BD file <C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1110.359 ; gain = 53.426
+close [ open {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/integrated_top.v} w ]
+add_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/integrated_top.v}}
 update_compile_order -fileset sources_1
-close_hw
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/6.111_Final_Project/Common/final_project.v:1]
-[Sun Nov 26 17:59:27 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 2
-[Sun Nov 26 18:01:36 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:03:08 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-current_hw_device [lindex [get_hw_devices] 0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:08:02 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 18:08:02 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+import_files -norecurse {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/image_processing.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/erosion.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/sobel.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/color_contour.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/one_edge.v}}
+update_compile_order -fileset sources_1
+remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v}}
+file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v}
+update_compile_order -fileset sources_1
+remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/integrated_top.v}}
+file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/new/integrated_top.v}
+import_files -force -norecurse {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Julian/Color_output.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Julian/lev_puls.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Julian/Color_offst.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Julian/FFT_energy.v} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Julian/Color_transform.v}}
+update_compile_order -fileset sources_1
+remove_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/sd_color_bram.v}}
+file delete -force {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/sd_color_bram.v}
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
 WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Working Project/WingsFinalProject/decahedral.coe}] [get_ips xy_bin]
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Working Project/WingsFinalProject/decahedral.coe' provided. It will be converted relative to IP Instance files '../../../../../../6.111_Final_Project/Wings/Working Project/WingsFinalProject/decahedral.coe'
-generate_target all [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
+set_property -dict [list CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Register_PortB_Output_of_Memory_Primitives {false}] [get_ips xy_bin]
+generate_target all [get_files  {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xy_bin'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xy_bin'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xy_bin'...
 INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xy_bin'...
 INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xy_bin'...
-generate_target: Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 1957.207 ; gain = 0.000
-export_ip_user_files -of_objects [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}] -no_script -force -quiet
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:22:36 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 18:22:36 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:30:32 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-
-reset_run impl_1 -prev_step 
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:31:00 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-update_files -from_files {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Current Working Files/color_contour.v}} -to_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v}} -filesets [get_filesets *]
-INFO: [filemgmt 20-762] Replacing file 'C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v' with file 'C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Current Working Files/color_contour.v'.
-INFO: [filemgmt 20-1080] Importing file from 'C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Current Working Files/color_contour.v' to 'C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/imports/New folder/color_contour.v'.
-create_ip -name div_gen -vendor xilinx.com -library ip -version 5.1 -module_name div_gen_0
-INFO: [filemgmt 56-101] Creating core container 'c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0.xcix' for IP 'div_gen_0'
-set_property -dict [list CONFIG.dividend_and_quotient_width {12} CONFIG.divisor_width {3} CONFIG.operand_sign {Unsigned} CONFIG.fractional_width {3} CONFIG.latency {14}] [get_ips div_gen_0]
-generate_target {instantiation_template} [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_0'...
-update_compile_order -fileset sources_1
-generate_target all [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_0'...
-export_ip_user_files -of_objects [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci}}] -no_script -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci}}]
-launch_run -jobs 2 div_gen_0_synth_1
-[Sun Nov 26 18:38:17 2017] Launched div_gen_0_synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/div_gen_0_synth_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:38:33 2017] Launched div_gen_0_synth_1, synth_1...
-Run output will be captured here:
-div_gen_0_synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/div_gen_0_synth_1/runme.log
-synth_1: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 18:38:33 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-update_compile_order -fileset sources_1
+export_ip_user_files -of_objects [get_files {{C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}] -no_script -force -quiet
 WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
 WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded}] [get_ips xy_bin]
-generate_target all [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xy_bin'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xy_bin'...
-export_ip_user_files -of_objects [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/xy_bin/xy_bin.xci}}] -no_script -force -quiet
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:46:30 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 18:46:30 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+can't use non-numeric string as operand of "/"
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.3 -module_name frame_buffer
+INFO: [filemgmt 56-101] Creating core container 'c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer.xcix' for IP 'frame_buffer'
+set_property -dict [list CONFIG.Memory_Type {Simple_Dual_Port_RAM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {307200} CONFIG.Enable_A {Always_Enabled} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/image_rgb.coe} CONFIG.Read_Width_A {12} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100}] [get_ips frame_buffer]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/image_rgb.coe' provided. It will be converted relative to IP Instance files '../../../../../../6.111_Final_Project/Wings/image_rgb.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'frame_buffer'...
 update_compile_order -fileset sources_1
+set_property generate_synth_checkpoint false [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}]
+generate_target all [get_files  {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'frame_buffer'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'frame_buffer'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'frame_buffer'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'frame_buffer'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'frame_buffer'...
+generate_target: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1410.930 ; gain = 2.020
+export_ip_user_files -of_objects [get_files {{c:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/frame_buffer/frame_buffer.xci}}] -no_script -force -quiet
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 18:52:38 2017] Launched synth_1...
+[Tue Dec 05 23:43:59 2017] Launched synth_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 18:52:38 2017] Launched impl_1...
+[Tue Dec 05 23:43:59 2017] Launched impl_1...
 Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Dec 05 23:51:28 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
+[Tue Dec 05 23:51:28 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 354 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/.Xil/Vivado-3232-THINKPAD/dcp/final_project_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.srcs/sources_1/ip/clk_manager/clk_manager.xdc:57]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2004.012 ; gain = 463.461
+Finished Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/.Xil/Vivado-3232-THINKPAD/dcp/final_project_early.xdc]
+Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/.Xil/Vivado-3232-THINKPAD/dcp/final_project.xdc]
+Finished Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/.Xil/Vivado-3232-THINKPAD/dcp/final_project.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.684 . Memory (MB): peak = 2012.004 ; gain = 7.934
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.684 . Memory (MB): peak = 2012.004 ; gain = 7.934
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM256X1S => RAM256X1S (RAMS64E, RAMS64E, RAMS64E, RAMS64E, MUXF7, MUXF7, MUXF8): 16 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 16 instances
+
+open_run: Time (s): cpu = 00:00:37 ; elapsed = 00:00:34 . Memory (MB): peak = 2122.613 ; gain = 667.074
+ERROR: [Common 17-165] Too many positional options when parsing 'Project/Final_Project/Final_Project.runs/impl_1/final_project_power_routed.rpx', please type 'open_report -help' for usage info.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Dec 06 00:48:37 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
+[Wed Dec 06 00:48:37 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Dec 06 01:26:34 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
+[Wed Dec 06 01:26:34 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292645975A
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
 set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
 set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
 program_hw_devices [lindex [get_hw_devices] 0]
@@ -1891,23 +255,5 @@ WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Cha
 Resolution: 
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
 2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov 26 19:05:00 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/synth_1/runme.log
-[Sun Nov 26 19:05:00 2017] Launched impl_1...
-Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/runme.log
-set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
-set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/Local Final Project/Final_Project/Final_Project.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
-program_hw_devices [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292645975A
 close_hw
-remove_files {{c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/Wings/Working Project/WingsFinalProject/decahedral.coe}}
-exit
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 26 19:16:42 2017...

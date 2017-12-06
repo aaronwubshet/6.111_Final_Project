@@ -45,23 +45,26 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlslice
 # IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconcat_0_0 || ORIG_REF_NAME==fft_mag_xlconcat_0_0}]
 
-# IP: c:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_1/fft_mag_xlconstant_2_1.xci
+# IP: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/ip/fft_mag_xlconstant_2_1/fft_mag_xlconstant_2_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fft_mag_xlconstant_2_1 || ORIG_REF_NAME==fft_mag_xlconstant_2_1}]
 
-# IP: ip/bram_fft_output_buffer/bram_fft_output_buffer.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bram_fft_output_buffer || ORIG_REF_NAME==bram_fft_output_buffer}]
+# IP: ip/xy_bin/xy_bin.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==xy_bin || ORIG_REF_NAME==xy_bin}]
 
 # IP: ip/clk_manager/clk_manager.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_manager || ORIG_REF_NAME==clk_manager}]
 
-# IP: ip/xy_bin/xy_bin.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==xy_bin || ORIG_REF_NAME==xy_bin}]
+# IP: ip/bram_fft_output_buffer/bram_fft_output_buffer.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bram_fft_output_buffer || ORIG_REF_NAME==bram_fft_output_buffer}]
+
+# IP: ip/frame_buffer/frame_buffer.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==frame_buffer || ORIG_REF_NAME==frame_buffer}]
 
 # XDC: ip/filter_input_buffer/filter_input_buffer_ooc.xdc
 
 # XDC: C:/Users/Aaron Wubshet/Desktop/Nexys4FFTDemo-master/src/bd/fft_mag/fft_mag_ooc.xdc
 
-# XDC: ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc
+# XDC: ip/xy_bin/xy_bin_ooc.xdc
 
 # XDC: ip/clk_manager/clk_manager_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_manager || ORIG_REF_NAME==clk_manager}] {/inst }]/inst ]]
@@ -71,4 +74,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: ip/clk_manager/clk_manager_ooc.xdc
 
-# XDC: ip/xy_bin/xy_bin_ooc.xdc
+# XDC: ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc
+
+# XDC: ip/frame_buffer/frame_buffer_ooc.xdc
