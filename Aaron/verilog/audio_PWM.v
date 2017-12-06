@@ -8,6 +8,7 @@ module audio_PWM(
     output reg PWM_out		// PWM output. Connect this to ampPWM.
     );
 
+    
 
     reg [7:0] pwm_counter = 8'd0;           // counts up to 255 clock cycles per pwm period
 
@@ -16,12 +17,20 @@ module audio_PWM(
         if(reset) begin
             pwm_counter <= 0;
             PWM_out <= 0;
+            
         end
         else begin
+            
             pwm_counter <= pwm_counter + 1;
 
-            if(pwm_counter >= music_data) PWM_out <= 0;
-            else PWM_out <= 1;
+            if(pwm_counter >= music_data)
+            begin 
+            PWM_out <= 0;
+            end
+            else
+            begin
+                PWM_out <= 1;
+            end
         end
     end
 endmodule

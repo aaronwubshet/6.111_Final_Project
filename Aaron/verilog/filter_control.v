@@ -22,56 +22,76 @@
 
 module filter_control(
     input clock,
+    input reset,
     input [1:0] switch,
     input ready,
-    input audio_in,
-    output audio_out,
-    output done,
-    output all_filters_ready
+    input [7:0] audio_in,
+    output [7:0] audio_out,
+    output done
     );
-    //filter is ready to accept data
-    wire hpf_ready;
+    
+
+    //low pass filter signals and instantiations
+    wire signed [9:0] lpf_coeff;
+    wire [4:0] lpf_idx;
+    wire lpf_done;
     wire lpf_ready;
-    wire bpf_ready;
-    assign all_filters_ready = hpf_ready && lpf_ready && bpf_ready;
+    assign lpf_ready = (switch == 2'b00) ? ready : 0;
+    wire signed [17:0] lpf_filter_out;
+    
+    lpf_coeffs low_pass_coeffs(.index(lpf_idx), .coeff(lpf_coeff));
+    
+    fir31 lpf(.clock(clock),.reset(reset),.ready(lpf_ready), .x(audio_in), .coeff(lpf_coeff), .idx(lpf_idx),
+        .y(lpf_filter_out), .done(lpf_done));      
+    
+    //high pass filter signals and instantiations
+    wire signed [9:0] hpf_coeff;
+    wire [4:0] hpf_idx;
+    wire hpf_done;
+    wire hpf_ready;
+    assign hpf_ready = (switch == 2'b01) ? ready: 0;
+    wire signed [17:0] hpf_filter_out;
+    
+    hpf_coeffs high_pass_coeffs(.index(hpf_idx), .coeff(hpf_coeff));
+    
+    fir31 hpf(.clock(clock),.reset(reset),.ready(hpf_ready), .x(audio_in), .coeff(hpf_coeff), .idx(hpf_idx),
+        .y(hpf_filter_out), .done(hpf_done)); 
+       
+    //band pass 1 filter signals and instations
+    wire signed [9:0] bpf1_coeff;
+    wire [4:0] bpf1_idx;
+    wire bpf1_done;
+    wire bpf1_ready;
+    assign bpf1_ready = (switch == 2'b10) ? ready: 0;
+    wire signed [17:0] bpf1_filter_out;
+    
+    bpf1_coeffs band_pass_1_coeffs(.index(bpf1_idx), .coeff(bpf1_coeff));
+    
+    fir31 bpf1(.clock(clock),.reset(reset),.ready(bpf1_ready), .x(audio_in), .coeff(bpf1_coeff), .idx(bpf1_idx),
+        .y(bpf1_filter_out), .done(bpf1_done)); 
+          
+    //band pass 2 filter signals and instations
+    wire signed [9:0] bpf2_coeff;
+    wire [4:0] bpf2_idx;
+    wire bpf2_done;
+    wire bpf2_ready;
+    assign bpf2_ready = (switch == 2'b11) ? ready: 0;
+    wire signed [17:0] bpf2_filter_out;
+    
+    bpf2_coeffs band_pass_2_coeffs(.index(bpf2_idx), .coeff(bpf2_coeff));
+    
+    fir31 bpf2(.clock(clock),.reset(reset),.ready(bpf2_ready), .x(audio_in), .coeff(bpf2_coeff), .idx(bpf2_idx),
+        .y(bpf2_filter_out), .done(bpf2_done)); 
 
-    //filter selection via switch
-    wire [3:0] data_in_valid;
-    assign data_in_valid = switch[0] ? (switch[1] ? 4'b1000: 4'b1000) : (switch[1] ? 4'b0010: 4'b0001);
-
-    //user is ready to input data     input to filter
-    wire input_data;
-    assign input_data = all_filters_ready ? audio_in: 0;
-
-    fir_compiler_high_pass hpf (
-      .aclk(clock),                              // input wire aclk
-      .s_axis_data_tvalid(data_in_valid[0]),  // input wire s_axis_data_tvalid
-      .s_axis_data_tready(hpf_ready),           // output wire s_axis_data_tready
-      .s_axis_data_tdata(input_data),    // input wire [15 : 0] s_axis_data_tdata
-      .m_axis_data_tvalid(m_axis_data_tvalid),  // output wire m_axis_data_tvalid
-      .m_axis_data_tready(m_axis_data_tready),  // input wire m_axis_data_tready
-      .m_axis_data_tdata(m_axis_data_tdata)    // output wire [31 : 0] m_axis_data_tdata
-    );
-    fir_compiler_bandpass bpf (
-      .aclk(clock),                              // input wire aclk
-      .s_axis_data_tvalid(data_in_valid[1]),  // input wire s_axis_data_tvalid
-      .s_axis_data_tready(bpf_ready),  // output wire s_axis_data_tready
-      .s_axis_data_tdata(input_data),    // input wire [15 : 0] s_axis_data_tdata
-      .m_axis_data_tvalid(m_axis_data_tvalid),  // output wire m_axis_data_tvalid
-      .m_axis_data_tready(m_axis_data_tready),  // input wire m_axis_data_tready
-      .m_axis_data_tdata(m_axis_data_tdata)    // output wire [31 : 0] m_axis_data_tdata
-    );
-    fir_compiler_low_pass lpf (
-      .aclk(clock),                              // input wire aclk
-      .s_axis_data_tvalid(data_in_valid[2]),  // input wire s_axis_data_tvalid
-      .s_axis_data_tready(lpf_ready),  // output wire s_axis_data_tready
-      .s_axis_data_tdata(input_data),    // input wire [15 : 0] s_axis_data_tdata
-      .m_axis_data_tvalid(m_axis_data_tvalid),  // output wire m_axis_data_tvalid
-      .m_axis_data_tready(m_axis_data_tready),  // input wire m_axis_data_tready
-      .m_axis_data_tdata(m_axis_data_tdata)    // output wire [31 : 0] m_axis_data_tdata
-    );
-
-
-
-
+    //output multiplexing
+    assign done = (switch == 2'b00) ? 
+        lpf_done: (switch==2'b01) ? 
+        hpf_done : (switch== 2'b10) ? 
+        bpf1_done : (switch == 2'b11) ? 
+        bpf2_done : 0;
+    assign audio_out = (switch == 2'b00) ?
+        lpf_filter_out[14:7]: (switch==2'b01) ? 
+        hpf_filter_out[14:7]: (switch== 2'b10) ? 
+        bpf1_filter_out[14:7] : (switch == 2'b11) ? 
+        bpf2_filter_out[14:7] : 0;
 endmodule
