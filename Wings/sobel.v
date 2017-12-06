@@ -63,7 +63,7 @@ module sobel(
     
     reg [11:0] GX2; //11
     reg [11:0] GY2; //11
-    reg [11:0] threshold = 12'd3000;
+    reg [11:0] threshold; // = 12'd3000;
    
     
     
@@ -84,7 +84,7 @@ module sobel(
                 i <= 0;
                 x <= 1;
                 y <= 1;
-                edge_memory_addr <= 641 - 1;
+                edge_memory_addr <= 641;
                 done <= 0;
                 
                 if (start) begin                

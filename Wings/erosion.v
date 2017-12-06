@@ -72,7 +72,7 @@ module edge_pixel_width(
             n <= 1;
             done <= 0;
         end
-        if (~done) begin
+        else if (~done) begin
         case (state)
             STATE_SETUP: begin
                 i <= 0;
