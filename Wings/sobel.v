@@ -24,7 +24,7 @@ module sobel(
     input wire clk,
     input wire start,
     output reg done,
-    input wire [5:0] SW,  //lower 6 switches
+//    input wire [5:0] SW,  //lower 6 switches
 
     //from the BRAM of the original picture
     input wire [11:0] pixel_data,
@@ -55,7 +55,7 @@ module sobel(
     
     reg [9:0] x;
     reg [8:0] y;
-    reg [9:0] x_buffer = 25;
+    reg [9:0] x_buffer = 35;
     reg [8:0] y_buffer = 25;
     
     reg [6:0] GX; 
@@ -71,9 +71,8 @@ module sobel(
     reg [5:0] old_SW = 16'hFFFF;   
         
     always @(posedge clk) begin
-        if (SW != old_SW) begin
-            threshold <= {SW[5], SW[5], SW[4], SW[4], SW[3], SW[3], SW[2], SW[2], SW[1], SW[1], SW[0], SW[0]};
-            old_SW <= SW;
+        if (~start) begin
+            threshold <= 0;
             state <= STATE_SETUP;
             done <= 0;
         end
@@ -213,6 +212,8 @@ module sobel(
                 
                 i <= 0;
                 
+//                is_edge <= 0; //ouoiuis
+
                 
                 if ((x < x_buffer)  || (x > (WIDTH - x_buffer)) || (y < y_buffer) || ( y >( HEIGHT - y_buffer ))) begin
                     state <= STATE_SHIFTWINDOW;

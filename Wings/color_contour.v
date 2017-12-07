@@ -44,6 +44,7 @@ module color_contour(
     parameter STATE_IS_IT_EDGE = 3;
     parameter STATE_WAIT_TWO = 4;
     parameter STATE_GET_FIRST = 6;
+    parameter STATE_GET_DIVISION = 5;
     
     reg [2:0] explore_dir = 0;
     reg [2:0] max_explore_dir = 3'b111;
@@ -63,9 +64,6 @@ module color_contour(
     reg [11:0] pixel_count;
     reg [2:0] bin_in;
     
-    
-    reg [9:0] x_prev = 0;
-    reg [8:0] y_prev = 0;
     reg [18:0] addr_prev = 0;
     reg [9:0] x_curr;
     reg [8:0] y_curr;
@@ -84,17 +82,7 @@ module color_contour(
     reg [15:0] dividend_in;
     
     
-//    div_gen_0 getting_pixels_per_bin (
-//      .aclk(clk),                                      // input wire aclk
-//      .s_axis_divisor_tvalid(),    // input wire s_axis_divisor_tvalid
-//      .s_axis_divisor_tdata(),      // input wire [7 : 0] s_axis_divisor_tdata
-//      .s_axis_dividend_tvalid(),  // input wire s_axis_dividend_tvalid
-//      .s_axis_dividend_tdata(),    // input wire [15 : 0] s_axis_dividend_tdata
-//      .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
-//      .m_axis_dout_tdata()            // output wire [23 : 0] m_axis_dout_tdata
-//    );
-    
-    div_gen_0 your_instance_name (
+    div_gen div (
       .aclk(clk),                                      // input wire aclk
       .s_axis_divisor_tvalid(divisor_ready),    // input wire s_axis_divisor_tvalid
       .s_axis_divisor_tdata(divisor_in),      // input wire [7 : 0] s_axis_divisor_tdata
@@ -114,7 +102,8 @@ module color_contour(
             done <= 0;
             bin_in <= 3'b001;
             pixel_count <= 0;
-//            num_pixels <= 0;
+            divisor_ready <= 0;
+            dividend_ready <= 0;
         end
         else if (~done) begin
                                
@@ -135,7 +124,10 @@ module color_contour(
                 dividend_in <= {4'h0, num_pixels};
         
                 pixel_count <= 0;
+                state <= STATE_GET_DIVISION;
+            end
         
+            STATE_GET_DIVISION: begin
                 if (divide_valid) begin                   
                     pixel_per_bin <= divide_out[19:8] + 1;
                                     
@@ -143,15 +135,10 @@ module color_contour(
                     state <= STATE_WAIT;
                 end
                 
-                                                            
-//                next_state <= STATE_GET_FIRST;
-//                state <= STATE_WAIT;
             end
             
             STATE_GET_FIRST: begin
                 if (bram_read != 0) begin                
-//                    x_start <= x_curr;
-//                    y_start <= y_curr;
                     addr_start <= edge_addr_read;
                     
                     bram_write <= bin_in;
@@ -280,7 +267,6 @@ module color_contour(
                         addr_curr <= edge_addr_read;
                         
                         explore_dir <= 0;
-//                        num_pixels <= num_pixels + 1;
                         
                         //write that bin into the bram location
                         edge_addr_write <= edge_addr_read;
@@ -288,8 +274,8 @@ module color_contour(
                         bram_write <= bin_in;
                         
                         pixel_count <= pixel_count + 1;
-//                        if (pixel_count == pixel_per_bin) begin 
-                        if (pixel_count ==  manual_pixel_bin) begin
+                        if (pixel_count == pixel_per_bin) begin 
+//                        if (pixel_count ==  manual_pixel_bin) begin
                             bin_in <= bin_in + 1;
                             pixel_count <= 0;
                         end
