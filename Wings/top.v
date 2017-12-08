@@ -23,83 +23,7 @@ module top(
     wire reset;
     assign reset = 0;
     
-    wire clk_25mhz;
-    
-/*    //camera signals
-    wire camera_pwdn;
-    wire camera_clk_in;
-    wire camera_clk_out;
-    wire [7:0] camera_dout;
-    wire camera_scl, camera_sda;
-    wire camera_vsync, camera_hsync;      
-    wire [15:0] camera_pixel;
-    wire camera_pixel_valid;
-    wire camera_reset;
-    wire camera_frame_done;
-    
-    assign camera_clk_in = clk_25mhz;
-    assign camera_pwdn = 0;
-    assign camera_reset = ~reset; 
-    
-    //assign camera outputs
-    assign JA[0] = camera_pwdn;
-    assign camera_dout[0] = JA[1];
-    assign camera_dout[2] = JA[2];
-    assign camera_dout[4] = JA[3];
-    assign JA[4] = camera_reset;
-    assign camera_dout[1] = JA[5];
-    assign camera_dout[3] = JA[6];
-    assign camera_dout[5] = JA[7];
-    
-    assign camera_dout[6] = JB[0];
-    assign JB[1] = camera_clk_in;
-    assign camera_hsync = JB[2];
-    //assign JB[3]= camera_sda; 
-    assign camera_dout[7] = JB[4];
-    assign camera_clk_out = JB[7];
-    assign camera_vsync = JB[5];
-    //assign JB[7] = camera_scl;
-    
-    
-    
-    
-    //camera configuration module    
-    camera_configure camera_configure_1 (
-        .clk(clk_25mhz),
-        .start(BTNC),
-        .sioc(JB[6]),
-        .siod(JB[3]),
-        .done()
-        );
-    
-    //camera interface
-    camera_read camera_read_1 (
-        .p_clock(camera_clk_out), 
-        .vsync(camera_vsync), 
-        .href(camera_hsync),
-        .p_data(camera_dout), 
-        .pixel_data(camera_pixel), 
-        .pixel_valid(camera_pixel_valid),
-        .frame_done(camera_frame_done) 
-        );
-        
-    //write camera data to frame buffer     
-    camera_address_gen camera_address_gen_1 (
-        .camera_clk(camera_clk_out),
-        .camera_pixel_valid(camera_pixel_valid),
-        .camera_frame_done(camera_frame_done),
-        .capture_frame(BTNU),
-        .camera_pixel(camera_pixel),
-        .memory_data(memory_write_data),
-        .memory_addr(memory_write_addr_cam),
-        .memory_we(memory_write_enable_cam)
-        );
-    
-    wire [18:0] memory_write_addr_cam;
-    wire memory_write_enable_cam;
-    
-    assign memory_write_addr = SW[6] ? 0 : memory_write_addr_cam;    
-    assign memory_write_enable = SW[6] ? 0 : memory_write_enable_cam;*/
+    wire clk_25mhz;    
     
         //clock generation
      video_clk video_clk_1 (
@@ -193,6 +117,7 @@ module top(
         .JB(JB),
         .BTNC(BTNC),
         .BTNU(BTNU),
+        .BTNL(BTNL),
         .image_start(SW[6])
     );
     

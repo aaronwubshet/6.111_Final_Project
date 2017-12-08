@@ -21,13 +21,10 @@
 
 
 module one_edge(
-    input clk,
-//    output reg [9:0] x_start,
-//    output reg [8:0] y_start,
-//    output reg [18:0] addr_start,
+    input wire clk,
     output reg [11:0] num_pixels,
     output reg done = 0,
-    input start,
+    input wire start,
     
     //writing to the BRAM of the edges
     input wire [2:0] bram_read,
@@ -81,10 +78,9 @@ module one_edge(
  
     
     always @(posedge clk) begin
-        if (~start) begin
+        if (start == 0) begin
             state <= STATE_SETUP;
             done <= 0;
-            num_pixels <= 0;
         end
         else if (~done) begin
                                
@@ -96,6 +92,7 @@ module one_edge(
                 edge_addr_write <= 0;
                 x_curr <= 0;
                 y_curr <= 0;
+                num_pixels <= 0;
                                                             
                 next_state <= STATE_GET_FIRST;
                 state <= STATE_WAIT;
@@ -103,8 +100,6 @@ module one_edge(
             
             STATE_GET_FIRST: begin
                 if ((x_curr > 35) && (y_curr > 35) && (bram_read == 3'b011)) begin
-//                    x_start <= x_curr;
-//                    y_start <= y_curr;
                     addr_start <= edge_addr_read;
                     
                     bram_write <= 3'b111;
@@ -128,8 +123,6 @@ module one_edge(
                 end
             end
             
-            
-                
             STATE_WAIT: begin
                 state <= STATE_WAIT_TWO;
             end
@@ -222,7 +215,7 @@ module one_edge(
 
                 if (edge_addr_read == addr_start) begin
                     
-                    edge_addr_read <= addr_start;
+                    edge_addr_read <= 0; //addr_start;
                     state <= STATE_WAIT;
                     next_state <= STATE_CLEAR_REST;
                 end
@@ -250,13 +243,14 @@ module one_edge(
                 if (bram_read == 3'b111) begin
                     bram_write <= 3'b001;
                     edge_addr_write <= edge_addr_read;
+//                    num_pixels <= num_pixels + 1;
                 end
                 else begin
                     bram_write <= 3'b000;
                     edge_addr_write <= edge_addr_read;
                 end
                 
-                if (edge_addr_read == 307200) begin
+                if (edge_addr_read > 307000) begin //200) begin
                     done <= 1;
                 end
                 

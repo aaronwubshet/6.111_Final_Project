@@ -93,7 +93,7 @@ module color_contour(
     );
     
  
-    reg [11:0] manual_pixel_bin = 12'h162;
+    reg [11:0] manual_pixel_bin = 12'd32;//12'h162;
     reg first = 1;
     
     always @(posedge clk) begin
@@ -276,6 +276,12 @@ module color_contour(
                         pixel_count <= pixel_count + 1;
                         if (pixel_count == pixel_per_bin) begin 
 //                        if (pixel_count ==  manual_pixel_bin) begin
+//                            if (bin_in == 3'b111) begin
+//                                bin_in <= 1;
+//                            end
+//                            else begin
+//                                bin_in <= bin_in + 1;
+//                            end
                             bin_in <= bin_in + 1;
                             pixel_count <= 0;
                         end

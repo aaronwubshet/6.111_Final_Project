@@ -55,7 +55,7 @@ module sobel(
     
     reg [9:0] x;
     reg [8:0] y;
-    reg [9:0] x_buffer = 35;
+    reg [9:0] x_buffer = 25;
     reg [8:0] y_buffer = 25;
     
     reg [6:0] GX; 

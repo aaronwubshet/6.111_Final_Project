@@ -27,6 +27,7 @@ module image_processing(
     inout wire [7:0] JB,
     input wire BTNC,
     input wire BTNU,
+    input wire BTNL,
     input wire image_start
     
 
@@ -114,7 +115,7 @@ module image_processing(
     
     //sobel edge detection    
     sobel edge_detection(
-        .clk(CLK_100M),
+        .clk(clk_25mhz),
         .start(image_start),
         .done(sobel_done),
 //        .SW(SW),
@@ -125,9 +126,7 @@ module image_processing(
         .is_edge(sobel_edge_bram_din),
         .edge_memory_addr(sobel_edge_bram_addr)
     );
-   
-   assign color_contour_done = ~SW[5] ? erosion_done : junk;
-        
+          
     
     wire erosion_done;
     wire [18:0] erosion_edge_bram_addrb;
@@ -176,7 +175,7 @@ module image_processing(
         .clk(clk_25mhz),
         .num_pixels(num_edge_pixels),
         .num_bins(num_bins),
-        .done(junk),
+        .done(color_contour_done),
         .start(one_edge_done),
         .bram_read(edge_bram_doutb),
         .bram_write(color_contour_bram_din),
@@ -192,7 +191,12 @@ module image_processing(
     assign edge_bram_din = ~sobel_done ? sobel_edge_bram_din : ~erosion_done ? erosion_edge_bram_din : 
                             ~one_edge_done? one_edge_bram_din : color_contour_bram_din;
                             
-    assign done = color_contour_done;
+//    assign done = color_contour_done;
+   assign done = (SW[5] && image_start) ? color_contour_done: (image_start) ? erosion_done : 0;
+//      assign done = (SW[5] && image_start &&SW[4]) ? color_contour_done: (SW[5] && image_start) ? one_edge_done : (image_start) ? erosion_done : 0;
+
+   //~SW[5] ? erosion_done : color_contour_done;
+
     
     
 endmodule
