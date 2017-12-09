@@ -1,0 +1,396 @@
+
+*** Running vivado
+    with args -log fft_mag_axis_register_slice_2_0.vds -m64 -mode batch -messageDb vivado.pb -notrace -source fft_mag_axis_register_slice_2_0.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source fft_mag_axis_register_slice_2_0.tcl -notrace
+Command: synth_design -top fft_mag_axis_register_slice_2_0 -part xc7a100tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7660 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 288.047 ; gain = 80.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fft_mag_axis_register_slice_2_0' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/synth/fft_mag_axis_register_slice_2_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_9_axis_register_slice' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_register_slice_v1_1_9/hdl/verilog/axis_register_slice_v1_1_axis_register_slice.v:66]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 10 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000010010010 
+	Parameter C_REG_CONFIG bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_infrastructure_v1_1_0/hdl/verilog/axis_infrastructure_v1_1_util_axis2vector.v:66]
+	Parameter C_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 10 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 27 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000010010010 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 16 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 16 - type: integer 
+	Parameter P_TLAST_INDX bound to: 16 - type: integer 
+	Parameter P_TID_INDX bound to: 17 - type: integer 
+	Parameter P_TDEST_INDX bound to: 17 - type: integer 
+	Parameter P_TUSER_INDX bound to: 17 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (1#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_infrastructure_v1_1_0/hdl/verilog/axis_infrastructure_v1_1_util_axis2vector.v:66]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_9_axisc_register_slice' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_register_slice_v1_1_9/hdl/verilog/axis_register_slice_v1_1_axisc_register_slice.v:62]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_DATA_WIDTH bound to: 27 - type: integer 
+	Parameter C_REG_CONFIG bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_9_axisc_register_slice' (2#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_register_slice_v1_1_9/hdl/verilog/axis_register_slice_v1_1_axisc_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_infrastructure_v1_1_0/hdl/verilog/axis_infrastructure_v1_1_util_vector2axis.v:66]
+	Parameter C_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 10 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 27 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000010010010 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 16 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 16 - type: integer 
+	Parameter P_TLAST_INDX bound to: 16 - type: integer 
+	Parameter P_TID_INDX bound to: 17 - type: integer 
+	Parameter P_TDEST_INDX bound to: 17 - type: integer 
+	Parameter P_TUSER_INDX bound to: 17 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (3#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_infrastructure_v1_1_0/hdl/verilog/axis_infrastructure_v1_1_util_vector2axis.v:66]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_9_axis_register_slice' (4#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/axis_register_slice_v1_1_9/hdl/verilog/axis_register_slice_v1_1_axis_register_slice.v:66]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_axis_register_slice_2_0' (5#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/synth/fft_mag_axis_register_slice_2_0.v:57]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axisc_register_slice has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axisc_register_slice has unconnected port M_READY
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port m_axis_tready
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 325.613 ; gain = 118.152
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 325.613 ; gain = 118.152
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/fft_mag_axis_register_slice_2_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/fft_mag_axis_register_slice_2_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 625.426 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axis_register_slice_v1_1_9_axisc_register_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module axis_register_slice_v1_1_9_axis_register_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port aresetn
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port s_axis_tstrb[1]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port s_axis_tstrb[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port s_axis_tid[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port s_axis_tdest[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_9_axis_register_slice has unconnected port m_axis_tready
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 625.426 ; gain = 417.965
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 625.426 ; gain = 417.965
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 625.426 ; gain = 417.965
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |FDRE |    28|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------------------+------------------------------------------------+------+
+|      |Instance                   |Module                                          |Cells |
++------+---------------------------+------------------------------------------------+------+
+|1     |top                        |                                                |    28|
+|2     |  inst                     |axis_register_slice_v1_1_9_axis_register_slice  |    28|
+|3     |    axisc_register_slice_0 |axis_register_slice_v1_1_9_axisc_register_slice |    28|
++------+---------------------------+------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 625.426 ; gain = 114.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 625.426 ; gain = 417.965
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc] for cell 'inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 625.426 ; gain = 414.332
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 625.426 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 07 01:43:54 2017...

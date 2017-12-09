@@ -1,0 +1,250 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Dec 07 01:48:27 2017
+# Process ID: 4144
+# Current directory: C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/fft_mag_xlslice_1_0_synth_1
+# Command line: vivado.exe -log fft_mag_xlslice_1_0.vds -mode batch -messageDb vivado.pb -notrace -source fft_mag_xlslice_1_0.tcl
+# Log file: C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/fft_mag_xlslice_1_0_synth_1/fft_mag_xlslice_1_0.vds
+# Journal file: C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/fft_mag_xlslice_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fft_mag_xlslice_1_0.tcl -notrace
+Command: synth_design -top fft_mag_xlslice_1_0 -part xc7a100tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13260 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 285.117 ; gain = 77.688
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlslice_1_0' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/synth/fft_mag_xlslice_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xlslice' [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/work/xlslice.v:12]
+	Parameter DIN_WIDTH bound to: 16 - type: integer 
+	Parameter DIN_FROM bound to: 15 - type: integer 
+	Parameter DIN_TO bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xlslice' (1#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/work/xlslice.v:12]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlslice_1_0' (2#1) [c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/synth/fft_mag_xlslice_1_0.v:57]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[6]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[5]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[4]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[3]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[2]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[1]
+WARNING: [Synth 8-3331] design xlslice has unconnected port Din[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 322.512 ; gain = 115.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 322.512 ; gain = 115.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 322.512 ; gain = 115.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 322.512 ; gain = 115.082
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 415.734 ; gain = 208.305
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3330] design fft_mag_xlslice_1_0 has an empty top module
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[6]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[5]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[4]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[2]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[1]
+WARNING: [Synth 8-3331] design fft_mag_xlslice_1_0 has unconnected port Din[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 415.734 ; gain = 208.305
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 415.734 ; gain = 208.305
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 415.734 ; gain = 208.305
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 415.734 ; gain = 208.305
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 415.734 ; gain = 208.305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 416.660 ; gain = 209.230
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 416.660 ; gain = 205.773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 416.660 ; gain = 209.230
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 509.449 ; gain = 298.563
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 863.402 ; gain = 353.953
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 863.402 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 07 01:49:05 2017...

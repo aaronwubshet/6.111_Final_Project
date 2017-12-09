@@ -1,0 +1,144 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sat Dec 09 13:09:46 2017
+| Host         : THINKPAD running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file final_project_control_sets_placed.rpt
+| Design       : final_project
+| Device       : xc7a100t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    91 |
+| Unused register locations in slices containing registers |   313 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             172 |           87 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              78 |           29 |
+| Yes          | No                    | No                     |             577 |          232 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             236 |           85 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+------------------+----------------+
+|      Clock Signal      |                                                     Enable Signal                                                    |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
++------------------------+----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+------------------+----------------+
+|  clocker/inst/clk_out2 |                                                                                                                      | audio_stuff/audio_at32khz/PWM_out_i_1_n_0       |                1 |              1 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/no_bit_reverse.DV_delay/wr_enable |                                                 |                1 |              1 |
+|  clocker/inst/clk_out1 | sd_read_write/cs_i_1_n_0                                                                                             |                                                 |                1 |              1 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel6                                                                                         |                                                 |                2 |              4 |
+|  clocker/inst/clk_out1 |                                                                                                                      | display/strobe[5]_i_1_n_0                       |                2 |              4 |
+|  clocker/inst/clk_out1 |                                                                                                                      | display/counter_reg[12]                         |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel_load1                                                                                    |                                                 |                2 |              4 |
+|  clocker/inst/clk_out1 | sd_read_write/bit_counter_reg[7]_i_1_n_0                                                                             | sd_read_write/bit_counter[9]_i_1_n_0            |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel5                                                                                         |                                                 |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel4                                                                                         |                                                 |                1 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel3[3]_i_1_n_0                                                                              |                                                 |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel2                                                                                         |                                                 |                1 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel_load0                                                                                    |                                                 |                1 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel7                                                                                         |                                                 |                3 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel1                                                                                         |                                                 |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel0                                                                                         |                                                 |                2 |              4 |
+|  clocker/inst/clk_out1 | box/skinny_edge/i                                                                                                    | box/skinny_edge/i[3]_i_1__0_n_0                 |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel_load2                                                                                    |                                                 |                2 |              4 |
+|  clocker/inst/clk_out1 | box/skinny_edge/state[3]_i_2__1_n_0                                                                                  | box/edge_detection/SR[0]                        |                3 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/bw_pixel8                                                                                         |                                                 |                2 |              4 |
+|  clocker/inst/clk_out1 | sd_read_write/cmd_out[47]_i_1_n_0                                                                                    | sd_read_write/cmd_out[6]_i_1_n_0                |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/i                                                                                                 | box/edge_detection/i[3]_i_1_n_0                 |                1 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/state[3]_i_2_n_0                                                                                  | box/edge_detection/state[3]_i_1_n_0             |                2 |              4 |
+|  clocker/inst/clk_out2 | box/edge_detection/x[9]_i_1_n_0                                                                                      |                                                 |                3 |              4 |
+|  clocker/inst/clk_out2 | audio_stuff/filter_controller/hpf/idx_reg[4]_i_2__0_n_0                                                              | audio_stuff/filter_controller/hpf/flag0         |                1 |              5 |
+|  clocker/inst/clk_out2 | audio_stuff/filter_controller/lpf/sel                                                                                | audio_stuff/filter_controller/lpf/flag0         |                1 |              5 |
+|  clocker/inst/clk_out1 | sd_read_write/state[4]_i_1_n_0                                                                                       |                                                 |                4 |              5 |
+|  clocker/inst/clk_out1 | sd_read_write/return_state[4]_i_1_n_0                                                                                |                                                 |                2 |              5 |
+|  clocker/inst/clk_out1 | sd_read_write/bit_counter_reg[7]_i_1_n_0                                                                             |                                                 |                3 |              6 |
+|  clocker/inst/clk_out1 |                                                                                                                      | box/isolate/pixel_count_reg[0]                  |                3 |              6 |
+|  clocker/inst/clk_out1 | box/separate/edge_addr_read[5]_i_1__0_n_0                                                                            |                                                 |                2 |              6 |
+|  clocker/inst/clk_out2 | box/edge_detection/x[9]_i_1_n_0                                                                                      | box/edge_detection/x[8]_i_1_n_0                 |                2 |              6 |
+|  clocker/inst/clk_out2 | box/edge_detection/y                                                                                                 | box/edge_detection/y[8]_i_1_n_0                 |                3 |              6 |
+|  clocker/inst/clk_out1 | sd_read_write/data_sig[7]_i_1_n_0                                                                                    |                                                 |                1 |              7 |
+|  clocker/inst/clk_out1 | sd_read_write/byte_counter[8]_i_2_n_0                                                                                | sd_read_write/byte_counter[8]_i_1_n_0           |                2 |              7 |
+|  clocker/inst/clk_out1 | sd_read_write/dout[7]_i_1_n_0                                                                                        |                                                 |                1 |              8 |
+|  clocker/inst/clk_out1 | sd_read_write/recv_data[7]_i_1_n_0                                                                                   |                                                 |                2 |              8 |
+|  clocker/inst/clk_out2 | audio_stuff/filter_controller/lpf/y[7]_i_1__0_n_0                                                                    |                                                 |                5 |              8 |
+|  clocker/inst/clk_out2 | audio_stuff/sd_count[8]_i_1_n_0                                                                                      |                                                 |                2 |              9 |
+|  clocker/inst/clk_out2 | audio_stuff/fwrite_reg_n_0                                                                                           | SW_IBUF[15]                                     |                4 |              9 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/rptr[5]_i_2_n_0                                                                                   | audio_stuff/myfifo/rptr[5]_i_1_n_0              |                2 |              9 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/symbols_out_remaining[9]_i_1_n_0                                    |                                                 |                4 |             10 |
+|  clocker/inst/clk_out2 | box/edge_detection/GX2                                                                                               |                                                 |                6 |             11 |
+|  clocker/inst/clk_out2 | box/edge_detection/GY2                                                                                               |                                                 |                6 |             11 |
+|  clocker/inst/clk_out2 | audio_stuff/filter_bram_addra_filter_reg[10]_i_1_n_0                                                                 | SW_IBUF[15]                                     |                3 |             11 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/load_cnt_ce    |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_0                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg                                                    |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/CE                                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_0_63_0_2_i_1_n_0                                                                         |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_128_191_0_2_i_1_n_0                                                                      |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_192_255_0_2_i_1_n_0                                                                      |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_256_319_0_2_i_1_n_0                                                                      |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_320_383_0_2_i_1_n_0                                                                      |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_384_447_0_2_i_1_n_0                                                                      |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_448_511_0_2_i_1_n_0                                                                      |                                                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/myfifo/fifo_reg_64_127_0_2_i_1_n_0                                                                       |                                                 |                3 |             12 |
+|  clocker/inst/clk_out1 |                                                                                                                      | julian_color/test_color/hreset                  |                3 |             12 |
+|  clocker/inst/clk_out1 | julian_color/test_color/hreset                                                                                       | julian_color/test_color/vcount0                 |                3 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_1                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out1 | box/separate/pixel_count[11]_i_1_n_0                                                                                 | box/isolate/pixel_count_reg[0]                  |                2 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_6                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_5                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_4                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_3                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/i_tc_compare_reg_2                                                  |                                                 |                4 |             12 |
+|  clocker/inst/clk_out1 | box/separate/edge_addr_read[5]_i_1__0_n_0                                                                            | box/separate/edge_addr_read[18]_i_1__1_n_0      |                2 |             13 |
+|  clocker/inst/clk_out2 | audio_stuff/fft_send_count[0]_i_1_n_0                                                                                |                                                 |                4 |             13 |
+|  clocker/inst/clk_out2 | box/edge_detection/GX                                                                                                |                                                 |                4 |             14 |
+|  clocker/inst/clk_out2 | box/edge_detection/edge_memory_addr[18]_i_2_n_0                                                                      | box/edge_detection/edge_memory_addr[18]_i_1_n_0 |                5 |             16 |
+|  clocker/inst/clk_out1 | box/skinny_edge/middle_addr                                                                                          | box/skinny_edge/middle_addr[18]_i_1_n_0         |                5 |             18 |
+|  clocker/inst/clk_out1 | box/isolate/addr_start                                                                                               |                                                 |                8 |             19 |
+|  clocker/inst/clk_out1 | box/isolate/addr_prev[18]_i_1_n_0                                                                                    |                                                 |                6 |             19 |
+|  clocker/inst/clk_out1 | box/isolate/addr_curr                                                                                                |                                                 |                6 |             19 |
+|  clocker/inst/clk_out1 | box/skinny_edge/edge_addr_read[18]_i_1_n_0                                                                           |                                                 |               11 |             19 |
+|  clocker/inst/clk_out1 | box/separate/addr_start                                                                                              |                                                 |                7 |             19 |
+|  clocker/inst/clk_out1 | box/separate/addr_prev[18]_i_2__0_n_0                                                                                | box/separate/addr_prev[18]_i_1__0_n_0           |                8 |             19 |
+|  clocker/inst/clk_out1 | box/separate/addr_curr                                                                                               |                                                 |                6 |             19 |
+|  clocker/inst/clk_out1 | box/isolate/edge_addr_write[18]_i_2_n_0                                                                              | box/isolate/edge_addr_write[18]_i_1_n_0         |               11 |             19 |
+|  clocker/inst/clk_out2 |                                                                                                                      | SW_IBUF[15]                                     |               10 |             19 |
+|  clocker/inst/clk_out2 | box/edge_detection/pic_memory_addr[18]_i_1_n_0                                                                       |                                                 |               12 |             19 |
+|  clocker/inst/clk_out1 | box/isolate/edge_addr_read[18]_i_1__0_n_0                                                                            |                                                 |                7 |             19 |
+|  clocker/inst/clk_out1 | box/skinny_edge/bram_write[2]_i_1__0_n_0                                                                             |                                                 |                9 |             22 |
+|  clocker/inst/clk_out1 | box/separate/bram_write[2]_i_2_n_0                                                                                   | box/separate/bram_write[2]_i_1__1_n_0           |               13 |             22 |
+|  clocker/inst/clk_out2 | audio_stuff/sd_addr[9]_i_1_n_0                                                                                       | SW_IBUF[15]                                     |                6 |             23 |
+|  clocker/inst/clk_out1 | sd_read_write/boot_counter[0]_i_1_n_0                                                                                |                                                 |                7 |             27 |
+|  clocker/inst/clk_out2 |                                                                                                                      | audio_stuff/clk_32khz_module/clear              |                8 |             32 |
+|  clocker/inst/clk_out2 | audio_stuff/my_fft/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                              |                                                 |               29 |             37 |
+|  clocker/inst/clk_out1 | sd_read_write/cmd_out[47]_i_1_n_0                                                                                    |                                                 |               16 |             52 |
+|  clocker/inst/clk_out2 |                                                                                                                      |                                                 |               31 |             60 |
+|  clocker/inst/clk_out1 |                                                                                                                      |                                                 |               58 |            115 |
++------------------------+----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+------------------+----------------+
+
+
