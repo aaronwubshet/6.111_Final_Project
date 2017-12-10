@@ -31,7 +31,7 @@ module sobel(
     output reg [18:0] pic_memory_addr,
     
     //writing to the BRAM of the edges
-    output reg [3:0] is_edge,
+    output reg [2:0] is_edge,
     output reg [18:0] edge_memory_addr
     );
     

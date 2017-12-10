@@ -211,23 +211,27 @@ module final_project(
     );
    
     wire [31:0] julian_debug;
-    wire adjusting;
+    wire julian_test;
+    //wire adjusting;
+    
+    
+    /*julian debug statement*/
+    wire [9:0] addrb;
+    wire [15:0] doutb;
+    wire [59:0] bin_addr;
+    wire [2:0] bin;
     Color_transform julian_color(.CLK100MHZ(clk_100mhz), .reset(master_reset), .clock_25mhz(clk_25mhz), .SW(SW[15:0]), 
         .BTNC(btn_center), .BTNU(btn_up), .BTNL(btn_left), .BTNR(btn_right), .BTND(btn_down),
         .VGA_R(VGA_R), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_VS(VGA_VS), .addr2_b(addrb),
         .dout2_b(doutb), .addr_b(vga_bram_addr), .dout_b(edge_bram_doutb), .wings_done(image_done),
         .wubs_done(aaron_done), .addresses(bin_addr), .bin_num(bin), .FFT_done(julian_done), 
-        .data_disp(julian_debug), .adjusting(adjusting));
+        .data_disp(julian_debug), .julian_test(julian_test), .start(start));
            
     //FFT amplitude output buffer read and write signals
     wire fft_bram_out_write_enablea;
     wire [9:0] fft_bram_out_addra;
     wire [15:0] fft_bram_out_dina;
     wire [15:0] fft_bram_out_douta;
-    
-    wire [9:0] fft_bram_out_addrb;
-    wire [15:0] fft_bram_out_dinb;
-    wire [15:0] fft_bram_out_doutb;
     
     bram_fft_output_buffer fft_amplitude_buffer (
         .clka(clk_100mhz),    // input wire clka
@@ -243,29 +247,39 @@ module final_project(
     );
         
     
-    
+    wire [2:0] state;
+    wire filter_flag;
+    wire filter_done;
+    wire flag;
+    wire last_flag;
+    wire filter_ready;     
+    wire test;
     audio_processing audio_stuff(.clock(clk_100mhz), .clk_25mhz(clk_25mhz), .reset(master_reset), .wings_done(image_done), 
         .julian_done(julian_done), .sd_data(sd_read),.sd_ready(sd_ready), .sd_read_available(sd_read_available), 
         .AUD_PWM(AUD_PWM),.sd_addr(sd_addr), .AUD_SD(AUD_SD), .sd_rd(sd_rd), .filter_control(SW[8:7]), 
         .fft_bram_out_write_enablea(fft_bram_out_write_enablea), .fft_bram_out_addra(fft_bram_out_addra),
-        .fft_bram_out_dina(fft_bram_out_dina), .done(aaron_done),.bin(bin),.bin_addr(bin_addr));
-    assign LED[0] = image_done;
+        .fft_bram_out_dina(fft_bram_out_dina), .done(aaron_done),.bin(bin),.bin_addr(bin_addr),
+        .state(state), .filter_flag(filter_flag), .filter_done(filter_done), .flag(flag), .last_flag(last_flag), .filter_ready(filter_ready), .test(test));
+    assign LED[0]= image_done;
     assign LED[1] = julian_done;
-    assign LED[2] = aaron_done;
-    /*
+    assign LED[2] = test;
+    assign LED[3] = julian_test;
+    //assign data = {16'b0, fft_bram_out_dina};
     
+    assign data = julian_debug;
+    //assign data = {julian_debug[0],3'b0, 2'b0, addrb, doutb};
     ila_0 testing (
-        .clk(clk_25mhz), // input wire clk
-    
-    
-        .probe0(image_edge_bram_addrb), // input wire [18:0]  probe0  
-        .probe1(vga_bram_addr), // input wire [18:0]  probe1 
-        .probe2(edge_bram_dout), // input wire [2:0]  probe2 
-        .probe3(edge_bram_din), // input wire [2:0]  probe3 
-        .probe4(hcount), // input wire [11:0]  probe4 
-        .probe5(vcount), // input wire [11:0]  probe5 
-        .probe6({aaron_done, julian_done, image_done}), // input wire [2:0]  probe6 
-        .probe7(image_done) // input wire [0:0]  probe7
-    );
-*/
+            .clk(clk_100mhz), // input wire clk
+        
+        
+            .probe0(doutb), // input wire [15:0]  probe0  
+            .probe1(addrb), // input wire [9:0]  probe1 
+            .probe2(start), // input wire [0:0]  probe2 
+            .probe3(julian_done), // input wire [0:0]  probe3 
+            .probe4(aaron_done), // input wire [2:0]  probe4 
+            .probe5(image_done), // input wire [0:0]  probe5 
+            .probe6(test), // input wire [0:0]  probe6 
+            .probe7(aaron_done) // input wire [0:0]  probe7
+        );
+
 endmodule

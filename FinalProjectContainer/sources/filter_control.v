@@ -27,7 +27,9 @@ module filter_control(
     input ready,
     input [7:0] audio_in,
     output [7:0] audio_out,
-    output done
+    output done,
+    output wire flag,
+    output wire last_flag
     );
     
 
@@ -42,7 +44,8 @@ module filter_control(
     lpf_coeffs low_pass_coeffs(.index(lpf_idx), .coeff(lpf_coeff));
     
     fir31 lpf(.clock(clock),.reset(reset),.ready(lpf_ready), .x(audio_in), .coeff(lpf_coeff), .idx(lpf_idx),
-        .y(lpf_filter_out), .done(lpf_done));      
+        .y(lpf_filter_out), .done(lpf_done), .flag(flag), .last_flag(last_flag));
+      
     
     //high pass filter signals and instantiations
     wire signed [9:0] hpf_coeff;

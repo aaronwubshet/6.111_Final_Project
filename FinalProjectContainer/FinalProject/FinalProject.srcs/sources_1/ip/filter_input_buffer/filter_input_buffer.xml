@@ -951,6 +951,10 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Sun Dec 10 16:33:24 UTC 2017</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
             <spirit:value>b1750b55</spirit:value>
           </spirit:parameter>

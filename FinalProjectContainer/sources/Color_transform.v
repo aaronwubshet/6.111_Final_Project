@@ -45,20 +45,21 @@ module Color_transform(
        
        output FFT_done,
        output [31:0] data_disp,
-       output adjusting
+       output julian_test,
+       output wire start
        );
        
     
     
     wire up_puls;   
-    lev_to_pulse pulse_up(.clock(CLK100MHZ),.reset(reset),.lev(up),.pulse(up_puls));
+    lev_to_pulse pulse_up(.clock(CLK100MHZ),.reset(reset),.lev(BTNU),.pulse(up_puls));
     
     wire down_puls;
-    lev_to_pulse pulse_down(.clock(CLK100MHZ),.reset(reset),.lev(down),.pulse(down_puls));
+    lev_to_pulse pulse_down(.clock(CLK100MHZ),.reset(reset),.lev(BTND),.pulse(down_puls));
    
 
     wire [83:0] color_FFT;  
-    wire [83:0] color = 83'hFFF_FF0_F0F_0FF_000_D08_0FF;
+    wire [83:0] color = 83'hFFF_FF0_F0F_00F_0F0_D08_0FF;
     wire [83:0] color_test;
     
     wire [3:0] off1;
@@ -69,24 +70,31 @@ module Color_transform(
     wire [3:0] off6;
     wire [3:0] off7;
     wire [3:0] off8;
+    wire adjusting;
     
     wire [3:0] c_map_test;
+    
+    wire [23:0] data_test; 
     
     
     Color_offst test_off(.clock(CLK100MHZ),.reset(SW[14]),.SW(SW),.up(up_puls),.down(down_puls),.adjusting(adjusting), .off1(off1), .off2(off2), 
                          .off3(off3), .off4(off4), .off5(off5), .off6(off6), .off7(off7));
     
-    //add a pause signal somewhere to change the offset??? 
+    //add a pause signal somewhere to change the offset???
+     
     FFT_energy test_FFT(.clock(CLK100MHZ),.ready(wubs_done),.bin_num(bin_num),.addresses(addresses),.data(dout2_b),.bram_addr(addr2_b),
                          .off1(off1), .off2(off2), .off3(off3), .off4(off4), .off5(off5), .off6(off6), .off7(off7),
-                         .color(color_FFT),.test_out(data_disp[31:8]),.done(FFT_done),.adjusting(adjusting),.reset(reset),.c_map_test(c_map_test));
+                         .color(color_FFT),.test_out(data_test),.done(FFT_done),.adjusting(adjusting),.reset(reset),.c_map_test(c_map_test), .julian_test(julian_test),
+                         .start(start));
     
     assign color_test = SW[13] ? color : color_FFT;
     //wire [83:0] color = 84'h00F_00C_00A_008_006_004_003;
     wire [11:0] rgb;
     wire hsync, vsync;
     
-   
+    //assign data_disp[7:0] = {off2,off1};
+    assign data_disp = {16'b0, off4,off3,off2,off1};
+    //assign data_disp[0] = julian_test; 
     Color_output test_color(.bin_data(dout_b),.ready(wings_done),.FFT_COLOR(color_test),.video_clk(clock_25mhz),.memory_addr(addr_b),.vsync(vsync), .hsync(hsync),
                             .video_out(rgb));
                             

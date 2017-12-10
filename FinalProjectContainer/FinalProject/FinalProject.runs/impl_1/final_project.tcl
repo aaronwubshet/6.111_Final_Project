@@ -51,67 +51,73 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.xpr} [current_project]
-  set_property ip_repo_paths {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/ip}} [current_project]
-  set_property ip_output_repo {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/ip}} [current_project]
+  set_property webtalk.parent_dir /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/wt [current_project]
+  set_property parent.project_path /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.xpr [current_project]
+  set_property ip_repo_paths /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/ip [current_project]
+  set_property ip_output_repo /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/ip [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/final_project.dcp}}
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_3_0/fft_mag_xlconstant_3_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_3_0/fft_mag_xlconstant_3_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp}}]
-  add_files -quiet {{C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp}}
-  set_property netlist_only true [get_files {{C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp}}]
-  add_files -quiet {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp}}
-  set_property netlist_only true [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp}}]
-  read_xdc -mode out_of_context -ref clk_manager -cells inst {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_ooc.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_ooc.xdc}}]
-  read_xdc -prop_thru_buffers -ref clk_manager -cells inst {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc}}]
-  read_xdc -ref clk_manager -cells inst {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.xdc}}]
-  read_xdc -mode out_of_context -ref frame_buffer -cells U0 {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc}}]
-  read_xdc -mode out_of_context -ref xy_bin -cells U0 {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_ooc.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_ooc.xdc}}]
-  read_xdc -mode out_of_context -ref bram_fft_output_buffer -cells U0 {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc}}]
-  read_xdc -mode out_of_context -ref div_gen_0 -cells U0 {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc}}]
-  read_xdc -mode out_of_context -ref filter_input_buffer -cells U0 {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_ooc.xdc}}
-  set_property processing_order EARLY [get_files {{c:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_ooc.xdc}}]
-  read_xdc {{C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc}}
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/final_project.dcp
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_0_0/fft_mag_xlslice_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlslice_1_0/fft_mag_xlslice_1_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconcat_0_0/fft_mag_xlconcat_0_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_3_0/fft_mag_xlconstant_3_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xlconstant_3_0/fft_mag_xlconstant_3_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp]
+  add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp
+  set_property netlist_only true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp]
+  read_xdc -mode out_of_context -ref clk_manager -cells inst /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_ooc.xdc]
+  read_xdc -prop_thru_buffers -ref clk_manager -cells inst /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_board.xdc]
+  read_xdc -ref clk_manager -cells inst /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.xdc]
+  read_xdc -mode out_of_context -ref frame_buffer -cells U0 /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc]
+  read_xdc -mode out_of_context -ref xy_bin -cells U0 /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_ooc.xdc]
+  read_xdc -mode out_of_context -ref bram_fft_output_buffer -cells U0 /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_ooc.xdc]
+  read_xdc -mode out_of_context -ref div_gen_0 -cells U0 /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc]
+  read_xdc -mode out_of_context -ref filter_input_buffer -cells U0 /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_ooc.xdc]
+  read_xdc -mode out_of_context -ref ila_0 -cells inst /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
+  read_xdc -ref ila_0 -cells inst /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_v6_1/constraints/ila.xdc
+  set_property processing_order EARLY [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_v6_1/constraints/ila.xdc]
+  read_xdc /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc
   link_design -top final_project -part xc7a100tcsg324-3
   write_hwdef -file final_project.hwdef
   close_msg_db -file init_design.pb

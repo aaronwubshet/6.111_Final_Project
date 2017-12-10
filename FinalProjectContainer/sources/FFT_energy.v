@@ -41,7 +41,9 @@ module FFT_energy(
             output reg [3:0]  c_map_test,
             output wire [83:0] color,
             output reg [23:0] test_out,     //debugging output 
-            output reg test
+            output reg test,
+            output reg julian_test,
+            output reg start
     );
     
 reg [59:0] addr_hold;                   //holds
@@ -50,7 +52,7 @@ reg [2:0] bin_count;
 reg [2:0] start_count;
 reg addr_count;
 reg start = 0;
-reg [23:0] bin_acc;                 //make sure this can hold our maximum value! 
+reg [41:0] bin_acc;                 //make sure this can hold our maximum value! - 42 bits
 
 /*individual color registers*/ 
 reg [11:0] sev;
@@ -69,45 +71,79 @@ wire [3:0] c_map_4;
 wire [3:0] c_map_5;
 wire [3:0] c_map_6;
 wire [3:0] c_map_7;
- 
+
+
+
+reg first_time;
+
+initial first_time = 0;
+ //reg julian_test;
+ reg done_delay;
+ reg [5:0] count;
+ initial done_delay = 0;
 initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
     always@(posedge clock) begin
         //AARON ADDED A SEPARATE CONDITIONAL THAT TRIGGERS IF AND ONLY IF THERE IS A RESET
         if(reset) begin
             done <= 1;
+            
+            
+            sev = 12'hFFF;
+            six = 12'hD2A;
+            fiv = 12'h000;
+            four = 12'h00F;
+            three =12'h6FF;
+            two = 12'hF00;
+            one = 12'h0F0;
         end
         /*ready from wubs, while I can read*/ 
         //THIS SET UP STUFF CAN'T HAPPEN AT RESET, IT NEEDS TO HAPPEN THE FIRST CLOCK CYCLE IN WHICH READY
         //IS ASSERT FROM AARON
-        if((ready && !start)) begin
+        if (done)
+        begin
+            done_delay <= 1;
+        end
+        else
+        begin
+            done_delay <= 0;
+        end
+        if((ready && !start && done_delay)) begin
             start <= 1'b1;                      //start in taking data and calculating 
             addr_hold <= addresses;
             bram_addr <= 10'd0;
             max_addr <= addresses[9:0];
+            //max_addr <= 10'd1023;
             bin_count <= 0;
             start_count <= 0;
             done <= 1'b0;
-            test_out <= 0;
+            //test_out <= 0;
             bin_acc <= 0;
             
-            sev = 0;
-            six = 0;
-            fiv = 0;
-            four = 0;
-            three = 0;
-            two = 0;
-            one = 0; 
+//            sev = 12'hFFF;
+//            six = 12'hD2A;
+//            fiv = 12'h000;
+//            four = 12'h00F;
+//            three =12'h6FF;
+//            two = 12'hF00;
+//            one = 12'h0F0; 
             
         end
         
-        if(start && ready) begin 
+        if(start) begin 
+            
             if(bin_count < bin_num) begin
             /*data available, start calculation */ 
                 if(start_count >= 2) begin
+                    start_count <= 0;
                      if(bram_addr < max_addr) begin 
                          bin_acc <= data*data + bin_acc;                    //update our bin energy
+                         //if(bram_addr == 1023 && !first_time) begin 
+                            //first_time <= 1;
+                            //julian_test <= 1; 
+                         //end
+                         test_out[15:0] <= data;
                          bram_addr <= bram_addr + 1;                        //move on to next bram address
-                         start_count <= 0;
+                         //start_count <= 0;
                          //test_out <= 1;
                      end
                      
@@ -156,6 +192,11 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
                             end    
                                        
                             3'b010:begin
+                            
+                                if(!first_time)begin
+                                    julian_test <= 1;
+                                    first_time <= 1;
+                                end
                                 if(adjusting) begin
                                     three <= three; 
                                 end
@@ -264,18 +305,11 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
                         
                         
                         
-                        
-                        //done <= 1'b1;
-                        if(bin_count == 1)begin
-                            test_out[23:0] <= bin_acc;
-                        end
-                        if(bin_count == 1)begin
-                            //test_out[23:12] <= bin_acc;
-                        end
                         //test_out <= bin_acc;
                         bin_count <= bin_count + 1;
                         bin_acc <= 0;
                         max_addr <= addr_hold>>10;     //get next max bin address
+            //            start_count <= 0;
                      end
                 
                 end 
@@ -289,6 +323,13 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
             
             else begin
                 done <= 1'b1;
+                start <= 0;
+                count <= count + 1;
+                if (count > 10)
+                begin
+                    count <= 0;
+                    //julian_test <= 1;
+                end
                 //possibly wait a clock cycle 
                 //test_out <= 4;
                 //bin_acc <= 1;
@@ -296,9 +337,9 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
             
         end
         
-        else if (!ready) begin
-            start <= 1'b0;
-        end
+//        else if (done) begin
+//            start <= 1'b0;
+//        end
     end 
  assign acc = bin_acc;
  assign c_map_1 = {bin_acc[off1 + 3],bin_acc[off1 + 2],bin_acc[off1 + 1],bin_acc[off1]} ;          //offset bits of accumulation register 

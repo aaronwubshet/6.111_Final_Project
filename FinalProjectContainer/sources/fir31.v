@@ -16,7 +16,9 @@ module fir31(
   input wire signed [9:0] coeff,
   output wire [4:0] idx,
   output reg signed [17:0] y,
-  output done
+  output done,
+  output reg flag,
+  output reg last_flag
 );
 
 

@@ -102,7 +102,7 @@ module one_edge(
             end
             
             STATE_GET_FIRST: begin
-                if (bram_read == 3'b011) begin
+                if (bram_read == 3'b011 && y_curr > 35 && x_curr > 35) begin
 //                    x_start <= x_curr;
 //                    y_start <= y_curr;
                     addr_start <= edge_addr_read;
@@ -223,7 +223,7 @@ module one_edge(
 
                 if (edge_addr_read == addr_start) begin
                     
-                    edge_addr_read <= addr_start;
+                    edge_addr_read <= 0;
                     state <= STATE_WAIT;
                     next_state <= STATE_CLEAR_REST;
                 end

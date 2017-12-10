@@ -85,15 +85,6 @@ module color_contour(
     reg [15:0] dividend_in;
     
     
-//    div_gen_0 getting_pixels_per_bin (
-//      .aclk(clk),                                      // input wire aclk
-//      .s_axis_divisor_tvalid(),    // input wire s_axis_divisor_tvalid
-//      .s_axis_divisor_tdata(),      // input wire [7 : 0] s_axis_divisor_tdata
-//      .s_axis_dividend_tvalid(),  // input wire s_axis_dividend_tvalid
-//      .s_axis_dividend_tdata(),    // input wire [15 : 0] s_axis_dividend_tdata
-//      .m_axis_dout_tvalid(),          // output wire m_axis_dout_tvalid
-//      .m_axis_dout_tdata()            // output wire [23 : 0] m_axis_dout_tdata
-//    );
     
     div_gen_0 your_instance_name (
       .aclk(clk),                                      // input wire aclk
@@ -115,7 +106,8 @@ module color_contour(
             done <= 0;
             bin_in <= 3'b001;
             pixel_count <= 0;
-//            num_pixels <= 0;
+            divisor_ready <= 0;
+            dividend_ready <= 0;
         end
         else if (~done) begin
                                

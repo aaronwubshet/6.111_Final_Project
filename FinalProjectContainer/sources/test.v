@@ -41,7 +41,12 @@ module audio_processing(
     output [59:0] bin_addr,
     output done,
     output reg [2:0] state,
-    output reg fread
+    output reg filter_flag,
+    output filter_done,
+    output filter_ready,
+    output wire flag,
+    output wire last_flag,
+    output test
         
     );
     
@@ -58,10 +63,6 @@ module audio_processing(
     wire clk_32khz; // audio sample rate clock
     clock_divider clk_32khz_module(.clk_in(clock), .clk_out(clk_32khz), .divider(32'd1563), .reset(reset)); // 100_000_000 / (32_000*2) = 1563
 
-//32khz clk for audio
-    reg last_clk_48khz;
-    wire clk_48khz; // audio sample rate clock
-    clock_divider clk_48khz_module(.clk_in(clock), .clk_out(clk_48khz), .divider(32'd1042), .reset(reset)); // 100_000_000 / (48_000*2) = 1041
 
     //SD to fifo
     reg [8:0] sd_count;
@@ -75,13 +76,13 @@ module audio_processing(
     
     //fifo to filter
     wire [7:0] audio_out;
-    wire filter_done;
+    //wire filter_done;
     reg filter_ready;
     wire filt_ready;
     assign filt_ready = filter_ready;
     wire signed [7:0] filter_to_fft;
     filter_control filter_controller(.clock(clock), .reset(reset), .switch(filter_control), .ready(filt_ready), 
-        .audio_in(fifo_to_filter), .audio_out(audio_out), .done(filter_done));
+        .audio_in(fifo_to_filter), .audio_out(audio_out), .done(filter_done), .flag(flag), .last_flag(last_flag));
 
 
     //filter to bram
@@ -139,14 +140,18 @@ module audio_processing(
     
     //FFT to Julian
     assign bin = 3'd4;
-    assign bin_addr = {10'd1023, 10'd700, 10'd300, 30'd0};
+    //assign bin_addr = {30'd0, 10'd300, 10'd700, 10'd1023};
+    assign bin_addr = {20'd0,10'd1023, 10'd1020, 10'd10, 10'd5};
     
 
-    
+    reg test;
     always @ (posedge clock)
     begin
         last_clk_32khz <= clk_32khz;
-        last_clk_48khz <= clk_48khz;
+        if(done)
+        begin
+            test <= 1;
+        end
         if (reset)
         begin
             sd_addr <= 32'h0;
@@ -172,6 +177,7 @@ module audio_processing(
                     //                  --> BRAM1 ---> FFT --> BRAM2
                     3'b000: 
                     begin     
+                        //whenever julian is done, i am not done
                         if (julian_done)
                         begin
                             done_reg <=0;
@@ -190,7 +196,10 @@ module audio_processing(
                             filter_flag <=0;
                             state <= 3'b011;
                         end
-                        
+                        else
+                        begin
+                            state <= 3'b001;
+                        end
                         //start filling up the fifo if it is empty
                         if (fempty)
                         begin
@@ -204,13 +213,9 @@ module audio_processing(
                         // and change states to see if filter is ready to read from fifo if this is the first value
                         if (last_sd_read_available == 0 && sd_read_available == 1 )
                         begin
-                            
                             fwrite <= 1;
                             sd_count <= sd_count + 1; 
-                            if (first_sample_flag)
-                            begin
-                                state <= 3'b001;
-                            end
+                            
                         end
                         // otherwise don't write to fifo
                         else
@@ -224,18 +229,40 @@ module audio_processing(
                             sd_addr <= sd_addr + 32'h200;
                             sd_count <= 0;
                         end
+
                         
                     end
 
                     3'b001:
                     begin
-                        //only write one value to fifo
-                        //if this is the first value being written to fifo from sd card simply shift into filter and
-                        // go into state waiting for filter to finish
                         if (julian_done)
                         begin
                             done_reg <=0;
-                        end
+                        end 
+                        
+                         // fifo has room and sd card byte is avaliable so write to fifo, increment sd_count(reading)
+                       if (last_sd_read_available == 0 && sd_read_available == 1 )
+                       begin
+                           fwrite <= 1;
+                           sd_count <= sd_count + 1; 
+                       end
+                       // otherwise don't write to fifo
+                       else
+                       begin
+                           fwrite <= 0;
+                       end   
+                       // if 512 bytes have been read from SD card then increment address by 200 hex and reset sd_count since
+                       // the fifo will be full
+                       if (sd_count >= 511)
+                       begin
+                           sd_addr <= sd_addr + 32'h200;
+                           sd_count <= 0;
+                       end   
+                        
+                       //only write one value to fifo
+                       //if this is the first value being written to fifo from sd card simply shift into filter and  
+                       // go into state waiting for filter to finish
+
                         if(first_sample_flag)
                         begin
                             first_sample_flag <=0;
@@ -243,24 +270,7 @@ module audio_processing(
                             filter_ready <= 1;
                             state <= 3'b010;
                             fwrite <=0;
-                            // fifo has room and sd card byte is avaliable so write to fifo, increment sd_count(reading)
-                            if (last_sd_read_available == 0 && sd_read_available == 1 )
-                            begin
-                                fwrite <= 1;
-                                sd_count <= sd_count + 1; 
-                            end
-                            // otherwise don't write to fifo
-                            else
-                            begin
-                                fwrite <= 0;
-                            end   
-                            // if 512 bytes have been read from SD card then increment address by 200 hex and reset sd_count since
-                            // the fifo will be full
-                            if (sd_count >= 511)
-                            begin
-                                sd_addr <= sd_addr + 32'h200;
-                                sd_count <= 0;
-                            end          
+                               
                         end
                         else
                         begin
@@ -286,24 +296,11 @@ module audio_processing(
                                 filter_ready <= 0;
                                 state <= 3'b010;
                             end
-                            // fifo has room and sd card byte is avaliable so write to fifo, increment sd_count(reading)
-                            if (last_sd_read_available == 0 && sd_read_available == 1 )
-                            begin
-                                fwrite <= 1;
-                                sd_count <= sd_count + 1; 
-                            end
-                            // otherwise don't write to fifo
                             else
                             begin
-                                fwrite <= 0;
-                            end   
-                            // if 512 bytes have been read from SD card then increment address by 200 hex and reset sd_count since
-                            // the fifo will be full
-                            if (sd_count >= 511)
-                            begin
-                                sd_addr <= sd_addr + 32'h200;
-                                sd_count <= 0;
-                            end                                                  
+                                filter_ready <= 0;
+                            end
+                                                                      
                         end
                     end
                     3'b010:
@@ -329,7 +326,6 @@ module audio_processing(
                             fread <= 0;
                             //filter is not ready for new values
                             filter_ready <= 0;
-                            state <= 3'b000;
                         end
                         // fifo has room and sd card byte is avaliable so write to fifo, increment sd_count(reading)
                         if (last_sd_read_available == 0 && sd_read_available == 1 )
