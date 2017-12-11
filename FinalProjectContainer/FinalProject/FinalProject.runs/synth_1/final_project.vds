@@ -2,12 +2,12 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sun Dec 10 18:04:29 2017
-# Process ID: 30626
-# Current directory: /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1
+# Start of session at: Sun Dec 10 19:59:43 2017
+# Process ID: 28397
+# Current directory: /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1
 # Command line: vivado -log final_project.vds -mode batch -messageDb vivado.pb -notrace -source final_project.tcl
-# Log file: /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/final_project.vds
-# Journal file: /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/vivado.jou
+# Log file: /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/final_project.vds
+# Journal file: /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source final_project.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -18,44 +18,44 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 30631 
-WARNING: [Synth 8-2611] redeclaration of ansi port flag is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:28]
-WARNING: [Synth 8-976] flag has already been declared [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:28]
-WARNING: [Synth 8-2654] second declaration of flag ignored [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:28]
-INFO: [Synth 8-994] flag is declared here [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:20]
-WARNING: [Synth 8-2611] redeclaration of ansi port last_flag is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:29]
-WARNING: [Synth 8-976] last_flag has already been declared [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:29]
-WARNING: [Synth 8-2654] second declaration of last_flag ignored [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:29]
-INFO: [Synth 8-994] last_flag is declared here [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:21]
-WARNING: [Synth 8-2611] redeclaration of ansi port start is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:54]
-WARNING: [Synth 8-976] start has already been declared [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:54]
-WARNING: [Synth 8-2654] second declaration of start ignored [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:54]
-INFO: [Synth 8-994] start is declared here [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:46]
-WARNING: [Synth 8-2611] redeclaration of ansi port overflow is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fifo.v:22]
-WARNING: [Synth 8-2507] parameter declaration becomes local in fifo with formal parameter declaration list [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fifo.v:19]
-WARNING: [Synth 8-2611] redeclaration of ansi port state is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:57]
-WARNING: [Synth 8-976] state has already been declared [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:57]
-WARNING: [Synth 8-2654] second declaration of state ignored [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:57]
-INFO: [Synth 8-994] state is declared here [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:43]
-WARNING: [Synth 8-2611] redeclaration of ansi port filter_flag is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:59]
-WARNING: [Synth 8-976] filter_flag has already been declared [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:59]
-WARNING: [Synth 8-2654] second declaration of filter_flag ignored [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:59]
-INFO: [Synth 8-994] filter_flag is declared here [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:44]
-WARNING: [Synth 8-2611] redeclaration of ansi port filter_ready is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:80]
-WARNING: [Synth 8-2611] redeclaration of ansi port test is not allowed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:147]
+INFO: Helper process launched with PID 28412 
+WARNING: [Synth 8-2611] redeclaration of ansi port flag is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:28]
+WARNING: [Synth 8-976] flag has already been declared [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:28]
+WARNING: [Synth 8-2654] second declaration of flag ignored [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:28]
+INFO: [Synth 8-994] flag is declared here [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:20]
+WARNING: [Synth 8-2611] redeclaration of ansi port last_flag is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:29]
+WARNING: [Synth 8-976] last_flag has already been declared [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:29]
+WARNING: [Synth 8-2654] second declaration of last_flag ignored [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:29]
+INFO: [Synth 8-994] last_flag is declared here [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:21]
+WARNING: [Synth 8-2611] redeclaration of ansi port start is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:54]
+WARNING: [Synth 8-976] start has already been declared [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:54]
+WARNING: [Synth 8-2654] second declaration of start ignored [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:54]
+INFO: [Synth 8-994] start is declared here [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:46]
+WARNING: [Synth 8-2611] redeclaration of ansi port overflow is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fifo.v:22]
+WARNING: [Synth 8-2507] parameter declaration becomes local in fifo with formal parameter declaration list [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fifo.v:19]
+WARNING: [Synth 8-2611] redeclaration of ansi port state is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:57]
+WARNING: [Synth 8-976] state has already been declared [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:57]
+WARNING: [Synth 8-2654] second declaration of state ignored [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:57]
+INFO: [Synth 8-994] state is declared here [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:43]
+WARNING: [Synth 8-2611] redeclaration of ansi port filter_flag is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:59]
+WARNING: [Synth 8-976] filter_flag has already been declared [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:59]
+WARNING: [Synth 8-2654] second declaration of filter_flag ignored [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:59]
+INFO: [Synth 8-994] filter_flag is declared here [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:44]
+WARNING: [Synth 8-2611] redeclaration of ansi port filter_ready is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:80]
+WARNING: [Synth 8-2611] redeclaration of ansi port test is not allowed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:147]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1084.535 ; gain = 189.324 ; free physical = 1938 ; free virtual = 11950
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1084.531 ; gain = 189.324 ; free physical = 2365 ; free virtual = 13208
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'final_project' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:23]
-INFO: [Synth 8-638] synthesizing module 'clk_manager' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/clk_manager_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_manager' (1#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/clk_manager_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'debounce' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'final_project' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_manager' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/clk_manager_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_manager' (1#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/clk_manager_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'debounce' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/debounce.v:4]
 	Parameter DELAY bound to: 1000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/debounce.v:4]
-INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/display_8hex.v:16]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/display_8hex.v:16]
 	Parameter bits bound to: 13 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'display_8hex' (3#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/display_8hex.v:16]
-INFO: [Synth 8-638] synthesizing module 'sd_controller' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sd_controller.v:6]
+INFO: [Synth 8-256] done synthesizing module 'display_8hex' (3#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'sd_controller' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sd_controller.v:6]
 	Parameter RST bound to: 0 - type: integer 
 	Parameter INIT bound to: 32'sb00000000000000000000000000000001 
 	Parameter CMD0 bound to: 2 - type: integer 
@@ -76,14 +76,14 @@ INFO: [Synth 8-638] synthesizing module 'sd_controller' [/afs/athena.mit.edu/use
 	Parameter WRITE_BLOCK_BYTE bound to: 17 - type: integer 
 	Parameter WRITE_BLOCK_WAIT bound to: 18 - type: integer 
 	Parameter WRITE_DATA_SIZE bound to: 515 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sd_controller.v:79]
-INFO: [Synth 8-256] done synthesizing module 'sd_controller' (4#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sd_controller.v:6]
-INFO: [Synth 8-638] synthesizing module 'frame_buffer' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (5#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'xy_bin' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/xy_bin_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'xy_bin' (6#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/xy_bin_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'image_processing' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_processing.v:23]
-INFO: [Synth 8-638] synthesizing module 'sobel' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sd_controller.v:79]
+INFO: [Synth 8-256] done synthesizing module 'sd_controller' (4#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sd_controller.v:6]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (5#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'xy_bin' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/xy_bin_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'xy_bin' (6#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/xy_bin_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'image_processing' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_processing.v:23]
+INFO: [Synth 8-638] synthesizing module 'sobel' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:23]
 	Parameter STATE_SETUP bound to: 0 - type: integer 
 	Parameter STATE_THRESHOLD bound to: 2 - type: integer 
 	Parameter STATE_WAIT bound to: 3 - type: integer 
@@ -95,11 +95,11 @@ INFO: [Synth 8-638] synthesizing module 'sobel' [/afs/athena.mit.edu/user/a/w/aw
 	Parameter STATE_SQUARE2 bound to: 9 - type: integer 
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:105]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:169]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:81]
-INFO: [Synth 8-256] done synthesizing module 'sobel' (7#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:23]
-INFO: [Synth 8-638] synthesizing module 'edge_pixel_width' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:105]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:169]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:81]
+INFO: [Synth 8-256] done synthesizing module 'sobel' (7#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:23]
+INFO: [Synth 8-638] synthesizing module 'edge_pixel_width' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v:23]
 	Parameter STATE_SETUP bound to: 0 - type: integer 
 	Parameter STATE_WAIT bound to: 1 - type: integer 
 	Parameter STATE_WAIT2 bound to: 2 - type: integer 
@@ -112,11 +112,11 @@ INFO: [Synth 8-638] synthesizing module 'edge_pixel_width' [/afs/athena.mit.edu/
 	Parameter STATE_LEFT bound to: 9 - type: integer 
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v:100]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v:193]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v:76]
-INFO: [Synth 8-256] done synthesizing module 'edge_pixel_width' (8#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v:23]
-INFO: [Synth 8-638] synthesizing module 'one_edge' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/one_edge.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v:100]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v:193]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v:76]
+INFO: [Synth 8-256] done synthesizing module 'edge_pixel_width' (8#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v:23]
+INFO: [Synth 8-638] synthesizing module 'one_edge' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/one_edge.v:23]
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter STATE_SETUP bound to: 0 - type: integer 
@@ -134,9 +134,9 @@ INFO: [Synth 8-638] synthesizing module 'one_edge' [/afs/athena.mit.edu/user/a/w
 	Parameter DIR_GET_UPLEFT bound to: 5 - type: integer 
 	Parameter DIR_GET_UP bound to: 6 - type: integer 
 	Parameter DIR_GET_UPRIGHT bound to: 7 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/one_edge.v:92]
-INFO: [Synth 8-256] done synthesizing module 'one_edge' (9#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/one_edge.v:23]
-INFO: [Synth 8-638] synthesizing module 'color_contour' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/one_edge.v:92]
+INFO: [Synth 8-256] done synthesizing module 'one_edge' (9#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/one_edge.v:23]
+INFO: [Synth 8-638] synthesizing module 'color_contour' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v:23]
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter STATE_SETUP bound to: 0 - type: integer 
@@ -153,108 +153,108 @@ INFO: [Synth 8-638] synthesizing module 'color_contour' [/afs/athena.mit.edu/use
 	Parameter DIR_GET_UPLEFT bound to: 5 - type: integer 
 	Parameter DIR_GET_UP bound to: 6 - type: integer 
 	Parameter DIR_GET_UPRIGHT bound to: 7 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'div_gen_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/div_gen_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (10#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/div_gen_0_stub.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v:115]
-INFO: [Synth 8-256] done synthesizing module 'color_contour' (11#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v:23]
-WARNING: [Synth 8-3848] Net memory_write_data in module/entity image_processing does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_processing.v:32]
-WARNING: [Synth 8-3848] Net memory_write_addr in module/entity image_processing does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_processing.v:34]
-WARNING: [Synth 8-3848] Net memory_write_enable in module/entity image_processing does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_processing.v:35]
-INFO: [Synth 8-256] done synthesizing module 'image_processing' (12#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_processing.v:23]
-INFO: [Synth 8-638] synthesizing module 'Color_transform' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_transform.v:23]
-INFO: [Synth 8-638] synthesizing module 'lev_to_pulse' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/lev_puls.v:23]
-INFO: [Synth 8-256] done synthesizing module 'lev_to_pulse' (13#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/lev_puls.v:23]
-INFO: [Synth 8-638] synthesizing module 'Color_offst' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_offst.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Color_offst' (14#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_offst.v:23]
-INFO: [Synth 8-638] synthesizing module 'FFT_energy' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:23]
-WARNING: [Synth 8-3848] Net test in module/entity FFT_energy does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:44]
-INFO: [Synth 8-256] done synthesizing module 'FFT_energy' (15#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:23]
-WARNING: [Synth 8-350] instance 'test_FFT' of module 'FFT_energy' requires 23 connections, but only 21 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_transform.v:85]
-INFO: [Synth 8-638] synthesizing module 'Color_output' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_output.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Color_output' (16#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_output.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Color_transform' (17#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_transform.v:23]
-INFO: [Synth 8-638] synthesizing module 'bram_fft_output_buffer' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/bram_fft_output_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'bram_fft_output_buffer' (18#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/bram_fft_output_buffer_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 'dinb' does not match port width (16) of module 'bram_fft_output_buffer' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:245]
-INFO: [Synth 8-638] synthesizing module 'audio_processing' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:23]
-INFO: [Synth 8-638] synthesizing module 'clock_divider' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/clock_divider.v:1]
-INFO: [Synth 8-256] done synthesizing module 'clock_divider' (19#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/clock_divider.v:1]
-INFO: [Synth 8-638] synthesizing module 'fifo' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fifo.v:15]
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (10#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v:115]
+INFO: [Synth 8-256] done synthesizing module 'color_contour' (11#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v:23]
+WARNING: [Synth 8-3848] Net memory_write_data in module/entity image_processing does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_processing.v:32]
+WARNING: [Synth 8-3848] Net memory_write_addr in module/entity image_processing does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_processing.v:34]
+WARNING: [Synth 8-3848] Net memory_write_enable in module/entity image_processing does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_processing.v:35]
+INFO: [Synth 8-256] done synthesizing module 'image_processing' (12#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_processing.v:23]
+INFO: [Synth 8-638] synthesizing module 'Color_transform' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_transform.v:23]
+INFO: [Synth 8-638] synthesizing module 'lev_to_pulse' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/lev_puls.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lev_to_pulse' (13#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/lev_puls.v:23]
+INFO: [Synth 8-638] synthesizing module 'Color_offst' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_offst.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Color_offst' (14#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_offst.v:23]
+INFO: [Synth 8-638] synthesizing module 'FFT_energy' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:23]
+WARNING: [Synth 8-3848] Net test in module/entity FFT_energy does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:44]
+INFO: [Synth 8-256] done synthesizing module 'FFT_energy' (15#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:23]
+WARNING: [Synth 8-350] instance 'test_FFT' of module 'FFT_energy' requires 23 connections, but only 21 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_transform.v:85]
+INFO: [Synth 8-638] synthesizing module 'Color_output' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_output.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Color_output' (16#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_output.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Color_transform' (17#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_transform.v:23]
+INFO: [Synth 8-638] synthesizing module 'bram_fft_output_buffer' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/bram_fft_output_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_fft_output_buffer' (18#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/bram_fft_output_buffer_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 'dinb' does not match port width (16) of module 'bram_fft_output_buffer' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:245]
+INFO: [Synth 8-638] synthesizing module 'audio_processing' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/clock_divider.v:1]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (19#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/clock_divider.v:1]
+INFO: [Synth 8-638] synthesizing module 'fifo' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fifo.v:15]
 	Parameter LOGSIZE bound to: 9 - type: integer 
 	Parameter WIDTH bound to: 8 - type: integer 
 	Parameter SIZE bound to: 512 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo' (20#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fifo.v:15]
-INFO: [Synth 8-638] synthesizing module 'filter_control' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/filter_control.v:23]
-INFO: [Synth 8-638] synthesizing module 'lpf_coeffs' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/lpf_coeffs.v:7]
-INFO: [Synth 8-256] done synthesizing module 'lpf_coeffs' (21#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/lpf_coeffs.v:7]
-INFO: [Synth 8-638] synthesizing module 'fir31' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:13]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:38]
-INFO: [Synth 8-256] done synthesizing module 'fir31' (22#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:13]
-INFO: [Synth 8-638] synthesizing module 'hpf_coeffs' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hpf_coeffs.v:10]
-INFO: [Synth 8-256] done synthesizing module 'hpf_coeffs' (23#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hpf_coeffs.v:10]
-WARNING: [Synth 8-350] instance 'hpf' of module 'fir31' requires 10 connections, but only 8 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/filter_control.v:60]
-INFO: [Synth 8-638] synthesizing module 'bpf1_coeffs' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/bpf1_coeffs.v:10]
-INFO: [Synth 8-256] done synthesizing module 'bpf1_coeffs' (24#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/bpf1_coeffs.v:10]
-WARNING: [Synth 8-350] instance 'bpf1' of module 'fir31' requires 10 connections, but only 8 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/filter_control.v:73]
-INFO: [Synth 8-638] synthesizing module 'bpf2_coeffs' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/bpf2_coeffs.v:10]
-INFO: [Synth 8-256] done synthesizing module 'bpf2_coeffs' (25#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/bpf2_coeffs.v:10]
-WARNING: [Synth 8-350] instance 'bpf2' of module 'fir31' requires 10 connections, but only 8 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/filter_control.v:86]
-INFO: [Synth 8-256] done synthesizing module 'filter_control' (26#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/filter_control.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'switch' does not match port width (2) of module 'filter_control' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:84]
-INFO: [Synth 8-638] synthesizing module 'filter_input_buffer' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/filter_input_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'filter_input_buffer' (27#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/filter_input_buffer_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'audio_PWM' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/audio_PWM.v:4]
-INFO: [Synth 8-256] done synthesizing module 'audio_PWM' (28#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/audio_PWM.v:4]
-INFO: [Synth 8-638] synthesizing module 'fft_mag' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:13]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_axis_register_slice_2_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_axis_register_slice_2_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_axis_register_slice_2_0' (29#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_axis_register_slice_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_register_slice_2' of module 'fft_mag_axis_register_slice_2_0' requires 10 connections, but only 9 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:92]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_c_addsub_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_c_addsub_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_c_addsub_0_0' (30#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_c_addsub_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_cordic_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_cordic_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_cordic_0_0' (31#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_cordic_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_mult_gen_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_mult_gen_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_mult_gen_0_0' (32#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_mult_gen_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_mult_gen_1_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_mult_gen_1_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_mult_gen_1_0' (33#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_mult_gen_1_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xfft_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xfft_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xfft_0_0' (34#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xfft_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'xfft_0' of module 'fft_mag_xfft_0_0' requires 18 connections, but only 17 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:127]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconcat_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconcat_0_0' (35#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_0_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_0_0' (36#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_0_0_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_1_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_1_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_1_0' (37#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_1_0_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_2_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_2_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_2_0' (38#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_2_0_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_3_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_3_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_3_0' (39#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlconstant_3_0_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlslice_0_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlslice_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlslice_0_0' (40#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlslice_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'fft_mag_xlslice_1_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlslice_1_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlslice_1_0' (41#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/fft_mag_xlslice_1_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fft_mag' (42#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:13]
-WARNING: [Synth 8-350] instance 'my_fft' of module 'fft_mag' requires 15 connections, but only 10 given [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:128]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:174]
-INFO: [Synth 8-256] done synthesizing module 'audio_processing' (43#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:23]
-WARNING: [Synth 8-689] width (2) of port connection 'filter_control' does not match port width (1) of module 'audio_processing' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:259]
-WARNING: [Synth 8-689] width (16) of port connection 'fft_bram_out_dina' does not match port width (9) of module 'audio_processing' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:261]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:271]
-INFO: [Synth 8-638] synthesizing module 'ila_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/ila_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ila_0' (44#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/realtime/ila_0_stub.v:6]
-WARNING: [Synth 8-3848] Net JA in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:40]
-WARNING: [Synth 8-3848] Net JB in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:41]
-WARNING: [Synth 8-3848] Net LED16_B in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:51]
-WARNING: [Synth 8-3848] Net LED16_G in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:51]
-WARNING: [Synth 8-3848] Net LED16_R in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:51]
-WARNING: [Synth 8-3848] Net LED17_B in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:52]
-WARNING: [Synth 8-3848] Net LED17_G in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:52]
-WARNING: [Synth 8-3848] Net LED17_R in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:52]
-WARNING: [Synth 8-3848] Net sd_write in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:100]
-WARNING: [Synth 8-3848] Net dinb in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:245]
-WARNING: [Synth 8-3848] Net edge_bram_dinb in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:157]
-INFO: [Synth 8-256] done synthesizing module 'final_project' (45#1) [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:23]
+INFO: [Synth 8-256] done synthesizing module 'fifo' (20#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fifo.v:15]
+INFO: [Synth 8-638] synthesizing module 'filter_control' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/filter_control.v:23]
+INFO: [Synth 8-638] synthesizing module 'lpf_coeffs' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/lpf_coeffs.v:7]
+INFO: [Synth 8-256] done synthesizing module 'lpf_coeffs' (21#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/lpf_coeffs.v:7]
+INFO: [Synth 8-638] synthesizing module 'fir31' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:13]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:38]
+INFO: [Synth 8-256] done synthesizing module 'fir31' (22#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:13]
+INFO: [Synth 8-638] synthesizing module 'hpf_coeffs' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hpf_coeffs.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hpf_coeffs' (23#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hpf_coeffs.v:10]
+WARNING: [Synth 8-350] instance 'hpf' of module 'fir31' requires 10 connections, but only 8 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/filter_control.v:60]
+INFO: [Synth 8-638] synthesizing module 'bpf1_coeffs' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/bpf1_coeffs.v:10]
+INFO: [Synth 8-256] done synthesizing module 'bpf1_coeffs' (24#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/bpf1_coeffs.v:10]
+WARNING: [Synth 8-350] instance 'bpf1' of module 'fir31' requires 10 connections, but only 8 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/filter_control.v:73]
+INFO: [Synth 8-638] synthesizing module 'bpf2_coeffs' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/bpf2_coeffs.v:10]
+INFO: [Synth 8-256] done synthesizing module 'bpf2_coeffs' (25#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/bpf2_coeffs.v:10]
+WARNING: [Synth 8-350] instance 'bpf2' of module 'fir31' requires 10 connections, but only 8 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/filter_control.v:86]
+INFO: [Synth 8-256] done synthesizing module 'filter_control' (26#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/filter_control.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'switch' does not match port width (2) of module 'filter_control' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:84]
+INFO: [Synth 8-638] synthesizing module 'filter_input_buffer' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/filter_input_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'filter_input_buffer' (27#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/filter_input_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'audio_PWM' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/audio_PWM.v:4]
+INFO: [Synth 8-256] done synthesizing module 'audio_PWM' (28#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/audio_PWM.v:4]
+INFO: [Synth 8-638] synthesizing module 'fft_mag' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:13]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_axis_register_slice_2_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_axis_register_slice_2_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_axis_register_slice_2_0' (29#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_axis_register_slice_2_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_register_slice_2' of module 'fft_mag_axis_register_slice_2_0' requires 10 connections, but only 9 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:92]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_c_addsub_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_c_addsub_0_0' (30#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_cordic_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_cordic_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_cordic_0_0' (31#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_cordic_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_mult_gen_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_mult_gen_0_0' (32#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_mult_gen_1_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_mult_gen_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_mult_gen_1_0' (33#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_mult_gen_1_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xfft_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xfft_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xfft_0_0' (34#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xfft_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xfft_0' of module 'fft_mag_xfft_0_0' requires 18 connections, but only 17 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:127]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconcat_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconcat_0_0' (35#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_0_0' (36#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_0_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_1_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_1_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_1_0' (37#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_1_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_2_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_2_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_2_0' (38#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_2_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlconstant_3_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_3_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlconstant_3_0' (39#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlconstant_3_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlslice_0_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlslice_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlslice_0_0' (40#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlslice_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fft_mag_xlslice_1_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlslice_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag_xlslice_1_0' (41#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/fft_mag_xlslice_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fft_mag' (42#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:13]
+WARNING: [Synth 8-350] instance 'my_fft' of module 'fft_mag' requires 15 connections, but only 10 given [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:128]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:174]
+INFO: [Synth 8-256] done synthesizing module 'audio_processing' (43#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'filter_control' does not match port width (1) of module 'audio_processing' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:259]
+WARNING: [Synth 8-689] width (16) of port connection 'fft_bram_out_dina' does not match port width (9) of module 'audio_processing' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:261]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:272]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ila_0' (44#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/realtime/ila_0_stub.v:6]
+WARNING: [Synth 8-3848] Net JA in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:40]
+WARNING: [Synth 8-3848] Net JB in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:41]
+WARNING: [Synth 8-3848] Net LED16_B in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:51]
+WARNING: [Synth 8-3848] Net LED16_G in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:51]
+WARNING: [Synth 8-3848] Net LED16_R in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:51]
+WARNING: [Synth 8-3848] Net LED17_B in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:52]
+WARNING: [Synth 8-3848] Net LED17_G in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:52]
+WARNING: [Synth 8-3848] Net LED17_R in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:52]
+WARNING: [Synth 8-3848] Net sd_write in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:100]
+WARNING: [Synth 8-3848] Net dinb in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:245]
+WARNING: [Synth 8-3848] Net edge_bram_dinb in module/entity final_project does not have driver. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:157]
+INFO: [Synth 8-256] done synthesizing module 'final_project' (45#1) [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:23]
 WARNING: [Synth 8-3917] design final_project has port SD_RESET driven by constant 0
 WARNING: [Synth 8-3917] design final_project has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3917] design final_project has port SD_DAT[2] driven by constant 1
@@ -352,9 +352,10 @@ WARNING: [Synth 8-3331] design final_project has unconnected port LED[7]
 WARNING: [Synth 8-3331] design final_project has unconnected port LED[6]
 WARNING: [Synth 8-3331] design final_project has unconnected port LED[5]
 WARNING: [Synth 8-3331] design final_project has unconnected port LED[4]
+WARNING: [Synth 8-3331] design final_project has unconnected port LED[3]
 WARNING: [Synth 8-3331] design final_project has unconnected port SD_CD
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1138.793 ; gain = 243.582 ; free physical = 1883 ; free virtual = 11897
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1138.789 ; gain = 243.582 ; free physical = 2309 ; free virtual = 13154
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -363,112 +364,112 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[7] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[6] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[5] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[4] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[3] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[2] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[1] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
-WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[0] to constant 0 [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[7] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[6] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[5] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[4] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[3] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[2] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[1] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
+WARNING: [Synth 8-3295] tying undriven pin sd_read_write:din[0] to constant 0 [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:115]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1138.793 ; gain = 243.582 ; free physical = 1883 ; free virtual = 11897
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1138.789 ; gain = 243.582 ; free physical = 2309 ; free virtual = 13154
 ---------------------------------------------------------------------------------
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'bram_fft_output_buffer' instantiated as 'fft_amplitude_buffer' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:236]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_manager' instantiated as 'clocker' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:71]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'div_gen_0' instantiated as 'box/separate/your_instance_name' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v:89]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_axis_register_slice_2_0' instantiated as 'audio_stuff/my_fft/axis_register_slice_2' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:92]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_c_addsub_0_0' instantiated as 'audio_stuff/my_fft/c_addsub_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:102]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_cordic_0_0' instantiated as 'audio_stuff/my_fft/cordic_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:107]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_mult_gen_0_0' instantiated as 'audio_stuff/my_fft/mult_gen_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:117]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_mult_gen_1_0' instantiated as 'audio_stuff/my_fft/mult_gen_1' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:122]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xfft_0_0' instantiated as 'audio_stuff/my_fft/xfft_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:127]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconcat_0_0' instantiated as 'audio_stuff/my_fft/xlconcat_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:145]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_0_0' instantiated as 'audio_stuff/my_fft/xlconstant_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:150]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_1_0' instantiated as 'audio_stuff/my_fft/xlconstant_1' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:152]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_2_0' instantiated as 'audio_stuff/my_fft/xlconstant_2' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:154]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_3_0' instantiated as 'audio_stuff/my_fft/xlconstant_3' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:156]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlslice_0_0' instantiated as 'audio_stuff/my_fft/xlslice_0' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:158]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlslice_1_0' instantiated as 'audio_stuff/my_fft/xlslice_1' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hdl/fft_mag.v:161]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'filter_input_buffer' instantiated as 'audio_stuff/filter_bram' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v:95]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'frame_buffer' instantiated as 'frame_buffer_1' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:141]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_0' instantiated as 'testing' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:271]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'xy_bin' instantiated as 'xy_edge' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v:176]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'bram_fft_output_buffer' instantiated as 'fft_amplitude_buffer' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:236]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_manager' instantiated as 'clocker' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:71]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'div_gen_0' instantiated as 'box/separate/your_instance_name' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v:89]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_axis_register_slice_2_0' instantiated as 'audio_stuff/my_fft/axis_register_slice_2' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:92]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_c_addsub_0_0' instantiated as 'audio_stuff/my_fft/c_addsub_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:102]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_cordic_0_0' instantiated as 'audio_stuff/my_fft/cordic_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:107]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_mult_gen_0_0' instantiated as 'audio_stuff/my_fft/mult_gen_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:117]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_mult_gen_1_0' instantiated as 'audio_stuff/my_fft/mult_gen_1' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:122]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xfft_0_0' instantiated as 'audio_stuff/my_fft/xfft_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:127]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconcat_0_0' instantiated as 'audio_stuff/my_fft/xlconcat_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:145]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_0_0' instantiated as 'audio_stuff/my_fft/xlconstant_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:150]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_1_0' instantiated as 'audio_stuff/my_fft/xlconstant_1' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:152]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_2_0' instantiated as 'audio_stuff/my_fft/xlconstant_2' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:154]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlconstant_3_0' instantiated as 'audio_stuff/my_fft/xlconstant_3' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:156]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlslice_0_0' instantiated as 'audio_stuff/my_fft/xlslice_0' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:158]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'fft_mag_xlslice_1_0' instantiated as 'audio_stuff/my_fft/xlslice_1' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hdl/fft_mag.v:161]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'filter_input_buffer' instantiated as 'audio_stuff/filter_bram' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v:95]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'frame_buffer' instantiated as 'frame_buffer_1' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:141]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ila_0' instantiated as 'testing' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:272]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'xy_bin' instantiated as 'xy_edge' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v:176]
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp/clk_manager_in_context.xdc] for cell 'clocker'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp/clk_manager_in_context.xdc] for cell 'clocker'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_2/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_2/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_3/xy_bin_in_context.xdc] for cell 'xy_edge'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_3/xy_bin_in_context.xdc] for cell 'xy_edge'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_4/bram_fft_output_buffer_in_context.xdc] for cell 'fft_amplitude_buffer'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_4/bram_fft_output_buffer_in_context.xdc] for cell 'fft_amplitude_buffer'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_5/div_gen_0_in_context.xdc] for cell 'box/separate/your_instance_name'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_5/div_gen_0_in_context.xdc] for cell 'box/separate/your_instance_name'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_6/filter_input_buffer_in_context.xdc] for cell 'audio_stuff/filter_bram'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_6/filter_input_buffer_in_context.xdc] for cell 'audio_stuff/filter_bram'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_7/ila_0_in_context.xdc] for cell 'testing'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_7/ila_0_in_context.xdc] for cell 'testing'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_8/fft_mag_axis_register_slice_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/axis_register_slice_2'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_8/fft_mag_axis_register_slice_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/axis_register_slice_2'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_9/fft_mag_c_addsub_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/c_addsub_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_9/fft_mag_c_addsub_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/c_addsub_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_10/fft_mag_cordic_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/cordic_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_10/fft_mag_cordic_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/cordic_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_11/fft_mag_mult_gen_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_11/fft_mag_mult_gen_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_12/fft_mag_mult_gen_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_12/fft_mag_mult_gen_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_1'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_13/fft_mag_xfft_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xfft_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_13/fft_mag_xfft_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xfft_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_14/fft_mag_xlconstant_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_14/fft_mag_xlconstant_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_15/fft_mag_xlconstant_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_15/fft_mag_xlconstant_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_1'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_16/fft_mag_xlconstant_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_2'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_16/fft_mag_xlconstant_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_2'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_17/fft_mag_xlslice_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_17/fft_mag_xlslice_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_18/fft_mag_xlslice_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_18/fft_mag_xlslice_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_1'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_19/fft_mag_xlconcat_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconcat_0'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_19/fft_mag_xlconcat_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconcat_0'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_20/fft_mag_xlconstant_3_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_3'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp_20/fft_mag_xlconstant_3_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_3'
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc]
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/final_project_propImpl.xdc].
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp/clk_manager_in_context.xdc] for cell 'clocker'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp/clk_manager_in_context.xdc] for cell 'clocker'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_2/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_2/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_3/xy_bin_in_context.xdc] for cell 'xy_edge'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_3/xy_bin_in_context.xdc] for cell 'xy_edge'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_4/bram_fft_output_buffer_in_context.xdc] for cell 'fft_amplitude_buffer'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_4/bram_fft_output_buffer_in_context.xdc] for cell 'fft_amplitude_buffer'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_5/div_gen_0_in_context.xdc] for cell 'box/separate/your_instance_name'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_5/div_gen_0_in_context.xdc] for cell 'box/separate/your_instance_name'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_6/filter_input_buffer_in_context.xdc] for cell 'audio_stuff/filter_bram'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_6/filter_input_buffer_in_context.xdc] for cell 'audio_stuff/filter_bram'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_7/ila_0_in_context.xdc] for cell 'testing'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_7/ila_0_in_context.xdc] for cell 'testing'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_8/fft_mag_axis_register_slice_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/axis_register_slice_2'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_8/fft_mag_axis_register_slice_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/axis_register_slice_2'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_9/fft_mag_c_addsub_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/c_addsub_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_9/fft_mag_c_addsub_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/c_addsub_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_10/fft_mag_cordic_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/cordic_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_10/fft_mag_cordic_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/cordic_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_11/fft_mag_mult_gen_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_11/fft_mag_mult_gen_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_12/fft_mag_mult_gen_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_12/fft_mag_mult_gen_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/mult_gen_1'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_13/fft_mag_xfft_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xfft_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_13/fft_mag_xfft_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xfft_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_14/fft_mag_xlconstant_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_14/fft_mag_xlconstant_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_15/fft_mag_xlconstant_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_15/fft_mag_xlconstant_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_1'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_16/fft_mag_xlconstant_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_2'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_16/fft_mag_xlconstant_2_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_2'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_17/fft_mag_xlslice_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_17/fft_mag_xlslice_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_18/fft_mag_xlslice_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_18/fft_mag_xlslice_1_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlslice_1'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_19/fft_mag_xlconcat_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconcat_0'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_19/fft_mag_xlconcat_0_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconcat_0'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_20/fft_mag_xlconstant_3_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_3'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp_20/fft_mag_xlconstant_3_0_in_context.xdc] for cell 'audio_stuff/my_fft/xlconstant_3'
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Constraints_Master.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Constraints_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Constraints_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/final_project_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/final_project_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1506.469 ; gain = 0.004 ; free physical = 1672 ; free virtual = 11685
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1507.465 ; gain = 0.004 ; free physical = 2088 ; free virtual = 12933
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'fft_amplitude_buffer' at clock pin 'clka' is different from the actual clock period '10.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'audio_stuff/filter_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can result in different synthesis results.
 WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'box/separate/your_instance_name' at clock pin 'aclk' is different from the actual clock period '40.000', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1671 ; free virtual = 11684
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2089 ; free virtual = 12934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1671 ; free virtual = 11684
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2089 ; free virtual = 12934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp/clk_manager_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-30626-eecs-digital-13/dcp/clk_manager_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp/clk_manager_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.runs/synth_1/.Xil/Vivado-28397-eecs-digital-13/dcp/clk_manager_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for audio_stuff/my_fft. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for audio_stuff/my_fft/axis_register_slice_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for audio_stuff/my_fft/c_addsub_0. (constraint file  auto generated constraint, line ).
@@ -484,7 +485,7 @@ Applied set_property DONT_TOUCH = true for audio_stuff/my_fft/xlconstant_3. (con
 Applied set_property DONT_TOUCH = true for audio_stuff/my_fft/xlslice_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for audio_stuff/my_fft/xlslice_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1671 ; free virtual = 11684
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2089 ; free virtual = 12934
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
@@ -497,10 +498,10 @@ INFO: [Synth 8-5546] ROM "ready_for_next_byte" won't be mapped to RAM because it
 INFO: [Synth 8-5546] ROM "bit_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "return_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "return_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:105]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:211]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:211]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:211]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:105]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:211]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:211]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:211]
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pic_memory_addr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5587] ROM size for "i" is below threshold of ROM address width. It will be mapped to LUTs
@@ -514,7 +515,7 @@ INFO: [Synth 8-5544] ROM "bw_pixel_load0" won't be mapped to Block RAM because a
 INFO: [Synth 8-5544] ROM "bw_pixel_load1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bw_pixel_load2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "is_edge" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v:100]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v:100]
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -528,16 +529,14 @@ INFO: [Synth 8-5544] ROM "bram_write" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "pixel_load0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pixel_load1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pixel_load2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/one_edge.v:146]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/one_edge.v:146]
 INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "num_pixels" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bram_write" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "y_curr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'dividend_ready_reg' into 'divisor_ready_reg' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v:93]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v:186]
-INFO: [Synth 8-5546] ROM "bin_in" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'dividend_ready_reg' into 'divisor_ready_reg' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v:93]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v:186]
 INFO: [Synth 8-5546] ROM "adjusting" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'julian_test_reg' into 'first_time_reg' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:197]
 INFO: [Synth 8-5546] ROM "flag" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "y" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'audio_processing'
@@ -559,7 +558,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'audio_processing'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1656 ; free virtual = 11670
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2082 ; free virtual = 12928
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -577,7 +576,7 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit       Adders := 4     
 	   2 Input     19 Bit       Adders := 19    
 	   3 Input     13 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 4     
 	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 6     
 	   2 Input      9 Bit       Adders := 7     
@@ -594,9 +593,9 @@ Detailed RTL Component Info :
 	               24 Bit    Registers := 1     
 	               19 Bit    Registers := 15    
 	               18 Bit    Registers := 4     
-	               12 Bit    Registers := 11    
+	               12 Bit    Registers := 12    
 	               11 Bit    Registers := 2     
-	               10 Bit    Registers := 7     
+	               10 Bit    Registers := 8     
 	                9 Bit    Registers := 5     
 	                8 Bit    Registers := 5     
 	                7 Bit    Registers := 3     
@@ -609,6 +608,7 @@ Detailed RTL Component Info :
 	               4K Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     84 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 5     
 	   8 Input     56 Bit        Muxes := 1     
 	   2 Input     42 Bit        Muxes := 4     
 	   8 Input     20 Bit        Muxes := 2     
@@ -619,8 +619,8 @@ Detailed RTL Component Info :
 	   8 Input     19 Bit        Muxes := 4     
 	   7 Input     19 Bit        Muxes := 3     
 	   2 Input     16 Bit        Muxes := 3     
-	   2 Input     12 Bit        Muxes := 50    
 	   7 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 50    
 	   8 Input     12 Bit        Muxes := 7     
 	   3 Input     12 Bit        Muxes := 3     
 	   2 Input     11 Bit        Muxes := 1     
@@ -657,17 +657,17 @@ Detailed RTL Component Info :
 	  20 Input      2 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 23    
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 214   
+	   2 Input      1 Bit        Muxes := 213   
 	  20 Input      1 Bit        Muxes := 8     
 	   4 Input      1 Bit        Muxes := 25    
 	   5 Input      1 Bit        Muxes := 23    
-	   8 Input      1 Bit        Muxes := 21    
+	   8 Input      1 Bit        Muxes := 22    
 	  10 Input      1 Bit        Muxes := 39    
 	  15 Input      1 Bit        Muxes := 4     
 	  14 Input      1 Bit        Muxes := 3     
 	  11 Input      1 Bit        Muxes := 16    
 	   9 Input      1 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -824,25 +824,24 @@ Detailed RTL Component Info :
 	   2 Input     21 Bit       Adders := 1     
 	   2 Input     20 Bit       Adders := 2     
 	   2 Input     19 Bit       Adders := 4     
-	   2 Input     12 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
 	               19 Bit    Registers := 5     
-	               12 Bit    Registers := 2     
+	               12 Bit    Registers := 3     
 	                3 Bit    Registers := 6     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   8 Input     20 Bit        Muxes := 1     
 	   8 Input     19 Bit        Muxes := 1     
 	   7 Input     19 Bit        Muxes := 3     
-	   2 Input     12 Bit        Muxes := 1     
 	   7 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 3     
 	   9 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 10    
-	   7 Input      1 Bit        Muxes := 11    
-	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 12    
 Module image_processing 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -873,11 +872,12 @@ Detailed RTL Component Info :
 	               42 Bit    Registers := 2     
 	               24 Bit    Registers := 1     
 	               12 Bit    Registers := 7     
-	               10 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 4     
 +---Muxes : 
+	   2 Input     60 Bit        Muxes := 5     
 	   2 Input     42 Bit        Muxes := 4     
 	   2 Input     16 Bit        Muxes := 3     
 	   2 Input     12 Bit        Muxes := 48    
@@ -886,7 +886,7 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 10    
 	   2 Input      3 Bit        Muxes := 7     
 	   2 Input      1 Bit        Muxes := 67    
-	   8 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 10    
 Module Color_output 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -977,29 +977,27 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1656 ; free virtual = 11670
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2082 ; free virtual = 12928
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'GX_reg[6:0]' into 'GX_reg[6:0]' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:147]
-INFO: [Synth 8-4471] merging register 'GY_reg[6:0]' into 'GY_reg[6:0]' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v:148]
+INFO: [Synth 8-4471] merging register 'GX_reg[6:0]' into 'GX_reg[6:0]' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:147]
+INFO: [Synth 8-4471] merging register 'GY_reg[6:0]' into 'GY_reg[6:0]' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v:148]
 INFO: [Synth 8-5546] ROM "y_curr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bin_in" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "adjusting" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'bin_acc_reg[41:0]' into 'bin_acc_reg[41:0]' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:120]
-WARNING: [Synth 8-3936] Found unconnected internal register 'addr_hold_reg' and it is trimmed from '60' to '20' bits. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v:112]
+INFO: [Synth 8-4471] merging register 'bin_acc_reg[41:0]' into 'bin_acc_reg[41:0]' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v:120]
 DSP Report: Generating DSP bin_acc0, operation Mode is: C'+A*B.
 DSP Report: register bin_acc_reg is absorbed into DSP bin_acc0.
 DSP Report: operator bin_acc0 is absorbed into DSP bin_acc0.
 DSP Report: operator bin_acc1 is absorbed into DSP bin_acc0.
-INFO: [Synth 8-4471] merging register 'vcount_reg[11:0]' into 'vcount_reg[11:0]' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_output.v:72]
-INFO: [Synth 8-4471] merging register 'hcount_reg[11:0]' into 'hcount_reg[11:0]' [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_output.v:64]
-DSP Report: Generating DSP memory_addr0, operation Mode is: C'+A2*(B:0x280).
-DSP Report: register vcount_reg is absorbed into DSP memory_addr0.
-DSP Report: register hcount_reg is absorbed into DSP memory_addr0.
-DSP Report: operator memory_addr0 is absorbed into DSP memory_addr0.
-DSP Report: operator memory_addr1 is absorbed into DSP memory_addr0.
-WARNING: [Synth 8-3936] Found unconnected internal register 'filter_controller/lpf/y_reg' and it is trimmed from '18' to '8' bits. [/afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v:68]
+INFO: [Synth 8-4471] merging register 'test_color/vcount_reg[11:0]' into 'test_color/vcount_reg[11:0]' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_output.v:72]
+INFO: [Synth 8-4471] merging register 'test_color/hcount_reg[11:0]' into 'test_color/hcount_reg[11:0]' [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_output.v:64]
+INFO: [Synth 8-5546] ROM "test_off/adjusting" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP test_color/memory_addr0, operation Mode is: C'+A2*(B:0x280).
+DSP Report: register test_color/vcount_reg is absorbed into DSP test_color/memory_addr0.
+DSP Report: register test_color/hcount_reg is absorbed into DSP test_color/memory_addr0.
+DSP Report: operator test_color/memory_addr0 is absorbed into DSP test_color/memory_addr0.
+DSP Report: operator test_color/memory_addr1 is absorbed into DSP test_color/memory_addr0.
+WARNING: [Synth 8-3936] Found unconnected internal register 'filter_controller/lpf/y_reg' and it is trimmed from '18' to '8' bits. [/afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v:68]
 INFO: [Synth 8-5546] ROM "last_sample" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "up/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "up/clean" won't be mapped to RAM because it is too sparse
@@ -1027,14 +1025,13 @@ WARNING: [Synth 8-3917] design final_project has port SD_DAT[1] driven by consta
 WARNING: [Synth 8-3331] design audio_processing has unconnected port clk_25mhz
 WARNING: [Synth 8-3331] design audio_processing has unconnected port sd_ready
 WARNING: [Synth 8-3331] design FFT_energy has unconnected port test
-WARNING: [Synth 8-3331] design FFT_energy has unconnected port addresses[59]
-WARNING: [Synth 8-3331] design FFT_energy has unconnected port addresses[58]
-WARNING: [Synth 8-3331] design FFT_energy has unconnected port addresses[57]
+WARNING: [Synth 8-3331] design Color_transform has unconnected port SW[15]
+WARNING: [Synth 8-3331] design Color_transform has unconnected port SW[12]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1657 ; free virtual = 11670
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2083 ; free virtual = 12929
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1657 ; free virtual = 11670
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2083 ; free virtual = 12929
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1066,12 +1063,12 @@ Distributed RAM: Preliminary Mapping  Report (see note below)
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping  Report (see note below)
-+-------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name  | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|FFT_energy   | C'+A*B          | 16     | 16     | 42     | -      | 42     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
-|Color_output | C'+A2*(B:0x280) | 12     | 10     | 12     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
-+-------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FFT_energy      | C'+A*B          | 16     | 16     | 42     | -      | 42     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
+|Color_transform | C'+A2*(B:0x280) | 12     | 10     | 12     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1242,9 +1239,9 @@ INFO: [Synth 8-3886] merging instance 'julian_color/test_FFT/four_reg[6]' (FDE) 
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (julian_color/\test_FFT/four_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (julian_color/\test_FFT/two_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1643 ; free virtual = 11656
+Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2062 ; free virtual = 12908
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1506.469 ; gain = 611.258 ; free physical = 1643 ; free virtual = 11656
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1507.465 ; gain = 612.258 ; free physical = 2062 ; free virtual = 12908
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1261,10 +1258,10 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clocker/clk_out1' to pin 
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clocker/clk_out2' to pin 'clocker/bbstub_clk_out2/O'
 INFO: [Synth 8-5820] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 1515.449 ; gain = 620.238 ; free physical = 1560 ; free virtual = 11573
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1515.445 ; gain = 620.238 ; free physical = 1988 ; free virtual = 12834
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1585.926 ; gain = 690.715 ; free physical = 1489 ; free virtual = 11502
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 1586.938 ; gain = 691.730 ; free physical = 1916 ; free virtual = 12762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1286,16 +1283,16 @@ INFO: [Synth 8-3886] merging instance 'audio_stuff/myfifo/rptr_reg_rep[6]' (FDRE
 INFO: [Synth 8-3886] merging instance 'audio_stuff/myfifo/rptr_reg_rep[7]' (FDRE) to 'audio_stuff/myfifo/rptr_reg[7]'
 INFO: [Synth 8-3886] merging instance 'audio_stuff/myfifo/rptr_reg_rep[8]' (FDRE) to 'audio_stuff/myfifo/rptr_reg[8]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1316,7 +1313,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module xy_edge has unconnected pin din
 CRITICAL WARNING: [Synth 8-4442] BlackBox module xy_edge has unconnected pin dinb[0]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module fft_amplitude_buffer has unconnected pin dinb[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1329,7 +1326,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1341,25 +1338,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1415,43 +1412,43 @@ Report Cell Usage:
 |18    |frame_buffer                    |     1|
 |19    |ila_0                           |     1|
 |20    |xy_bin                          |     1|
-|21    |CARRY4                          |   322|
+|21    |CARRY4                          |   326|
 |22    |DSP48E1                         |     1|
 |23    |DSP48E1_1                       |     1|
-|24    |LUT1                            |   873|
-|25    |LUT2                            |   214|
-|26    |LUT3                            |   365|
-|27    |LUT4                            |   291|
-|28    |LUT5                            |   327|
-|29    |LUT6                            |   706|
-|30    |MUXF7                           |    27|
-|31    |MUXF8                           |     8|
+|24    |LUT1                            |   880|
+|25    |LUT2                            |   213|
+|26    |LUT3                            |   354|
+|27    |LUT4                            |   277|
+|28    |LUT5                            |   384|
+|29    |LUT6                            |   713|
+|30    |MUXF7                           |    26|
+|31    |MUXF8                           |     7|
 |32    |RAM64M                          |    16|
 |33    |RAM64X1D                        |    16|
 |34    |XORCY                           |     8|
-|35    |FDRE                            |  1143|
-|36    |FDSE                            |    26|
+|35    |FDRE                            |  1203|
+|36    |FDSE                            |    28|
 |37    |IBUF                            |    22|
-|38    |OBUF                            |    42|
-|39    |OBUFT                           |    34|
+|38    |OBUF                            |    41|
+|39    |OBUFT                           |    35|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+----------------------+-----------------+------+
 |      |Instance              |Module           |Cells |
 +------+----------------------+-----------------+------+
-|1     |top                   |                 |  4707|
-|2     |  box                 |image_processing |  2358|
-|3     |    edge_detection    |sobel            |   645|
-|4     |    isolate           |one_edge         |   671|
-|5     |    separate          |color_contour    |   630|
-|6     |    skinny_edge       |edge_pixel_width |   412|
-|7     |  julian_color        |Color_transform  |   676|
+|1     |top                   |                 |  4816|
+|2     |  box                 |image_processing |  2388|
+|3     |    edge_detection    |sobel            |   643|
+|4     |    isolate           |one_edge         |   676|
+|5     |    separate          |color_contour    |   659|
+|6     |    skinny_edge       |edge_pixel_width |   410|
+|7     |  julian_color        |Color_transform  |   767|
 |8     |    pulse_down        |lev_to_pulse     |     3|
 |9     |    pulse_up          |lev_to_pulse_5   |    10|
-|10    |    test_FFT          |FFT_energy       |   478|
+|10    |    test_FFT          |FFT_energy       |   570|
 |11    |    test_color        |Color_output     |   128|
-|12    |    test_off          |Color_offst      |    57|
+|12    |    test_off          |Color_offst      |    56|
 |13    |  audio_stuff         |audio_processing |   720|
 |14    |    my_fft            |fft_mag          |   179|
 |15    |    audio_at32khz     |audio_PWM        |    24|
@@ -1461,21 +1458,21 @@ Report Instance Areas:
 |19    |      lpf             |fir31_4          |    36|
 |20    |    myfifo            |fifo             |   118|
 |21    |  center              |debounce         |    54|
-|22    |  display             |display_8hex     |   118|
+|22    |  display             |display_8hex     |   109|
 |23    |  down                |debounce_0       |    54|
 |24    |  left                |debounce_1       |    54|
 |25    |  right               |debounce_2       |    54|
-|26    |  sd_read_write       |sd_controller    |   376|
+|26    |  sd_read_write       |sd_controller    |   373|
 |27    |  up                  |debounce_3       |    54|
 +------+----------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1593.934 ; gain = 698.723 ; free physical = 1480 ; free virtual = 11493
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1594.945 ; gain = 699.738 ; free physical = 1907 ; free virtual = 12753
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 4 critical warnings and 296 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1593.934 ; gain = 215.906 ; free physical = 1479 ; free virtual = 11493
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1593.941 ; gain = 698.730 ; free physical = 1481 ; free virtual = 11495
+Synthesis finished with 0 errors, 4 critical warnings and 254 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1594.945 ; gain = 215.922 ; free physical = 1907 ; free virtual = 12753
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1594.953 ; gain = 699.746 ; free physical = 1907 ; free virtual = 12754
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 386 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 390 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1486,8 +1483,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-286 Infos, 288 Warnings, 4 Critical Warnings and 0 Errors encountered.
+283 Infos, 287 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1625.953 ; gain = 636.184 ; free physical = 1475 ; free virtual = 11495
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1657.969 ; gain = 0.000 ; free physical = 1480 ; free virtual = 11495
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 18:05:19 2017...
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1626.965 ; gain = 637.199 ; free physical = 1907 ; free virtual = 12754
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1658.980 ; gain = 0.000 ; free physical = 1905 ; free virtual = 12753
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 20:00:35 2017...

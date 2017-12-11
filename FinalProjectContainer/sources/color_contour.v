@@ -281,8 +281,8 @@ module color_contour(
                         bram_write <= bin_in;
                         
                         pixel_count <= pixel_count + 1;
-//                        if (pixel_count == pixel_per_bin) begin 
-                        if (pixel_count ==  manual_pixel_bin) begin
+                        if (pixel_count == pixel_per_bin) begin 
+//                        if (pixel_count ==  manual_pixel_bin) begin
                             bin_in <= bin_in + 1;
                             pixel_count <= 0;
                         end

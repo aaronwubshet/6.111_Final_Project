@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fft_mag_axis_register_slice_2_0_synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1512628983">
-  <File Type="VDS-TIMING-PB" Name="fft_mag_axis_register_slice_2_0_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="fft_mag_axis_register_slice_2_0_timing_summary_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="fft_mag_axis_register_slice_2_0_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="fft_mag_axis_register_slice_2_0.tcl"/>
-  <File Type="RDS-RDS" Name="fft_mag_axis_register_slice_2_0.vds"/>
   <File Type="RDS-UTIL" Name="fft_mag_axis_register_slice_2_0_utilization_synth.rpt"/>
+  <File Type="PA-TCL" Name="fft_mag_axis_register_slice_2_0.tcl"/>
   <File Type="RDS-UTIL-PB" Name="fft_mag_axis_register_slice_2_0_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="fft_mag_axis_register_slice_2_0.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fft_mag_axis_register_slice_2_0_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="fft_mag_axis_register_slice_2_0_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="fft_mag_axis_register_slice_2_0.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="fft_mag_axis_register_slice_2_0_drc_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fft_mag_axis_register_slice_2_0">
     <File Path="$PPRDIR/../sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.xci">
       <FileInfo>

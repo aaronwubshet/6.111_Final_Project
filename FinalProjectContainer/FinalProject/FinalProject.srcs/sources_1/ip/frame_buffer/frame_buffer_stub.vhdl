@@ -1,10 +1,10 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
--- Date        : Sun Dec 10 11:33:49 2017
+-- Date        : Sun Dec 10 18:32:01 2017
 -- Host        : eecs-digital-13 running 64-bit Ubuntu 14.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_stub.vhdl
+--               /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_stub.vhdl
 -- Design      : frame_buffer
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-3

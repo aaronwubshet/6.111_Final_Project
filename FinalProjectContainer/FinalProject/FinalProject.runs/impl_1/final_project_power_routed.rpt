@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Sun Dec 10 18:07:27 2017
+| Date             : Sun Dec 10 20:02:33 2017
 | Host             : eecs-digital-13 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file final_project_power_routed.rpt -pb final_project_power_summary_routed.pb -rpx final_project_power_routed.rpx
 | Design           : final_project
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.023 |       12 |       --- |             --- |
-| Slice Logic              |     0.014 |    14665 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     4432 |     63400 |            6.99 |
-|   Register               |     0.001 |     5806 |    126800 |            4.58 |
-|   CARRY4                 |     0.001 |      650 |     15850 |            4.10 |
+| Slice Logic              |     0.014 |    15230 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     4567 |     63400 |            7.20 |
+|   Register               |     0.001 |     6112 |    126800 |            4.82 |
+|   CARRY4                 |     0.001 |      669 |     15850 |            4.22 |
 |   LUT as Shift Register  |    <0.001 |      752 |     19000 |            3.96 |
 |   LUT as Distributed RAM |    <0.001 |      200 |     19000 |            1.05 |
-|   F7/F8 Muxes            |    <0.001 |      187 |     63400 |            0.29 |
-|   Others                 |     0.000 |     1512 |       --- |             --- |
-| Signals                  |     0.023 |     9880 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      185 |     63400 |            0.29 |
+|   Others                 |     0.000 |     1620 |       --- |             --- |
+| Signals                  |     0.022 |    10238 |       --- |             --- |
 | Block RAM                |     0.012 |      120 |       135 |           88.89 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
-| DSPs                     |     0.014 |       16 |       240 |            6.67 |
-| I/O                      |     0.004 |       57 |       210 |           27.14 |
+| DSPs                     |     0.015 |       16 |       240 |            6.67 |
+| I/O                      |     0.004 |       56 |       210 |           26.67 |
 | Static Power             |     0.101 |          |           |                 |
 | Total                    |     0.296 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -508,7 +508,7 @@ Table of Contents
 |                     scale_mux                                                                  |    <0.001 |
 |                   scaling2bits.scaler_re                                                       |    <0.001 |
 |                     scale_mux                                                                  |    <0.001 |
-|                 pe_gen[1].natural_order_input.PE                                               |     0.008 |
+|                 pe_gen[1].natural_order_input.PE                                               |     0.009 |
 |                   FB_1.BF_1                                                                    |     0.001 |
 |                     BTFLY0                                                                     |    <0.001 |
 |                       logic_bfly_byp.add_i                                                     |    <0.001 |
@@ -752,8 +752,8 @@ Table of Contents
 |                             use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay                |    <0.001 |
 |                         mult2_preadder_d_plus_a.mult2                                          |     0.001 |
 |                           mult                                                                 |     0.001 |
-|                         mult3_preadder_d_minus_a.mult3                                         |     0.001 |
-|                           mult                                                                 |     0.001 |
+|                         mult3_preadder_d_minus_a.mult3                                         |     0.002 |
+|                           mult                                                                 |     0.002 |
 |                             use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay                |    <0.001 |
 |                         optionally_negate_inputs                                               |    <0.001 |
 |                   has_TW_mult.TW                                                               |    <0.001 |
@@ -1134,13 +1134,100 @@ Table of Contents
 |       fifo_reg_64_127_6_6                                                                      |    <0.001 |
 |       fifo_reg_64_127_7_7                                                                      |    <0.001 |
 |   box                                                                                          |     0.006 |
-|     edge_detection                                                                             |     0.004 |
+|     edge_detection                                                                             |     0.003 |
 |     isolate                                                                                    |    <0.001 |
-|     separate                                                                                   |    <0.001 |
+|     separate                                                                                   |     0.001 |
 |       your_instance_name                                                                       |    <0.001 |
 |         U0                                                                                     |    <0.001 |
 |           i_synth                                                                              |    <0.001 |
 |             i_nd_to_rdy                                                                        |    <0.001 |
+|             i_nonzero_fract.i_synth                                                            |    <0.001 |
+|               i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider                                  |    <0.001 |
+|                 i_sdivider.divider_blk                                                         |    <0.001 |
+|                   div_loop[0].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[0].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[0].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[10].adder_gen.reg_req.adsu_mod                                      |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[10].divisor_gen.divisor_dc1.del_divisor_msbs                        |    <0.001 |
+|                   div_loop[10].num_stages.numerator_gen.del_numer                              |    <0.001 |
+|                   div_loop[10].quot_gen.quot_reg.i_div1.quot_out                               |    <0.001 |
+|                   div_loop[11].adder_gen.reg_req.adsu_mod                                      |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[11].divisor_gen.divisor_dc1.del_divisor_msbs                        |    <0.001 |
+|                   div_loop[11].num_stages.numerator_gen.del_numer                              |    <0.001 |
+|                   div_loop[11].quot_gen.quot_reg.i_div1.quot_out                               |    <0.001 |
+|                   div_loop[1].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[1].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[1].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[1].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[2].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[2].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[2].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[2].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[3].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[3].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[3].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[3].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[4].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[4].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[4].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[4].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[5].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[5].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[5].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[5].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[6].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[6].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[6].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[6].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[7].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[7].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[7].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[7].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[8].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[8].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[8].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[8].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   div_loop[9].adder_gen.reg_req.adsu_mod                                       |    <0.001 |
+|                     add1                                                                       |    <0.001 |
+|                       no_pipelining.the_addsub                                                 |    <0.001 |
+|                         i_q_simple.qreg                                                        |    <0.001 |
+|                   div_loop[9].divisor_gen.divisor_dc1.del_divisor_msbs                         |    <0.001 |
+|                   div_loop[9].num_stages.numerator_gen.del_numer                               |    <0.001 |
+|                   div_loop[9].quot_gen.quot_reg.i_div1.quot_out                                |    <0.001 |
+|                   reg_quot_out.reg_quot                                                        |    <0.001 |
 |     skinny_edge                                                                                |    <0.001 |
 |   clocker                                                                                      |     0.106 |
 |     inst                                                                                       |     0.106 |
@@ -1224,11 +1311,11 @@ Table of Contents
 |           valid.cstr                                                                           |     0.001 |
 |             ramloop[0].ram.r                                                                   |     0.001 |
 |               prim_noinit.ram                                                                  |     0.001 |
-|   frame_buffer_1                                                                               |     0.002 |
-|     U0                                                                                         |     0.002 |
-|       inst_blk_mem_gen                                                                         |     0.002 |
-|         gnbram.gnativebmg.native_blk_mem_gen                                                   |     0.002 |
-|           valid.cstr                                                                           |     0.002 |
+|   frame_buffer_1                                                                               |     0.001 |
+|     U0                                                                                         |     0.001 |
+|       inst_blk_mem_gen                                                                         |     0.001 |
+|         gnbram.gnativebmg.native_blk_mem_gen                                                   |     0.001 |
+|           valid.cstr                                                                           |     0.001 |
 |             has_mux_b.B                                                                        |    <0.001 |
 |             ramloop[17].ram.r                                                                  |    <0.001 |
 |               prim_init.ram                                                                    |    <0.001 |
@@ -1380,7 +1467,7 @@ Table of Contents
 |               prim_init.ram                                                                    |    <0.001 |
 |             ramloop[91].ram.r                                                                  |    <0.001 |
 |               prim_init.ram                                                                    |    <0.001 |
-|   julian_color                                                                                 |     0.002 |
+|   julian_color                                                                                 |     0.003 |
 |     pulse_down                                                                                 |    <0.001 |
 |     pulse_up                                                                                   |    <0.001 |
 |     test_FFT                                                                                   |     0.002 |

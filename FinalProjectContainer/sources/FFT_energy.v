@@ -42,7 +42,7 @@ module FFT_energy(
             output wire [83:0] color,
             output reg [23:0] test_out,     //debugging output 
             output reg test,
-            output reg julian_test,
+            output reg  [9:0] julian_test,
             output reg start
     );
     
@@ -110,7 +110,7 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
         if((ready && !start && done_delay)) begin
             start <= 1'b1;                      //start in taking data and calculating 
             addr_hold <= addresses;
-            bram_addr <= 10'd0;
+            bram_addr <= 10'd511;
             max_addr <= addresses[9:0];
             //max_addr <= 10'd1023;
             bin_count <= 0;
@@ -137,10 +137,6 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
                     start_count <= 0;
                      if(bram_addr < max_addr) begin 
                          bin_acc <= data*data + bin_acc;                    //update our bin energy
-                         //if(bram_addr == 1023 && !first_time) begin 
-                            //first_time <= 1;
-                            //julian_test <= 1; 
-                         //end
                          test_out[15:0] <= data;
                          bram_addr <= bram_addr + 1;                        //move on to next bram address
                          //start_count <= 0;
@@ -194,7 +190,7 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
                             3'b010:begin
                             
                                 if(!first_time)begin
-                                    julian_test <= 1;
+                                    julian_test <= max_addr;
                                     first_time <= 1;
                                 end
                                 if(adjusting) begin
@@ -308,6 +304,7 @@ initial done = 1; //AARON ADDED THIS LINE SO THAT INITIALLY JULIAN OUTPUTS DONE
                         //test_out <= bin_acc;
                         bin_count <= bin_count + 1;
                         bin_acc <= 0;
+                        addr_hold <= addr_hold >>10;
                         max_addr <= addr_hold>>10;     //get next max bin address
             //            start_count <= 0;
                      end

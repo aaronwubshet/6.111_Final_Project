@@ -45,7 +45,7 @@ module Color_transform(
        
        output FFT_done,
        output [31:0] data_disp,
-       output julian_test,
+       output [9:0] julian_test,
        output wire start
        );
        

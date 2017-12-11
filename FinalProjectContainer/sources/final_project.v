@@ -211,7 +211,7 @@ module final_project(
     );
    
     wire [31:0] julian_debug;
-    wire julian_test;
+    wire [9:0] julian_test;
     //wire adjusting;
     
     
@@ -263,10 +263,11 @@ module final_project(
     assign LED[0]= image_done;
     assign LED[1] = julian_done;
     assign LED[2] = test;
-    assign LED[3] = julian_test;
+    //assign LED[3] = julian_test;
     //assign data = {16'b0, fft_bram_out_dina};
     
-    assign data = julian_debug;
+    assign data[15:0] = julian_debug[15:0];
+    assign data[31:16] = {6'b0, julian_test };
     //assign data = {julian_debug[0],3'b0, 2'b0, addrb, doutb};
     ila_0 testing (
             .clk(clk_100mhz), // input wire clk

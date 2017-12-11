@@ -141,7 +141,7 @@ module audio_processing(
     //FFT to Julian
     assign bin = 3'd4;
     //assign bin_addr = {30'd0, 10'd300, 10'd700, 10'd1023};
-    assign bin_addr = {20'd0,10'd1023, 10'd1020, 10'd10, 10'd5};
+    assign bin_addr = {20'd0,10'd1023, 10'd691, 10'd541, 10'd521};
     
 
     reg test;

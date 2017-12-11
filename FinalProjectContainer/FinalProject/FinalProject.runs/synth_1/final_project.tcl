@@ -11,66 +11,66 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.cache/wt [current_project]
-set_property parent.project_path /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.xpr [current_project]
+set_property webtalk.parent_dir /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.cache/wt [current_project]
+set_property parent.project_path /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-add_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_rgb.coe
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp]
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp]
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp]
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp]
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp]
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp]
-add_files -quiet /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp]
-add_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fft_mag.bd
-set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fft_mag_ooc.xdc]
-set_property is_locked true [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fft_mag.bd]
+add_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_rgb.coe
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp]
+add_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fft_mag.bd
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fft_mag_ooc.xdc]
+set_property is_locked true [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fft_mag.bd]
 
 read_verilog -library xil_defaultlib {
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/lpf_coeffs.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/hpf_coeffs.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fir31.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/bpf2_coeffs.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/bpf1_coeffs.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sobel.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/one_edge.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/lev_puls.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/FFT_energy.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/erosion.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_output.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_offst.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/color_contour.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/filter_control.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/fifo.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/clock_divider.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/audio_PWM.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/sd_controller.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/image_processing.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/display_8hex.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/debounce.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Color_transform.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/test.v
-  /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/final_project.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/lpf_coeffs.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/hpf_coeffs.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fir31.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/bpf2_coeffs.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/bpf1_coeffs.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/FFT_energy.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sobel.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/one_edge.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/lev_puls.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/erosion.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_output.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_offst.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/color_contour.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/filter_control.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/fifo.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/clock_divider.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/audio_PWM.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/sd_controller.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/image_processing.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/display_8hex.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/debounce.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Color_transform.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/test.v
+  /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/final_project.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc
-set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/a/w/awubshet/Desktop/FinalProjectContainer/sources/Constraints_Master.xdc]
+read_xdc /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Constraints_Master.xdc
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/u/julianch/final_project_debug/sources/Constraints_Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
