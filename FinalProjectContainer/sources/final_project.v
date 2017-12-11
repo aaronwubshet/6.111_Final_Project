@@ -269,18 +269,6 @@ module final_project(
     assign data[15:0] = julian_debug[15:0];
     assign data[31:16] = {6'b0, julian_test };
     //assign data = {julian_debug[0],3'b0, 2'b0, addrb, doutb};
-    ila_0 testing (
-            .clk(clk_100mhz), // input wire clk
-        
-        
-            .probe0(doutb), // input wire [15:0]  probe0  
-            .probe1(addrb), // input wire [9:0]  probe1 
-            .probe2(start), // input wire [0:0]  probe2 
-            .probe3(julian_done), // input wire [0:0]  probe3 
-            .probe4(aaron_done), // input wire [2:0]  probe4 
-            .probe5(image_done), // input wire [0:0]  probe5 
-            .probe6(test), // input wire [0:0]  probe6 
-            .probe7(aaron_done) // input wire [0:0]  probe7
-        );
+ 
 
 endmodule

@@ -44,7 +44,7 @@ module filter_control(
     lpf_coeffs low_pass_coeffs(.index(lpf_idx), .coeff(lpf_coeff));
     
     fir31 lpf(.clock(clock),.reset(reset),.ready(lpf_ready), .x(audio_in), .coeff(lpf_coeff), .idx(lpf_idx),
-        .y(lpf_filter_out), .done(lpf_done), .flag(flag), .last_flag(last_flag));
+        .y(lpf_filter_out), .done(lpf_done), .no_filter(0));
       
     
     //high pass filter signals and instantiations
@@ -58,7 +58,7 @@ module filter_control(
     hpf_coeffs high_pass_coeffs(.index(hpf_idx), .coeff(hpf_coeff));
     
     fir31 hpf(.clock(clock),.reset(reset),.ready(hpf_ready), .x(audio_in), .coeff(hpf_coeff), .idx(hpf_idx),
-        .y(hpf_filter_out), .done(hpf_done)); 
+        .y(hpf_filter_out), .done(hpf_done), .no_filter(1)); 
        
     //band pass 1 filter signals and instations
     wire signed [9:0] bpf1_coeff;
@@ -71,9 +71,10 @@ module filter_control(
     bpf1_coeffs band_pass_1_coeffs(.index(bpf1_idx), .coeff(bpf1_coeff));
     
     fir31 bpf1(.clock(clock),.reset(reset),.ready(bpf1_ready), .x(audio_in), .coeff(bpf1_coeff), .idx(bpf1_idx),
-        .y(bpf1_filter_out), .done(bpf1_done)); 
+        .y(bpf1_filter_out), .done(bpf1_done), .no_filter(0)); 
           
     //band pass 2 filter signals and instations
+    //NOT REALLY BANDPASS JUST PASSTHROUGH
     wire signed [9:0] bpf2_coeff;
     wire [4:0] bpf2_idx;
     wire bpf2_done;
@@ -84,7 +85,7 @@ module filter_control(
     bpf2_coeffs band_pass_2_coeffs(.index(bpf2_idx), .coeff(bpf2_coeff));
     
     fir31 bpf2(.clock(clock),.reset(reset),.ready(bpf2_ready), .x(audio_in), .coeff(bpf2_coeff), .idx(bpf2_idx),
-        .y(bpf2_filter_out), .done(bpf2_done)); 
+        .y(bpf2_filter_out), .done(bpf2_done), .no_filter(1)); 
 
     //output multiplexing
     assign done = (switch == 2'b00) ? 
@@ -93,8 +94,8 @@ module filter_control(
         bpf1_done : (switch == 2'b11) ? 
         bpf2_done : 0;
     assign audio_out = (switch == 2'b00) ?
-        lpf_filter_out[7:0]: (switch==2'b01) ? 
-        hpf_filter_out[17:10]: (switch== 2'b10) ? 
+        lpf_filter_out[17:10]: (switch==2'b01) ? 
+        hpf_filter_out[17:0]: (switch== 2'b10) ? 
         bpf1_filter_out[17:10] : (switch == 2'b11) ? 
-        bpf2_filter_out[17:10] : 0;
+        bpf2_filter_out[7:0] : 0;
 endmodule

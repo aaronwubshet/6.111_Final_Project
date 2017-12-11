@@ -17,8 +17,7 @@ module fir31(
   output wire [4:0] idx,
   output reg signed [17:0] y,
   output done,
-  output reg flag,
-  output reg last_flag
+  input no_filter
 );
 
 
@@ -65,8 +64,14 @@ module fir31(
 		end
 		if (idx_reg == 31)
 		begin
-		    y <= x;
-			//y <= accumulator;
+		 if(no_filter)
+		 begin
+		     y <= x;
+         end
+         else
+         begin
+			y <= accumulator;
+         end
 			flag <=1;
 		end
     end
