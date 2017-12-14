@@ -1,0 +1,283 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Dec 10 20:19:06 2017
+# Process ID: 9592
+# Current directory: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9348 C:\Users\Aaron Wubshet\Desktop\6.111_Final_Project\FinalProjectContainer\FinalProject\FinalProject.xpr
+# Log file: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/vivado.log
+# Journal file: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Aaron Wubshet/Desktop/New folder (2)/6.111_Final_Project/FinalProjectContainer/FinalProject' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'clk_manager' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_manager' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_manager' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_manager' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_manager' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/clk_manager/clk_manager_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'frame_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'frame_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'frame_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'frame_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'frame_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/frame_buffer/frame_buffer_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xy_bin' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xy_bin' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xy_bin' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xy_bin' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xy_bin' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/xy_bin/xy_bin_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_fft_output_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_fft_output_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_fft_output_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_fft_output_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_fft_output_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/bram_fft_output_buffer/bram_fft_output_buffer_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'div_gen_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'div_gen_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'div_gen_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'div_gen_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'div_gen_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/div_gen_0/div_gen_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'filter_input_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'filter_input_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'filter_input_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'filter_input_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'filter_input_buffer' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/filter_input_buffer/filter_input_buffer_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_0' generated file not found 'c:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 843.527 ; gain = 195.496
+update_compile_order -fileset sources_1
+reset_run clk_manager_synth_1
+reset_run frame_buffer_synth_1
+reset_run xy_bin_synth_1
+reset_run bram_fft_output_buffer_synth_1
+launch_runs synth_1 -jobs 2
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/Color_offst.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/Color_offst.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/Color_output.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/Color_output.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/Color_transform.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/Color_transform.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/FFT_energy.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/FFT_energy.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/audio_PWM.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/audio_PWM.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/bpf1_coeffs.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/bpf1_coeffs.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/bpf2_coeffs.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/bpf2_coeffs.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/clock_divider.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/clock_divider.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/color_contour.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/color_contour.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/debounce.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/debounce.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/display_8hex.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/display_8hex.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/erosion.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/erosion.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/fifo.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/fifo.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/filter_control.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/filter_control.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/final_project.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/final_project.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/fir31.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/fir31.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/hpf_coeffs.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/hpf_coeffs.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/image_processing.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/image_processing.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/lev_puls.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/lev_puls.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/lpf_coeffs.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/lpf_coeffs.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/one_edge.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/one_edge.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/sd_controller.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/sd_controller.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/sobel.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/sobel.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/test.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/test.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/hdl/fft_mag.v" into library work [C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/sources/hdl/fft_mag.v:1]
+[Sun Dec 10 20:20:06 2017] Launched clk_manager_synth_1, frame_buffer_synth_1, xy_bin_synth_1, bram_fft_output_buffer_synth_1, div_gen_0_synth_1, filter_input_buffer_synth_1, ila_0_synth_1...
+Run output will be captured here:
+clk_manager_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/clk_manager_synth_1/runme.log
+frame_buffer_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/frame_buffer_synth_1/runme.log
+xy_bin_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/xy_bin_synth_1/runme.log
+bram_fft_output_buffer_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/bram_fft_output_buffer_synth_1/runme.log
+div_gen_0_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/div_gen_0_synth_1/runme.log
+filter_input_buffer_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/filter_input_buffer_synth_1/runme.log
+ila_0_synth_1: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/ila_0_synth_1/runme.log
+[Sun Dec 10 20:20:07 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 855.676 ; gain = 1.223
+launch_runs impl_1 -jobs 2
+[Sun Dec 10 20:30:40 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 20:36:39 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.2
+  **** Build date : Jun  2 2016-16:57:03
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292646002A
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a100t_0 and the probes file C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/debug_nets.ltx.
+The device design has 0 ILA core(s) and 0 VIO core(s). The probes file has 1 ILA core(s) and 0 VIO core(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file OR
+2. Goto device properties and associate the correct probes file with the programming file already programmed in the device.
+set_property PROBES.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"testing"}]]
+remove_files -fileset ila_0 {{C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.xci}}
+INFO: [Project 1-386] Moving file 'C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0/ila_0.xci' from fileset 'ila_0' to fileset 'sources_1'.
+file delete -force {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.srcs/sources_1/ip/ila_0}
+file delete -force {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.ip_user_files/ip/ila_0} {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.ip_user_files/sim_scripts/ila_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 20:42:20 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 20:42:20 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 20:50:35 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 20:50:35 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 20:56:10 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 21:04:56 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 21:04:56 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 21:15:18 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 21:15:18 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 21:23:02 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 21:23:02 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 21:31:12 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 21:31:12 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Dec 10 21:43:20 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1/runme.log
+[Sun Dec 10 21:43:20 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/impl_1/final_project.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292646002A
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 12:21:22 2017...

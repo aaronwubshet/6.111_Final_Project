@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="clk_manager_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/clk_manager_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="frame_buffer_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/frame_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xy_bin_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/xy_bin_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bram_fft_output_buffer_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/bram_fft_output_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="div_gen_0_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/div_gen_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="filter_input_buffer_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/filter_input_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ila_0_synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/ila_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="clk_manager_synth_1"/>
+		<Parent Id="frame_buffer_synth_1"/>
+		<Parent Id="xy_bin_synth_1"/>
+		<Parent Id="bram_fft_output_buffer_synth_1"/>
+		<Parent Id="div_gen_0_synth_1"/>
+		<Parent Id="filter_input_buffer_synth_1"/>
+		<Parent Id="ila_0_synth_1"/>
+	</Run>
+</Runs>
+
