@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="C:/Users/Aaron Wubshet/Desktop/FinalProjectContainer/FinalProject/FinalProject.xpr">
+<Project Version="7" Minor="14" Path="C:/Users/Aaron Wubshet/Desktop/6.111_Final_Project/FinalProjectContainer/FinalProject/FinalProject.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c86645dc0a13445991e739de95cd461d"/>
@@ -126,10 +126,9 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="hdl/fft_mag.hwdef"/>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="hw_handoff/fft_mag_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="hw_handoff/fft_mag.hwh"/>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="fft_mag_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.xci">
+          <Proxy FileSetName="fft_mag_xlconstant_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_xlconstant_0_0/fft_mag_xlconstant_0_0.xci">
           <Proxy FileSetName="fft_mag_xlconstant_0_0"/>
         </CompFileExtendedInfo>
@@ -145,13 +144,6 @@
         <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0.xci">
           <Proxy FileSetName="fft_mag_cordic_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.xci">
-          <Proxy FileSetName="fft_mag_c_addsub_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.xci">
-          <Proxy FileSetName="fft_mag_axis_register_slice_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="hdl/fft_mag.v"/>
         <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_xlconstant_3_0/fft_mag_xlconstant_3_0.xci">
           <Proxy FileSetName="fft_mag_xlconstant_3_0"/>
         </CompFileExtendedInfo>
@@ -167,8 +159,11 @@
         <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_xlconstant_2_0/fft_mag_xlconstant_2_0.xci">
           <Proxy FileSetName="fft_mag_xlconstant_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_xlconstant_1_0/fft_mag_xlconstant_1_0.xci">
-          <Proxy FileSetName="fft_mag_xlconstant_1_0"/>
+        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_c_addsub_0_0/fft_mag_c_addsub_0_0.xci">
+          <Proxy FileSetName="fft_mag_c_addsub_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="fft_mag.bd" FileRelPathName="ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0.xci">
+          <Proxy FileSetName="fft_mag_axis_register_slice_2_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../sources/clock_divider.v">
